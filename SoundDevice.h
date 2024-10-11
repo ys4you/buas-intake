@@ -4,12 +4,12 @@ class SoundDevice
 {
 public:
 	static SoundDevice* get();
+	void ShutdownSoundDevice();
 private:
 	SoundDevice();
-	~SoundDevice();
 
 	ALCcontext* ALCCtx;
-	ALCdevice* Device;
+	ALCdevice* ALDevice;
 
 };
 

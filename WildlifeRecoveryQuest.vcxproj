@@ -47,14 +47,14 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>template;.;lib\glad;lib\glfw\include;lib\OpenCL\inc;lib\zlib;lib;lib/OpenAL/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>template;.;lib\glad;lib\glfw\include;lib\OpenCL\inc;lib\zlib;lib;lib/OpenAL/include;lib\libsndfile-1.2.2-win64\include</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
       <ExceptionHandling>Sync</ExceptionHandling>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>OpenAL32.lib</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;advapi32.lib;user32.lib;glfw3.lib;gdi32.lib;shell32.lib;OpenCL.lib;OpenGL32.lib;libz-static.lib;OpenAL32.lib;sndfile.lib</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <OutputFile>$(TargetPath)</OutputFile>
@@ -64,7 +64,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Platform)'=='x64'">
     <Link>
-      <AdditionalLibraryDirectories>lib/glfw/lib-vc2022;lib/zlib;lib/openCL/lib;lib/OpenAL/libs/Win64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>lib/glfw/lib-vc2022;lib/zlib;lib/openCL/lib;lib/OpenAL/libs/Win64;lib\libsndfile-1.2.2-win64\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
@@ -123,7 +123,9 @@
   <ItemGroup>
     <ClCompile Include="game.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SoundBuffer.cpp" />
     <ClCompile Include="SoundDevice.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="template\bvh.cpp" />
     <ClCompile Include="template\opencl.cpp" />
     <ClCompile Include="template\opengl.cpp" />
@@ -145,7 +147,9 @@
     <ClInclude Include="cl\tools.cl" />
     <ClInclude Include="game.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="SoundBuffer.h" />
     <ClInclude Include="SoundDevice.h" />
+    <ClInclude Include="SoundManager.h" />
     <ClInclude Include="template\bvh.h" />
     <ClInclude Include="template\common.h" />
     <ClInclude Include="template\opencl.h" />

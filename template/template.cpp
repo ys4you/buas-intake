@@ -3,6 +3,9 @@
 // IGAD/NHTV/BUAS/UU - Jacco Bikker - 2006-2024
 
 #include "precomp.h"
+
+#include <iostream>
+
 #include "game.h"
 
 #pragma comment( linker, "/subsystem:windows /ENTRY:mainCRTStartup" )
@@ -85,6 +88,8 @@ void ErrorCallback( int, const char* description )
 // Application entry point
 void main()
 {
+	SoundManager::get()->LoadingSounds();
+	SoundManager::get()->Play("hit");
 	// open a window
 	if (!glfwInit()) FatalError( "glfwInit failed." );
 	glfwSetErrorCallback( ErrorCallback );
@@ -94,9 +99,9 @@ void main()
 	glfwWindowHint( GLFW_STENCIL_BITS, GL_FALSE );
 	glfwWindowHint( GLFW_RESIZABLE, GL_FALSE /* easier :) */ );
 #ifdef FULLSCREEN
-	window = glfwCreateWindow( SCRWIDTH, SCRHEIGHT, "Tmpl8-2024", glfwGetPrimaryMonitor(), 0 );
+	window = glfwCreateWindow( SCRWIDTH, SCRHEIGHT, "Buas Intake '25", glfwGetPrimaryMonitor(), 0 );
 #else
-	window = glfwCreateWindow( SCRWIDTH, SCRHEIGHT, "Tmpl8-2024", 0, 0 );
+	window = glfwCreateWindow( SCRWIDTH, SCRHEIGHT, "Buas Intake '25", 0, 0 );
 #endif
 	if (!window) FatalError( "glfwCreateWindow failed." );
 	glfwMakeContextCurrent( window );
@@ -330,6 +335,8 @@ void main()
 	float deltaTime = 0;
 	static int frameNr = 0;
 	static Timer timer;
+
+
 	while (!glfwWindowShouldClose( window ))
 	{
 		deltaTime = min( 500.0f, 1000.0f * timer.elapsed() );
@@ -350,6 +357,9 @@ void main()
 	}
 	// close down
 	app->Shutdown();
+	SoundDevice::get()->ShutdownSoundDevice();
+	SoundManager::get()->ShutdownOpenAL();
+	SoundBuffer::get()->clearBuffers();
 	Kernel::KillCL();
 	glfwDestroyWindow( window );
 	glfwTerminate();

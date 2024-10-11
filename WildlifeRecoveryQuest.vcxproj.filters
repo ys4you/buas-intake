@@ -32,6 +32,12 @@
     <ClCompile Include="Player.cpp">
       <Filter>Code\Player</Filter>
     </ClCompile>
+    <ClCompile Include="SoundBuffer.cpp">
+      <Filter>Code\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Code\Audio</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
@@ -70,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Code\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundBuffer.h">
+      <Filter>Code\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Code\Audio</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

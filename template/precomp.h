@@ -21,7 +21,12 @@
 #include "al.h"
 #include "alc.h"
 
+#include "sndfile.h"
+#include "sndfile.hh"
+
 #include "SoundDevice.h"
+#include "SoundBuffer.h"
+#include "SoundManager.h"
 
 // header for AVX, and every technology before it.
 // if your CPU does not support this (unlikely), include the appropriate header instead.
