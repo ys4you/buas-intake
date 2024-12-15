@@ -26,7 +26,7 @@ SoundDevice::SoundDevice()
 	if (alcIsExtensionPresent(ALDevice, "ALC_ENUMERATE_ALL_EXT")) //checks if present
 		name = alcGetString(ALDevice, ALC_ALL_DEVICES_SPECIFIER);
 	if (!name || alcGetError(ALDevice) != ALC_NO_ERROR) 
-		name = alcGetString(ALDevice, ALC_DEVICE_SPECIFIER); // gets the SPECIFIER once failed
+		name = alcGetString(ALDevice, ALC_DEVICE_SPECIFIER);
 }
 
 void SoundDevice::ShutdownSoundDevice()

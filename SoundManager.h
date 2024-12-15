@@ -6,9 +6,9 @@
 
 struct audio
 {
-    std::string fileName;   // Audio file name
-    ALuint audioBuffer;     // OpenAL buffer ID
-    ALuint audioSource;     // OpenAL source ID
+    std::string fileName;
+    ALuint audioBuffer; // OpenAL buffer ID
+    ALuint audioSource; // OpenAL source ID
 
     // Constructor
     audio(const std::string& name, ALuint buffer, ALuint source)
@@ -27,9 +27,9 @@ public:
     void ShutdownOpenAL();
 
 private:
-    const ALsizei maxSources = 16;           // Max number of sources
-    std::vector<audio> sources;              // Audio source and buffer list
-    ALuint* source = nullptr;                // Pointer to OpenAL sources
+    const ALsizei maxSources = 16;
+    std::vector<audio> sources;
+    ALuint* source = nullptr;
 
     SoundManager();
 

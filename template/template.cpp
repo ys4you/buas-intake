@@ -89,7 +89,7 @@ void ErrorCallback( int, const char* description )
 void main()
 {
 	SoundManager::get()->LoadingSounds();
-	SoundManager::get()->Play("hit");
+	//SoundManager::get()->Play("hit");
 	// open a window
 	if (!glfwInit()) FatalError( "glfwInit failed." );
 	glfwSetErrorCallback( ErrorCallback );

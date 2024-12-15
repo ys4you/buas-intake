@@ -38,6 +38,12 @@
     <ClCompile Include="SoundManager.cpp">
       <Filter>Code\Audio</Filter>
     </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Code\SceneManager\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Code\SceneManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
@@ -83,6 +89,15 @@
     <ClInclude Include="SoundManager.h">
       <Filter>Code\Audio</Filter>
     </ClInclude>
+    <ClInclude Include="SceneBaseState.h">
+      <Filter>Code\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Code\SceneManager\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Code\SceneManager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
@@ -110,6 +125,12 @@
     </Filter>
     <Filter Include="Code\Audio">
       <UniqueIdentifier>{da0c1041-e963-43f4-8509-a5a2c326b989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\SceneManager">
+      <UniqueIdentifier>{05f55455-e819-4f9f-b6c7-66a69f49d6b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\SceneManager\Scenes">
+      <UniqueIdentifier>{96fce710-20c4-42e5-82f9-a14e23ae8a84}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

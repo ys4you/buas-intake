@@ -28,6 +28,10 @@
 #include "SoundBuffer.h"
 #include "SoundManager.h"
 
+#include "SceneManager.h"
+#include "SceneBaseState.h"
+#include "MainMenu.h"
+
 // header for AVX, and every technology before it.
 // if your CPU does not support this (unlikely), include the appropriate header instead.
 // see: https://stackoverflow.com/a/11228864/2844473
