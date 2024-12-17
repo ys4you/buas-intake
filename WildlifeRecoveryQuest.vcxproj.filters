@@ -26,23 +26,17 @@
     <ClCompile Include="template\bvh.cpp">
       <Filter>template</Filter>
     </ClCompile>
-    <ClCompile Include="SoundDevice.cpp">
-      <Filter>Code\Audio</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Code\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundBuffer.cpp">
-      <Filter>Code\Audio</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundManager.cpp">
-      <Filter>Code\Audio</Filter>
     </ClCompile>
     <ClCompile Include="MainMenu.cpp">
       <Filter>Code\SceneManager\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="SceneManager.cpp">
       <Filter>Code\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioManager.cpp">
+      <Filter>Code\Audio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -77,17 +71,8 @@
     <ClInclude Include="template\bvh.h">
       <Filter>template</Filter>
     </ClInclude>
-    <ClInclude Include="SoundDevice.h">
-      <Filter>Code\Audio</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Code\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundBuffer.h">
-      <Filter>Code\Audio</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundManager.h">
-      <Filter>Code\Audio</Filter>
     </ClInclude>
     <ClInclude Include="SceneBaseState.h">
       <Filter>Code\SceneManager</Filter>
@@ -97,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="SceneManager.h">
       <Filter>Code\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.h">
+      <Filter>Code\Audio</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -123,14 +111,14 @@
     <Filter Include="Code\Player">
       <UniqueIdentifier>{51be660e-5b82-4942-a3ae-b882e2ade2d5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Code\Audio">
-      <UniqueIdentifier>{da0c1041-e963-43f4-8509-a5a2c326b989}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Code\SceneManager">
       <UniqueIdentifier>{05f55455-e819-4f9f-b6c7-66a69f49d6b0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Code\SceneManager\Scenes">
       <UniqueIdentifier>{96fce710-20c4-42e5-82f9-a14e23ae8a84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Audio">
+      <UniqueIdentifier>{a51333ad-bc3f-4f7d-ac26-64944a12b0cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

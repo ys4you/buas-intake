@@ -8,6 +8,7 @@
 
 #include "game.h"
 
+#include "AudioManager.h"
 #pragma comment( linker, "/subsystem:windows /ENTRY:mainCRTStartup" )
 
 using namespace Tmpl8;
@@ -88,8 +89,10 @@ void ErrorCallback( int, const char* description )
 // Application entry point
 void main()
 {
-	SoundManager::get()->LoadingSounds();
-	//SoundManager::get()->Play("hit");
+	//HereTest
+	AudioManager& audio = AudioManager::Get();
+	audio.initialize();
+	audio.playAudio("C:/Buas/Intake/Collect/assets/audio/hit.wav");
 	// open a window
 	if (!glfwInit()) FatalError( "glfwInit failed." );
 	glfwSetErrorCallback( ErrorCallback );
@@ -357,9 +360,6 @@ void main()
 	}
 	// close down
 	app->Shutdown();
-	SoundDevice::get()->ShutdownSoundDevice();
-	SoundManager::get()->ShutdownOpenAL();
-	SoundBuffer::get()->clearBuffers();
 	Kernel::KillCL();
 	glfwDestroyWindow( window );
 	glfwTerminate();

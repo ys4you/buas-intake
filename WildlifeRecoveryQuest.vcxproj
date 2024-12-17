@@ -47,7 +47,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>template;.;lib\glad;lib\glfw\include;lib\OpenCL\inc;lib\zlib;lib;lib/OpenAL/include;lib\libsndfile-1.2.2-win64\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>template;.;lib\glad;lib\glfw\include;lib\OpenCL\inc;lib\zlib;lib;lib\Audio\;lib\libsndfile-1.2.2-win64\include</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -121,13 +121,11 @@
   </ItemDefinitionGroup>
   <!-- END Custom section -->
   <ItemGroup>
+    <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="SoundBuffer.cpp" />
-    <ClCompile Include="SoundDevice.cpp" />
-    <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="template\bvh.cpp" />
     <ClCompile Include="template\opencl.cpp" />
     <ClCompile Include="template\opengl.cpp" />
@@ -146,15 +144,13 @@
     <ClCompile Include="template\tmpl8math.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AudioManager.h" />
     <ClInclude Include="cl\tools.cl" />
     <ClInclude Include="game.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="SceneBaseState.h" />
     <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="SoundBuffer.h" />
-    <ClInclude Include="SoundDevice.h" />
-    <ClInclude Include="SoundManager.h" />
     <ClInclude Include="template\bvh.h" />
     <ClInclude Include="template\common.h" />
     <ClInclude Include="template\opencl.h" />

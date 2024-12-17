@@ -18,19 +18,6 @@
 #include <math.h>				// c standard math library
 #include <assert.h>				// runtime assertions
 
-#include "al.h"
-#include "alc.h"
-
-#include "sndfile.h"
-#include "sndfile.hh"
-
-#include "SoundDevice.h"
-#include "SoundBuffer.h"
-#include "SoundManager.h"
-
-#include "SceneManager.h"
-#include "SceneBaseState.h"
-#include "MainMenu.h"
 
 // header for AVX, and every technology before it.
 // if your CPU does not support this (unlikely), include the appropriate header instead.
@@ -151,6 +138,10 @@ using namespace Tmpl8;
 // opencl & opencl
 #include "opencl.h"
 #include "opengl.h"
+
+//audio
+#include "miniaudio.h"
+
 
 // fatal error reporting (with a pretty window)
 #define FATALERROR( fmt, ... ) FatalError( "Error on line %d of %s: " fmt "\n", __LINE__, __FILE__, ##__VA_ARGS__ )

@@ -1,6 +1,9 @@
 #include "precomp.h"
 #include "game.h"
 
+#include "SceneManager.h"
+#include "SceneBaseState.h"
+#include "MainMenu.h"
 
 
 //vars
