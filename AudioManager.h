@@ -12,11 +12,13 @@ public:
 
     void deconstruct();
 
-    bool playAudio(const std::string& filePath);
+    bool playAudio(const std::string& audioName);
 
 private:
     AudioManager();
     ~AudioManager();
+
+    void SetupAudioDict();
 
     // Disable copy and assignment
     AudioManager(const AudioManager&) = delete;
@@ -24,5 +26,7 @@ private:
 
     ma_engine m_engine;
     bool m_initialized = false;
+
+    std::map<std::string, std::string> audioDict;
 };
 

@@ -123,9 +123,6 @@
   <ItemGroup>
     <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="game.cpp" />
-    <ClCompile Include="MainMenu.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="template\bvh.cpp" />
     <ClCompile Include="template\opencl.cpp" />
     <ClCompile Include="template\opengl.cpp" />
@@ -147,10 +144,6 @@
     <ClInclude Include="AudioManager.h" />
     <ClInclude Include="cl\tools.cl" />
     <ClInclude Include="game.h" />
-    <ClInclude Include="MainMenu.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="SceneBaseState.h" />
-    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="template\bvh.h" />
     <ClInclude Include="template\common.h" />
     <ClInclude Include="template\opencl.h" />
