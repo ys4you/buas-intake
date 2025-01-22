@@ -92,7 +92,6 @@ void main()
 	//HereTest
 	AudioManager& audio = AudioManager::Get();
 	audio.initialize();
-	audio.playAudio("C:/Buas/Intake/Collect/assets/audio/hit.wav");
 	// open a window
 	if (!glfwInit()) FatalError( "glfwInit failed." );
 	glfwSetErrorCallback( ErrorCallback );

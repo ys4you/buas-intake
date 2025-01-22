@@ -29,6 +29,15 @@
     <ClCompile Include="AudioManager.cpp">
       <Filter>Code\Audio</Filter>
     </ClCompile>
+    <ClCompile Include="FSMSceneController.cpp">
+      <Filter>Code\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuScene.cpp">
+      <Filter>Code\SceneManager\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLoopScene.cpp">
+      <Filter>Code\SceneManager\Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
@@ -65,6 +74,18 @@
     <ClInclude Include="AudioManager.h">
       <Filter>Code\Audio</Filter>
     </ClInclude>
+    <ClInclude Include="SceneBaseState.h">
+      <Filter>Code\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="FSMSceneController.h">
+      <Filter>Code\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuScene.h">
+      <Filter>Code\SceneManager\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLoopScene.h">
+      <Filter>Code\SceneManager\Scenes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
@@ -92,6 +113,12 @@
     </Filter>
     <Filter Include="Code\Audio">
       <UniqueIdentifier>{a51333ad-bc3f-4f7d-ac26-64944a12b0cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\SceneManager">
+      <UniqueIdentifier>{b39a87b5-0660-44f5-871c-2238a5acc866}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\SceneManager\Scenes">
+      <UniqueIdentifier>{ca48b019-261d-4adf-a307-78cc1b1de69d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -122,7 +122,10 @@
   <!-- END Custom section -->
   <ItemGroup>
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="FSMSceneController.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="GameLoopScene.cpp" />
+    <ClCompile Include="MainMenuScene.cpp" />
     <ClCompile Include="template\bvh.cpp" />
     <ClCompile Include="template\opencl.cpp" />
     <ClCompile Include="template\opengl.cpp" />
@@ -143,7 +146,11 @@
   <ItemGroup>
     <ClInclude Include="AudioManager.h" />
     <ClInclude Include="cl\tools.cl" />
+    <ClInclude Include="FSMSceneController.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="GameLoopScene.h" />
+    <ClInclude Include="MainMenuScene.h" />
+    <ClInclude Include="SceneBaseState.h" />
     <ClInclude Include="template\bvh.h" />
     <ClInclude Include="template\common.h" />
     <ClInclude Include="template\opencl.h" />
