@@ -27,16 +27,16 @@
       <Filter>template</Filter>
     </ClCompile>
     <ClCompile Include="AudioManager.cpp">
-      <Filter>Code\Audio</Filter>
+      <Filter>Code\Managers\Audio</Filter>
     </ClCompile>
     <ClCompile Include="FSMSceneController.cpp">
-      <Filter>Code\SceneManager</Filter>
+      <Filter>Code\Managers\SceneManager</Filter>
     </ClCompile>
     <ClCompile Include="MainMenuScene.cpp">
-      <Filter>Code\SceneManager\Scenes</Filter>
+      <Filter>Code\Managers\SceneManager\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="GameLoopScene.cpp">
-      <Filter>Code\SceneManager\Scenes</Filter>
+      <Filter>Code\Managers\SceneManager\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -72,19 +72,22 @@
       <Filter>template</Filter>
     </ClInclude>
     <ClInclude Include="AudioManager.h">
-      <Filter>Code\Audio</Filter>
+      <Filter>Code\Managers\Audio</Filter>
     </ClInclude>
     <ClInclude Include="SceneBaseState.h">
-      <Filter>Code\SceneManager</Filter>
+      <Filter>Code\Managers\SceneManager</Filter>
     </ClInclude>
     <ClInclude Include="FSMSceneController.h">
-      <Filter>Code\SceneManager</Filter>
+      <Filter>Code\Managers\SceneManager</Filter>
     </ClInclude>
     <ClInclude Include="MainMenuScene.h">
-      <Filter>Code\SceneManager\Scenes</Filter>
+      <Filter>Code\Managers\SceneManager\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="GameLoopScene.h">
-      <Filter>Code\SceneManager\Scenes</Filter>
+      <Filter>Code\Managers\SceneManager\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionHandler.h">
+      <Filter>Code\Util</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -108,17 +111,23 @@
     <Filter Include="Code">
       <UniqueIdentifier>{41730315-d3d9-49c1-91ef-9a46c5871a0e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Code\Player">
-      <UniqueIdentifier>{51be660e-5b82-4942-a3ae-b882e2ade2d5}</UniqueIdentifier>
+    <Filter Include="Code\Managers">
+      <UniqueIdentifier>{a13e94e8-d7d0-466d-a7f7-2396b3609ec1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Code\Audio">
-      <UniqueIdentifier>{a51333ad-bc3f-4f7d-ac26-64944a12b0cc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Code\SceneManager">
+    <Filter Include="Code\Managers\SceneManager">
       <UniqueIdentifier>{b39a87b5-0660-44f5-871c-2238a5acc866}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Code\SceneManager\Scenes">
+    <Filter Include="Code\Managers\SceneManager\Scenes">
       <UniqueIdentifier>{ca48b019-261d-4adf-a307-78cc1b1de69d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Managers\Audio">
+      <UniqueIdentifier>{a51333ad-bc3f-4f7d-ac26-64944a12b0cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Util">
+      <UniqueIdentifier>{f298fe17-90d6-461a-b6a5-8c0365d376a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\UI">
+      <UniqueIdentifier>{8216d165-f542-4a97-8c98-64541f586a3f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
