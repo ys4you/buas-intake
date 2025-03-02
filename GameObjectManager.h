@@ -4,7 +4,8 @@
 
 class GameObject; // Forward declaration, does not need full definition
 
-class GameObjectManager {
+class GameObjectManager
+{
 public:
     static GameObjectManager& Get();
 

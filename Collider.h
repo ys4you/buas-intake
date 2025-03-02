@@ -5,7 +5,8 @@
 
 enum class ColliderType { AABB, Circle };
 
-struct AABB {
+struct AABB
+{
     glm::vec2 min;
     glm::vec2 max;
 
@@ -13,7 +14,8 @@ struct AABB {
     AABB(glm::vec2 min, glm::vec2 max) : min(min), max(max) {}
 };
 
-struct CircleCollider {
+struct CircleCollider
+{
     glm::vec2 center;
     float radius;
 
@@ -21,7 +23,8 @@ struct CircleCollider {
     CircleCollider(glm::vec2 center, float radius) : center(center), radius(radius) {}
 };
 
-struct Collider {
+struct Collider
+{
     ColliderType type;
     AABB aabb;
     CircleCollider circle;
@@ -30,21 +33,27 @@ struct Collider {
     Collider(AABB aabb) : type(ColliderType::AABB), aabb(aabb) {}
     Collider(CircleCollider circle) : type(ColliderType::Circle), circle(circle) {}
 
-    bool CheckCollision(const Collider& other) const {
-        if (this->type == other.type) {
-            if (this->type == ColliderType::AABB) {
+    bool CheckCollision(const Collider& other) const
+	{
+        if (this->type == other.type) 
+        {
+            if (this->type == ColliderType::AABB) 
+            {
                 return CheckAABBCollision(this->aabb, other.aabb);
             }
-            else if (this->type == ColliderType::Circle) {
+            else if (this->type == ColliderType::Circle) 
+            {
                 return CheckCircleCollision(this->circle, other.circle);
             }
         }
         if ((this->type == ColliderType::AABB && other.type == ColliderType::Circle) ||
             (this->type == ColliderType::Circle && other.type == ColliderType::AABB)) {
-            if (this->type == ColliderType::AABB) {
+            if (this->type == ColliderType::AABB) 
+            {
                 return CheckAABBCollisionWithCircle(this->aabb, other.circle);
             }
-            else {
+            else 
+            {
                 return CheckAABBCollisionWithCircle(other.aabb, this->circle);
             }
         }
@@ -52,20 +61,23 @@ struct Collider {
     }
 
 private:
-    static bool CheckAABBCollision(const AABB& a, const AABB& b) {
+    static bool CheckAABBCollision(const AABB& a, const AABB& b)
+	{
         return (a.min.x < b.max.x &&
             a.max.x > b.min.x &&
             a.min.y < b.max.y &&
             a.max.y > b.min.y);
     }
 
-    static bool CheckCircleCollision(const CircleCollider& a, const CircleCollider& b) {
+    static bool CheckCircleCollision(const CircleCollider& a, const CircleCollider& b)
+	{
         float distance = glm::distance(a.center, b.center);
         float radiiSum = a.radius + b.radius;
         return distance <= radiiSum;
     }
 
-    static bool CheckAABBCollisionWithCircle(const AABB& aabb, const CircleCollider& circle) {
+    static bool CheckAABBCollisionWithCircle(const AABB& aabb, const CircleCollider& circle)
+	{
         float closestX = glm::clamp(circle.center.x, aabb.min.x, aabb.max.x);
         float closestY = glm::clamp(circle.center.y, aabb.min.y, aabb.max.y);
         glm::vec2 closestPoint(closestX, closestY);

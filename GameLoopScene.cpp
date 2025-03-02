@@ -19,6 +19,9 @@ void GameLoopScene::onEnter(FSMSceneController& controller, Surface* screen)
 void GameLoopScene::onUpdate(FSMSceneController& controller, float deltaTime, Surface* screen)
 {
 	screen->Clear(0);
+	//works
+	std::cout << "updating now: " << player->GetName() << "with pointer: " << player << std::endl;
+	//player->Update(deltaTime);
 }
 
 void GameLoopScene::onExit(FSMSceneController& controller, Surface* screen)

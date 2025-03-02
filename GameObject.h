@@ -48,9 +48,7 @@ public:
         }
         Sprite objSprite(new Surface(file_.c_str()), 1);
 
-        //objSprite.Draw(screen, position.x, position.y);
-        objSprite.Draw(screen, 100, 100);
-
+        objSprite.Draw(screen, position.x, position.y);
     }
 
     bool CheckCollision(const GameObject& other) const
