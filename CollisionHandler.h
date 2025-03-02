@@ -18,4 +18,3 @@ public:
             (a.min.y <= b.max.y && a.max.y >= b.min.y);
     }
 };
-

@@ -1,6 +1,7 @@
 #include "SceneBaseState.h"
 #include <memory>
 
+
 class FSMSceneController {
 private:
     std::unique_ptr<SceneBaseState> currentState;
@@ -21,4 +22,8 @@ public:
 
     //Down below find vars that is accesable thru all states
     int pHealth;
+
+    //MainMenu
+    int mainMenuButtonState = 1;
+    bool buttonsDisabled = false;
 };

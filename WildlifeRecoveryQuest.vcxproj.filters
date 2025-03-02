@@ -33,10 +33,19 @@
       <Filter>Code\Managers\SceneManager</Filter>
     </ClCompile>
     <ClCompile Include="MainMenuScene.cpp">
-      <Filter>Code\Managers\SceneManager\Scenes</Filter>
+      <Filter>Code\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="GameLoopScene.cpp">
-      <Filter>Code\Managers\SceneManager\Scenes</Filter>
+      <Filter>Code\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectManager.cpp">
+      <Filter>Code\Managers\GameObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Code\GameObjects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Code\GameObjects\Button</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -81,13 +90,25 @@
       <Filter>Code\Managers\SceneManager</Filter>
     </ClInclude>
     <ClInclude Include="MainMenuScene.h">
-      <Filter>Code\Managers\SceneManager\Scenes</Filter>
+      <Filter>Code\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="GameLoopScene.h">
-      <Filter>Code\Managers\SceneManager\Scenes</Filter>
+      <Filter>Code\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="CollisionHandler.h">
+    <ClInclude Include="GameObject.h">
       <Filter>Code\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectManager.h">
+      <Filter>Code\Managers\GameObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Code\GameObjects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Code\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Code\GameObjects\Button</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -117,17 +138,26 @@
     <Filter Include="Code\Managers\SceneManager">
       <UniqueIdentifier>{b39a87b5-0660-44f5-871c-2238a5acc866}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Code\Managers\SceneManager\Scenes">
-      <UniqueIdentifier>{ca48b019-261d-4adf-a307-78cc1b1de69d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Code\Managers\Audio">
       <UniqueIdentifier>{a51333ad-bc3f-4f7d-ac26-64944a12b0cc}</UniqueIdentifier>
     </Filter>
     <Filter Include="Code\Util">
       <UniqueIdentifier>{f298fe17-90d6-461a-b6a5-8c0365d376a6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Code\UI">
-      <UniqueIdentifier>{8216d165-f542-4a97-8c98-64541f586a3f}</UniqueIdentifier>
+    <Filter Include="Code\Managers\GameObjectManager">
+      <UniqueIdentifier>{b7067b4e-eef5-44bc-a2b0-096740486f88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects">
+      <UniqueIdentifier>{f0a78c38-31d7-44c8-823f-0f0fda2836ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Player">
+      <UniqueIdentifier>{e0ca5e42-509e-4b60-b163-184b51483e70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Scenes">
+      <UniqueIdentifier>{ca48b019-261d-4adf-a307-78cc1b1de69d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Button">
+      <UniqueIdentifier>{89da98a4-8ee1-4ae3-a68e-5084d285de46}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

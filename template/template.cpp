@@ -9,6 +9,7 @@
 #include "game.h"
 
 #include "AudioManager.h"
+#include "GameObjectManager.h"
 #pragma comment( linker, "/subsystem:windows /ENTRY:mainCRTStartup" )
 
 using namespace Tmpl8;
@@ -91,6 +92,7 @@ void main()
 {
 	//HereTest
 	AudioManager& audio = AudioManager::Get();
+
 	audio.initialize();
 	// open a window
 	if (!glfwInit()) FatalError( "glfwInit failed." );

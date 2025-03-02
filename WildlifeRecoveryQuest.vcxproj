@@ -122,10 +122,13 @@
   <!-- END Custom section -->
   <ItemGroup>
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="FSMSceneController.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="GameLoopScene.cpp" />
+    <ClCompile Include="GameObjectManager.cpp" />
     <ClCompile Include="MainMenuScene.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="template\bvh.cpp" />
     <ClCompile Include="template\opencl.cpp" />
     <ClCompile Include="template\opengl.cpp" />
@@ -145,12 +148,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="cl\tools.cl" />
-    <ClInclude Include="CollisionHandler.h" />
+    <ClInclude Include="Collider.h" />
     <ClInclude Include="FSMSceneController.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="GameLoopScene.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameObjectManager.h" />
     <ClInclude Include="MainMenuScene.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="SceneBaseState.h" />
     <ClInclude Include="template\bvh.h" />
     <ClInclude Include="template\common.h" />

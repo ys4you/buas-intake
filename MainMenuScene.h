@@ -1,10 +1,18 @@
 #include "SceneBaseState.h"
-#include "sprite.h"
 #include "surface.h"
 #include <iostream>
 
+#include "Button.h"
+
 class MainMenuScene : public SceneBaseState {
 private:
+    bool leftPressed = false;
+    bool rightPressed = false;
+
+    Button* controlsButton = nullptr;
+    Button* playButton = nullptr;
+    Button* quitButton = nullptr;
+
 public:
     void onEnter(FSMSceneController& controller, Surface* screen) override;
 
