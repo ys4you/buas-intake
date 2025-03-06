@@ -1,27 +1,45 @@
 #include "precomp.h"
 #include "GameLoopScene.h"
 #include "FSMSceneController.h"
-#include "Player.h"
+#include "PlayerSoul.h"
+#include "common.h"
 
 void GameLoopScene::onEnter(FSMSceneController& controller, Surface* screen)
 {
 	std::cout << "Entering Game Loop Scene\n";
 
-	player = new Player(
+	player = new PlayerSoul(
 		screen,
-		glm::vec2(50, 50),
+		glm::vec2(700, 300),
 		glm::vec2(28, 28),
 		"assets/art/player.png",
 		"Hero");
+
+	box = new Box(
+		screen,
+		glm::vec2((SCRWIDTH/2)-125, SCRHEIGHT / 3 -125),
+		glm::vec2(250, 250),
+		"Box"
+		);
+	int centerValue = 200;
+	actionMenu = new ActionMenu(
+		screen,
+		glm::vec2(centerValue, SCRHEIGHT- 200 - 1), // Centered horizontally, positioned 250 from the bottom
+		glm::vec2(SCRWIDTH - (centerValue*2), 200-1),
+		"ActionMenu"
+	);
+
+	attack = new DummyAtackOne(screen, 15);
+
+	attack->DoingAttack();
 }
-//Sprite controlsActive(new Surface("assets/art/player.png"), 1);
 
 void GameLoopScene::onUpdate(FSMSceneController& controller, float deltaTime, Surface* screen)
 {
 	screen->Clear(0);
-	//works
-	std::cout << "updating now: " << player->GetName() << "with pointer: " << player << std::endl;
-	//player->Update(deltaTime);
+	player->KeepInsideBoundary(box->GetCollider());
+
+	attack->Update(deltaTime);
 }
 
 void GameLoopScene::onExit(FSMSceneController& controller, Surface* screen)

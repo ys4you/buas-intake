@@ -1,6 +1,7 @@
 #include "precomp.h"
 #include "MainMenuScene.h"
 #include <windows.h>
+#include <cstdlib>
 
 #include "FSMSceneController.h"
 
@@ -102,6 +103,8 @@ void MainMenuScene::onUpdate(FSMSceneController& controller, float deltaTime, Su
             controlsButton->IsActive(false);
             playButton->IsActive(false);
             quitButton->IsActive(true);
+            if (GetAsyncKeyState(VK_RETURN) & 0x8000)
+                exit(0);
             break;
 
         default:
@@ -115,6 +118,9 @@ void MainMenuScene::onUpdate(FSMSceneController& controller, float deltaTime, Su
 void MainMenuScene::onExit(FSMSceneController& controller, Surface* screen)
 {
     std::cout << "Exiting Main Menu Scene\n";
+    GameObjectManager::Get().RemoveGameObject(controlsButton->GetId());
+    GameObjectManager::Get().RemoveGameObject(playButton->GetId());
+    GameObjectManager::Get().RemoveGameObject(quitButton->GetId());
 }
 
 void MainMenuScene::checkSwitchState(FSMSceneController& controller)

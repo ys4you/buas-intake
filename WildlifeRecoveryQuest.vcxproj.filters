@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="game.cpp" />
     <ClCompile Include="template\opencl.cpp">
       <Filter>template</Filter>
     </ClCompile>
@@ -41,15 +40,33 @@
     <ClCompile Include="GameObjectManager.cpp">
       <Filter>Code\Managers\GameObjectManager</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Code\GameObjects\Player</Filter>
-    </ClCompile>
     <ClCompile Include="Button.cpp">
-      <Filter>Code\GameObjects\Button</Filter>
+      <Filter>Code\GameObjects\UI\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>Code\GameObjects\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerSoul.cpp">
+      <Filter>Code\GameObjects\Player\Soul</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionMenu.cpp">
+      <Filter>Code\GameObjects\UI\ActionMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Code\GameObjects\Player\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Code\GameObjects\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyAtackOne.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy\Attacks</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereProjectile.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game.h" />
     <ClInclude Include="template\common.h">
       <Filter>template</Filter>
     </ClInclude>
@@ -101,14 +118,33 @@
     <ClInclude Include="GameObjectManager.h">
       <Filter>Code\Managers\GameObjectManager</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Code\GameObjects\Player</Filter>
-    </ClInclude>
     <ClInclude Include="Collider.h">
       <Filter>Code\Util</Filter>
     </ClInclude>
     <ClInclude Include="Button.h">
-      <Filter>Code\GameObjects\Button</Filter>
+      <Filter>Code\GameObjects\UI\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>Code\GameObjects\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerSoul.h">
+      <Filter>Code\GameObjects\Player\Soul</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionMenu.h">
+      <Filter>Code\GameObjects\UI\ActionMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Code\GameObjects\Player\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h" />
+    <ClInclude Include="Enemy.h">
+      <Filter>Code\GameObjects\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyAtackOne.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Attacks</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereProjectile.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -156,8 +192,35 @@
     <Filter Include="Code\Scenes">
       <UniqueIdentifier>{ca48b019-261d-4adf-a307-78cc1b1de69d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Code\GameObjects\Button">
+    <Filter Include="Code\GameObjects\Box">
+      <UniqueIdentifier>{cd8253c5-722b-4f7a-9fed-2e7b27cc886d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\UI">
+      <UniqueIdentifier>{cc286e24-4069-4529-a3b0-c401d466cf13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\UI\Button">
       <UniqueIdentifier>{89da98a4-8ee1-4ae3-a68e-5084d285de46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Player\Soul">
+      <UniqueIdentifier>{f2f6dca9-f186-418c-89b2-8118c710b735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\UI\ActionMenu">
+      <UniqueIdentifier>{2fc5d91a-bfe9-4ec0-acc3-1f698b0a407c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Player\Characters">
+      <UniqueIdentifier>{a2c2c216-4a1a-45ac-a6bf-2c049c5c4209}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy">
+      <UniqueIdentifier>{25391a6c-7b7d-47bb-9915-11331da5bc9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy">
+      <UniqueIdentifier>{b3fb25f1-15e3-425e-9914-50fd184f699a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Attacks">
+      <UniqueIdentifier>{71d5ab83-6a83-47cb-906c-3671b1337757}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Projectiles">
+      <UniqueIdentifier>{52a4abe3-ce25-43aa-9da1-aa370f57f7c9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

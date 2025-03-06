@@ -1,7 +1,13 @@
 #include "SceneBaseState.h"
 #include <iostream>
 
-#include "Player.h"
+//GameObjects
+#include "PlayerSoul.h"
+#include "Box.h"
+#include "ActionMenu.h"
+
+//attacks
+#include "DummyAtackOne.h"
 
 class GameLoopScene : public SceneBaseState {
 public:
@@ -13,5 +19,8 @@ public:
 
     void checkSwitchState(FSMSceneController& controller) override;
 
-    Player* player = nullptr;
+    PlayerSoul* player = nullptr;
+    Box* box = nullptr;
+    ActionMenu* actionMenu = nullptr;
+    DummyAtackOne* attack = nullptr;
 };

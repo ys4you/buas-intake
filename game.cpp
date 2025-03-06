@@ -16,22 +16,22 @@ std::unique_ptr<SceneBaseState> gameLoopScene = std::make_unique<GameLoopScene>(
 
 void Game::Init()
 {
+
     sceneController.initialize(screen);
-    sceneController.changeState(std::move(gameLoopScene));
+    sceneController.changeState(std::move(mainMenuScene));
 }
-float DeltaTime;
 void Game::Tick(float deltaTime)
 {
     //screen->Clear(0);
-	GameObjectManager::Get().UpdateAllObjects(DeltaTime);
     CheckStates();
-    sceneController.update(DeltaTime);
+    sceneController.update(deltaTime);
+
+	GameObjectManager::Get().UpdateAllObjects(deltaTime);
 
 }
 
 void Game::CheckStates()
 {
-    DeltaTime /= 1000.0f; //convert to seconds
     if (sceneController.mainMenuButtonState == 2 && !sceneController.buttonsDisabled)
     {
         if (GetAsyncKeyState(VK_RETURN) & 0x8000)

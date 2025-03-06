@@ -15,6 +15,11 @@ public:
         buttonInactivePath(buttonInactivePath),
         buttonActivePath(buttonActivePath)
     {
+        if (!buttonActivePath.empty())
+            buttonActive = new Sprite(new Surface(buttonActivePath.c_str()), 1);
+
+        if (!buttonInactivePath.empty())
+            buttonInactive = new Sprite(new Surface(buttonInactivePath.c_str()), 1);
     }
 
 
@@ -25,5 +30,7 @@ private:
     std::string buttonInactivePath;
     std::string buttonActivePath;
 
-    void RenderButton(std::string file);
+    Sprite* buttonActive;
+    Sprite* buttonInactive;
+    void RenderButton(Sprite* sprite);
 };

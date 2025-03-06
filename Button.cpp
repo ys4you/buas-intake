@@ -8,17 +8,13 @@ void Button::Update(float deltaTime)
 
 void Button::IsActive(bool isActive)
 {
-    RenderButton(isActive ? buttonActivePath : buttonInactivePath);
+    RenderButton(isActive ? buttonActive: buttonInactive);
 }
 
-void Button::RenderButton(std::string file)
+void Button::RenderButton(Sprite* sprite)
 {
-    if (file.empty())
-    {
-        std::cout << "ERROR: Object: " << name_ << " (" << Id << ") Does not have a surface that can be rendered." << std::endl;
-        return;
-    }
-    Sprite objSprite(new Surface(file.c_str()), 1);
+	if (!sprite)
+		return;
 
-    objSprite.Draw(screen, position.x, position.y);
+    sprite->Draw(screen, position.x, position.y);
 }

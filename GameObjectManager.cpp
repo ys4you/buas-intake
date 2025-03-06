@@ -4,7 +4,7 @@
 #include "GameObject.h"
 
 int GameObjectManager::nextId = 0; // Initialize static nextId
-std::map<int, GameObject*> GameObjectManager::gameObjects; // Changed to std::map
+std::map<int, GameObject*> GameObjectManager::gameObjects; 
 
 GameObjectManager& GameObjectManager::Get() {
     static GameObjectManager instance;
@@ -35,8 +35,16 @@ GameObject* GameObjectManager::GetGameObject(int id)
 
 void GameObjectManager::RemoveGameObject(int id)
 {
-    gameObjects.erase(id);
+    auto it = gameObjects.find(id);
+    if (it != gameObjects.end()) {
+        std::cout << "Removing GameObject with ID: " << id << std::endl;
+        gameObjects.erase(it);
+    }
+    else {
+        std::cout << "Can not delete GameObject with ID: " << id << " not found!" << std::endl;
+    }
 }
+
 
 void GameObjectManager::UpdateAllObjects(float deltaTime)
 {
@@ -49,7 +57,7 @@ void GameObjectManager::UpdateAllObjects(float deltaTime)
         }
         else
         {
-            std::cout << "updating now: " << gameObj->GetName() << "with pointer: " << gameObj << std::endl;
+            //std::cout << "updating now: " << gameObj->GetName() << "with pointer: " << gameObj << std::endl;
             gameObj->Update(deltaTime);  // Safe to call Update()
         }
     }
