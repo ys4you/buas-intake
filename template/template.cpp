@@ -360,8 +360,6 @@ void main()
 		if (!running) break;
 	}
 	// close down
-	GameObjectManager::Get().Deconstruct();
-	AudioManager::Get().deconstruct();
 	app->Shutdown();
 	Kernel::KillCL();
 	glfwDestroyWindow( window );

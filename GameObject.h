@@ -12,8 +12,9 @@ class GameObject
 public:
     virtual ~GameObject() = default;
 
+
     GameObject(Surface* screen, const glm::vec2& pos = { 0, 0 }, const glm::vec2& objSize = { 1, 1 }, std::string objPath = nullptr, const std::string& objName = "newGameObj", Collider objCollider = Collider())
-        : screen(screen), position(pos), size(objSize), file_(objPath),  name_(objName), collider(objCollider), Id(-1)
+        : screen(screen), position(pos), size(objSize), file_(objPath),  name_(objName), collider(objCollider), Id(-1), isDeleted_(false)
     {
         Init();
     }
@@ -31,7 +32,6 @@ public:
     }
 
     glm::vec2 GetPosition() const { return position; }
-
     void SetPosition(const glm::vec2& newPos)
     {
         position = newPos;
@@ -40,12 +40,22 @@ public:
             collider.SetAABB(AABB(position, position + size));
         }
     }
+
     int GetId() const { return Id; }
     void SetId(int newId) { Id = newId; }
 
     Collider GetCollider() const { return collider; }
-
     std::string GetName() const { return name_;  }
+
+    void MarkForDeletion()
+    {
+        isDeleted_ = true;
+    }
+
+    bool ShouldBeRemoved() const
+    {
+        return isDeleted_;
+    }
 
 
 
@@ -88,7 +98,6 @@ public:
     {
         if (collider.type == ColliderType::AABB)
         {
-            // Debugging: print initial AABB values before clamping
             // std::cout << "Before Clamping: \n";
             // std::cout << "AABB Min: (" << collider.aabb.min.x << ", " << collider.aabb.min.y << "), Max: (" << collider.aabb.max.x << ", " << collider.aabb.max.y << ")\n";
             // std::cout << "Boundary Min: (" << boundary.aabb.min.x << ", " << boundary.aabb.min.y << "), Max: (" << boundary.aabb.max.x << ", " << boundary.aabb.max.y << ")\n";
@@ -144,7 +153,7 @@ public:
 
 protected:
     GameObject(Surface* screen, const glm::vec2& pos, const glm::vec2& objSize, std::string objSurface, const std::string& objName, int objId, Collider objCollider)
-        : screen(screen), position(pos), size(objSize), file_(objSurface), name_(objName), collider(objCollider), Id(objId)
+        : screen(screen), position(pos), size(objSize), file_(objSurface), name_(objName), collider(objCollider), Id(objId), isDeleted_(false)
     {
     }
 
@@ -158,4 +167,5 @@ protected:
 
     std::string file_;
     Sprite* sprite_;
+    bool isDeleted_;
 };

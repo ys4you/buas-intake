@@ -28,15 +28,6 @@
     <ClCompile Include="AudioManager.cpp">
       <Filter>Code\Managers\Audio</Filter>
     </ClCompile>
-    <ClCompile Include="FSMSceneController.cpp">
-      <Filter>Code\Managers\SceneManager</Filter>
-    </ClCompile>
-    <ClCompile Include="MainMenuScene.cpp">
-      <Filter>Code\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="GameLoopScene.cpp">
-      <Filter>Code\Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="GameObjectManager.cpp">
       <Filter>Code\Managers\GameObjectManager</Filter>
     </ClCompile>
@@ -59,11 +50,35 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Code\GameObjects\Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="DummyAtackOne.cpp">
-      <Filter>Code\GameObjects\Enemy\Dummy\Attacks</Filter>
+    <ClCompile Include="DummyEnemy.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="DeathScene.cpp">
+      <Filter>Code\Scenes\Death</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLoopScene.cpp">
+      <Filter>Code\Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuScene.cpp">
+      <Filter>Code\Scenes\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="FSMSceneController.cpp">
+      <Filter>Code\Managers\GameObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseAttack.cpp">
+      <Filter>Code\GameObjects\Enemy\BaseAttack</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyAttackOne.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy\Attacks\Attack 1</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleAttack.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy\Attacks\Attack 2</Filter>
     </ClCompile>
     <ClCompile Include="SphereProjectile.cpp">
-      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles</Filter>
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\Circle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -106,12 +121,6 @@
     <ClInclude Include="FSMSceneController.h">
       <Filter>Code\Managers\SceneManager</Filter>
     </ClInclude>
-    <ClInclude Include="MainMenuScene.h">
-      <Filter>Code\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="GameLoopScene.h">
-      <Filter>Code\Scenes</Filter>
-    </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>Code\Util</Filter>
     </ClInclude>
@@ -140,11 +149,33 @@
     <ClInclude Include="Enemy.h">
       <Filter>Code\GameObjects\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="DummyAtackOne.h">
-      <Filter>Code\GameObjects\Enemy\Dummy\Attacks</Filter>
+    <ClInclude Include="DummyEnemy.h">
+      <Filter>Code\GameObjects\Enemy\Dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="DeathScene.h">
+      <Filter>Code\Scenes\Death</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLoopScene.h">
+      <Filter>Code\Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuScene.h">
+      <Filter>Code\Scenes\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseAttack.h">
+      <Filter>Code\GameObjects\Enemy\BaseAttack</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyAttackOne.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Attacks\Attack 1</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleAttack.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Attacks\Attack 2</Filter>
     </ClInclude>
     <ClInclude Include="SphereProjectile.h">
-      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles</Filter>
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Circle.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\Circle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -222,5 +253,32 @@
     <Filter Include="Code\GameObjects\Enemy\Dummy\Projectiles">
       <UniqueIdentifier>{52a4abe3-ce25-43aa-9da1-aa370f57f7c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Code\Scenes\Death">
+      <UniqueIdentifier>{1b896030-c2f0-4783-9ef4-3e877cb5765d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Scenes\Game">
+      <UniqueIdentifier>{6eb793fb-3908-41c1-a174-74ec9c189085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Scenes\MainMenu">
+      <UniqueIdentifier>{aa758f62-f90a-4820-961a-67a4305c5782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\BaseAttack">
+      <UniqueIdentifier>{dbdf7d33-2918-46c4-a987-79b2b4d82e3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Attacks\Attack 1">
+      <UniqueIdentifier>{ca5224e7-59f3-4a0a-b973-ade782a5469b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Attacks\Attack 2">
+      <UniqueIdentifier>{4facfc57-18a2-4799-94dd-71e7343e827b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Projectiles\Sphere">
+      <UniqueIdentifier>{e864bc10-5193-4652-82b1-1a66afd3b13a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Projectiles\Circle">
+      <UniqueIdentifier>{95306841-eed0-4803-b426-29ddbbb8a2e4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="myGame.rc" />
   </ItemGroup>
 </Project>

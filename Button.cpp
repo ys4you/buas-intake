@@ -1,6 +1,11 @@
 #include "precomp.h"
 #include "Button.h"
 
+Button::~Button()
+{
+	GameObject::~GameObject();
+}
+
 void Button::Update(float deltaTime)
 {
 	//GameObject::Update(deltaTime); // calls the base Update function. Not going to Use since we want to handle Rendering differently.

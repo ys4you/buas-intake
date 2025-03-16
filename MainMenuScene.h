@@ -4,21 +4,26 @@
 
 #include "Button.h"
 
+
 class MainMenuScene : public SceneBaseState {
 private:
+    int mainMenuButtonState = 0;
+
     bool leftPressed = false;
     bool rightPressed = false;
+    bool enterPressed = false;
 
     Button* controlsButton = nullptr;
     Button* playButton = nullptr;
     Button* quitButton = nullptr;
 
+
 public:
-    void onEnter(FSMSceneController& controller, Surface* screen) override;
+    void onEnter(Surface* screen) override;
 
-    void onUpdate(FSMSceneController& controller, float deltaTime, Surface* screen) override;
+    void onUpdate(float deltaTime, Surface* screen) override;
 
-    void onExit(FSMSceneController& controller, Surface* screen) override;
+    void onExit(Surface* screen) override;
 
-    void checkSwitchState(FSMSceneController& controller) override;
+    void checkSwitchState() override;
 };

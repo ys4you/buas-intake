@@ -1,25 +1,45 @@
-#include "precomp.h"
+﻿#include "precomp.h"
 #include "FSMSceneController.h"
 
-// Change the current state
-void FSMSceneController::changeState(std::unique_ptr<SceneBaseState> newState)
+// Initialize static instance to nullptr
+FSMSceneController* FSMSceneController::instance = nullptr;
+
+FSMSceneController* FSMSceneController::Get()
 {
-    if (currentState) 
-    {
-        currentState->onExit(*this, screen);
+    if (instance == nullptr) {
+        instance = new FSMSceneController();
     }
-    currentState = std::move(newState);
-    if (currentState) 
-    {
-        currentState->onEnter(*this, screen);
-    }
+    return instance;
 }
 
-// Update the current state
+void FSMSceneController::destroyInstance()
+{
+    delete instance;
+    instance = nullptr;
+}
+
+void FSMSceneController::initialize(Surface* screen)
+{
+    this->screen = screen;
+}
+
+void FSMSceneController::changeState(std::unique_ptr<SceneBaseState> newState)
+{
+    if (currentState)
+    {
+        currentState->onExit(screen);
+    }
+    currentState = std::move(newState);
+    if (currentState)
+    {
+        currentState->onEnter(screen);
+    }
+}
 
 void FSMSceneController::update(float deltaTime)
 {
     if (currentState) {
-        currentState->onUpdate(*this, deltaTime, screen);
+        currentState->onUpdate(deltaTime, screen);
+        currentState->checkSwitchState();
     }
 }

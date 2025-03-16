@@ -11,21 +11,34 @@ public:
         const glm::vec2& pos = { 0, 0 },
         const glm::vec2& objSize = { 1, 1 },
         std::string filePath = "",
-        const std::string& objName = "Player",
-        Collider collider = Collider(ColliderType::AABB))
+        const std::string& objName = "PlayerSoul",
+        int maxHealth = 100,        // Default max health
+        int health = 100,           // Default current health
+        Collider collider = Collider(ColliderType::AABB)
+
+    )
         : GameObject(
             screen,
             pos,
             objSize,
             std::move(filePath),
             objName,
-            collider) // Calling the base class constructor
+            collider),
+          healthPoints(health),
+          maxHealthPoints(maxHealth)
     {
     }
+
+    void TakeDamage(int damageAmount);
+    void Die();
+    void Heal(int healAmount);
+
+    bool hasDied = false;
 
     int healthPoints;
     int maxHealthPoints;
 
-    void Update(float deltaTime) override;
+private:
 
+    void Update(float deltaTime) override;
 };

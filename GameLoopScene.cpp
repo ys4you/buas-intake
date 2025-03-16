@@ -3,8 +3,9 @@
 #include "FSMSceneController.h"
 #include "PlayerSoul.h"
 #include "common.h"
+#include "DeathScene.h"
 
-void GameLoopScene::onEnter(FSMSceneController& controller, Surface* screen)
+void GameLoopScene::onEnter(Surface* screen)
 {
 	std::cout << "Entering Game Loop Scene\n";
 
@@ -13,7 +14,9 @@ void GameLoopScene::onEnter(FSMSceneController& controller, Surface* screen)
 		glm::vec2(700, 300),
 		glm::vec2(28, 28),
 		"assets/art/player.png",
-		"Hero");
+		"PlayerSoul",
+		100,
+		100);
 
 	box = new Box(
 		screen,
@@ -24,30 +27,53 @@ void GameLoopScene::onEnter(FSMSceneController& controller, Surface* screen)
 	int centerValue = 200;
 	actionMenu = new ActionMenu(
 		screen,
-		glm::vec2(centerValue, SCRHEIGHT- 200 - 1), // Centered horizontally, positioned 250 from the bottom
+		glm::vec2(centerValue, SCRHEIGHT- 200 - 1),
 		glm::vec2(SCRWIDTH - (centerValue*2), 200-1),
 		"ActionMenu"
 	);
 
-	attack = new DummyAtackOne(screen, 15);
+	cAttack = new CircleAttack(screen, 10, 10, 3);
+	cAttack->FireAttack();
 
-	attack->DoingAttack();
+	//attack = new DummyAttackOne(screen, 20, 10.f);
+	//attack->FireAttack();
 }
 
-void GameLoopScene::onUpdate(FSMSceneController& controller, float deltaTime, Surface* screen)
+void GameLoopScene::onUpdate(float deltaTime, Surface* screen)
 {
 	screen->Clear(0);
 	player->KeepInsideBoundary(box->GetCollider());
 
-	attack->Update(deltaTime);
+	//attack->Update(deltaTime);
+	cAttack->Update(deltaTime);
 }
 
-void GameLoopScene::onExit(FSMSceneController& controller, Surface* screen)
+void GameLoopScene::onExit(Surface* screen)
 {
+	if(isDeleted_)
+		return;
+
 	std::cout << "Exiting Game Loop Scene\n";
+	// Clean up other dynamically allocated resources
+	delete attack;
+	box->MarkForDeletion();
+	actionMenu->MarkForDeletion();
+	player->MarkForDeletion();
+
+	// Set the pointers to nullptr to avoid using them after cleanup
+	attack = nullptr;
+	box = nullptr;
+	actionMenu = nullptr;
+	player = nullptr;
+
+	isDeleted_ = true;
 }
 
-void GameLoopScene::checkSwitchState(FSMSceneController& controller)
+void GameLoopScene::checkSwitchState()
 {
-	
+	if (player->hasDied)
+	{
+		std::unique_ptr<DeathScene> deathScene = std::make_unique<DeathScene>();
+		FSMSceneController::Get()->changeState(std::move(deathScene));
+	}
 }

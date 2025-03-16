@@ -20,4 +20,3 @@ void Box::Render()
         );
     }
 }
-

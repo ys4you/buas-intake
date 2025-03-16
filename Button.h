@@ -22,7 +22,7 @@ public:
             buttonInactive = new Sprite(new Surface(buttonInactivePath.c_str()), 1);
     }
 
-
+    ~Button() override;
     void Update(float deltaTime) override;
 
     void IsActive(bool isActive);

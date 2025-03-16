@@ -7,20 +7,24 @@
 #include "ActionMenu.h"
 
 //attacks
-#include "DummyAtackOne.h"
+#include "CircleAttack.h"
+#include "DummyAttackOne.h"
 
 class GameLoopScene : public SceneBaseState {
 public:
-    void onEnter(FSMSceneController& controller, Surface* screen) override;
+    void onEnter(Surface* screen) override;
 
-    void onUpdate(FSMSceneController& controller, float deltaTime, Surface* screen) override;
+    void onUpdate(float deltaTime, Surface* screen) override;
 
-    void onExit(FSMSceneController& controller, Surface* screen) override;
+    void onExit(Surface* screen) override;
 
-    void checkSwitchState(FSMSceneController& controller) override;
+    void checkSwitchState() override;
 
     PlayerSoul* player = nullptr;
     Box* box = nullptr;
     ActionMenu* actionMenu = nullptr;
-    DummyAtackOne* attack = nullptr;
+    DummyAttackOne* attack = nullptr;
+    CircleAttack* cAttack = nullptr;
+    SphereProjectile* projectile = nullptr;
+    bool isDeleted_ = false;
 };

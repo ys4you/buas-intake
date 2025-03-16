@@ -3,11 +3,15 @@
 
 #include <Windows.h>  // For GetAsyncKeyState
 
+#include "FSMSceneController.h"
+
+#include "DeathScene.h"
+
 void PlayerSoul::Update(float deltaTime)
 {
     GameObject::Update(deltaTime);
 
-    float speed = 20.f * (deltaTime / 1000.f);
+    float speed = 0.3f;
     float moveX = 0.f;
     float moveY = 0.f;
 
@@ -42,5 +46,32 @@ void PlayerSoul::Update(float deltaTime)
     position.y += moveY * speed * deltaTime;
 
 
-    GameObject::SetPosition(position);
+    SetPosition(position);
+    //std::cout << "Player pos: x: " << position.x << " y: " << position.y << std::endl;
+
+}
+
+// Function to handle taking damage
+void PlayerSoul::TakeDamage(int damageAmount) {
+
+    healthPoints -= damageAmount;
+    std::cout << "player took damage heath is now: "  << healthPoints << std::endl;
+    if (healthPoints <= 0) {
+        healthPoints = 0; // Prevent negative health
+        Die(); // Call die function if health is zero or less
+    }
+}
+
+// Function to handle death
+void PlayerSoul::Die() {
+    hasDied = true;
+    std::cout << "player has died!" << std::endl;
+
+}
+
+void PlayerSoul::Heal(int healAmount) {
+    healthPoints += healAmount;
+    if (healthPoints > maxHealthPoints) {
+        healthPoints = maxHealthPoints; // clamp
+    }
 }

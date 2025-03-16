@@ -123,10 +123,15 @@
   <ItemGroup>
     <ClCompile Include="ActionMenu.cpp" />
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="BaseAttack.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Character.cpp" />
-    <ClCompile Include="DummyAtackOne.cpp" />
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="CircleAttack.cpp" />
+    <ClCompile Include="DeathScene.cpp" />
+    <ClCompile Include="DummyAttackOne.cpp" />
+    <ClCompile Include="DummyEnemy.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FSMSceneController.cpp" />
     <ClCompile Include="game.cpp" />
@@ -155,12 +160,17 @@
   <ItemGroup>
     <ClInclude Include="ActionMenu.h" />
     <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="BaseAttack.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="CircleAttack.h" />
     <ClInclude Include="cl\tools.cl" />
     <ClInclude Include="Collider.h" />
-    <ClInclude Include="DummyAtackOne.h" />
+    <ClInclude Include="DeathScene.h" />
+    <ClInclude Include="DummyAttackOne.h" />
+    <ClInclude Include="DummyEnemy.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="FSMSceneController.h" />
     <ClInclude Include="game.h" />
@@ -169,6 +179,7 @@
     <ClInclude Include="GameObjectManager.h" />
     <ClInclude Include="MainMenuScene.h" />
     <ClInclude Include="PlayerSoul.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SceneBaseState.h" />
     <ClInclude Include="SphereProjectile.h" />
     <ClInclude Include="template\bvh.h" />
@@ -185,6 +196,9 @@
     <None Include="cl\kernels.cl" />
     <None Include="README.md" />
     <None Include="template\LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="myGame.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

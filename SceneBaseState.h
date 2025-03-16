@@ -7,8 +7,8 @@ public:
     virtual ~SceneBaseState() = default;
 
     // Methods to be overridden by specific scenes
-    virtual void onEnter(FSMSceneController& controller, Surface* screen) = 0;
-    virtual void onUpdate(FSMSceneController& controller, float deltaTime, Surface* screen) = 0;
-    virtual void onExit(FSMSceneController& controller, Surface* screen) = 0;
-    virtual void checkSwitchState(FSMSceneController& controller) = 0;
+    virtual void onEnter(Surface* screen) = 0;
+    virtual void onUpdate(float deltaTime, Surface* screen) = 0;
+    virtual void onExit(Surface* screen) = 0;
+    virtual void checkSwitchState() = 0;
 };

@@ -1,29 +1,39 @@
 #include "precomp.h"
-
 #include "GameObjectManager.h"
 #include "GameObject.h"
+#include <iostream>
+#include <string>
 
-int GameObjectManager::nextId = 0; // Initialize static nextId
-std::map<int, GameObject*> GameObjectManager::gameObjects; 
-
-GameObjectManager& GameObjectManager::Get() {
+GameObjectManager& GameObjectManager::Get()
+{
     static GameObjectManager instance;
     return instance;
 }
 
-void GameObjectManager::RegisterGameObject(GameObject* newGameObj) {
-    if (!newGameObj) return; // Ensure it's a valid pointer
+GameObjectManager::GameObjectManager() : nextId(0) {}
 
-    int id = nextId++; // Assign a new ID
-    newGameObj->SetId(id); 
+GameObjectManager::~GameObjectManager()
+{
+    for (auto& pair : gameObjects)
+    {
+	    if (!pair.second) //TODO: See doc how to check if pair is not null and not just .second
+        delete pair.second;
+    }
+    gameObjects.clear();
+}
 
-    gameObjects[id] = newGameObj; // Store a raw pointer
+void GameObjectManager::RegisterGameObject(GameObject* newGameObj)
+{
+    if (!newGameObj) return;
 
-    // Log message
+    int id = nextId++;
+    newGameObj->SetId(id);
+
+    gameObjects[id] = newGameObj;
+
     std::string logMessage = "GameObject Created: " + newGameObj->GetName() + " (ID: " + std::to_string(id) + ")\n";
-
 #ifdef _DEBUG
-    OutputDebugStringA(logMessage.c_str()); // Log to the Windows debugger
+    OutputDebugStringA(logMessage.c_str());
 #endif
 }
 
@@ -33,41 +43,61 @@ GameObject* GameObjectManager::GetGameObject(int id)
     return (it != gameObjects.end()) ? it->second : nullptr;
 }
 
+GameObject* GameObjectManager::GetGameObjectByName(const std::string& name)
+{
+    for (auto& pair : gameObjects)
+    {
+        if (pair.second->GetName() == name)
+        {
+            return pair.second;
+        }
+    }
+    return nullptr;
+}
+
 void GameObjectManager::RemoveGameObject(int id)
 {
     auto it = gameObjects.find(id);
-    if (it != gameObjects.end()) {
-        std::cout << "Removing GameObject with ID: " << id << std::endl;
-        gameObjects.erase(it);
-    }
-    else {
-        std::cout << "Can not delete GameObject with ID: " << id << " not found!" << std::endl;
+    if (it != gameObjects.end())
+    {
+        const std::string logMessage = "GameObject Removed: " + it->second->GetName() + " (ID: " + std::to_string(id) + ")\n";
+
+        std::cout << logMessage << std::endl;
+#ifdef _DEBUG
+        OutputDebugStringA(logMessage.c_str());
+#endif
+
+        delete it->second;  // Free memory
+        gameObjects.erase(it);  // Remove from map
     }
 }
+
 
 
 void GameObjectManager::UpdateAllObjects(float deltaTime)
 {
+    if (gameObjects.empty())
+        return;
+
+    std::vector<int> objectsToRemove;
+
     for (auto& [id, gameObj] : gameObjects)
     {
         if (!gameObj)
-        {
-            std::cerr << "Warning: GameObject with ID " << id << " is nullptr!\n";
             continue;
-        }
-        else
+
+        gameObj->Update(deltaTime);
+
+        if (gameObj->ShouldBeRemoved()) 
         {
-            //std::cout << "updating now: " << gameObj->GetName() << "with pointer: " << gameObj << std::endl;
-            gameObj->Update(deltaTime);  // Safe to call Update()
+            objectsToRemove.push_back(id);
         }
+    }
+
+    // Remove all marked objects AFTER iteration
+    for (int id : objectsToRemove)
+    {
+        RemoveGameObject(id);
     }
 }
 
-void GameObjectManager::Deconstruct()
-{
-    for (auto& pair : gameObjects) 
-    {
-        delete pair.second; // Deletes each GameObject
-    }
-    gameObjects.clear(); // Clears the map
-}
