@@ -9,6 +9,13 @@
 #include "DiamondRain.h"
 #include "RandomBlasterSpam.h"
 
+enum class TurnState
+{
+	None,
+	Waiting 
+};
+
+
 class DummyEnemy : public Enemy
 {
 public:
@@ -39,8 +46,11 @@ public:
     }
 
     vector<BaseAttack*> attacks;
+
 protected:
     int amountOfCircles = 3;
     void Update(float deltaTime) override;
+
+    void UseDefinedAttack(BaseAttack* attack);
 };
 

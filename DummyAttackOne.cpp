@@ -31,7 +31,7 @@ void DummyAttackOne::Update(float deltaTime)
     const float deltaTimeInSeconds = deltaTime / 1000.f;
     timer += deltaTimeInSeconds;
 
-    const float interval = attackTime / projectilesAmount;
+    float interval = attackTime / projectilesAmount;
     //float interval = 0.5f; //test
 
     for (int i = 0; i < projectilesAmount; ++i)

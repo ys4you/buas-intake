@@ -7,7 +7,7 @@ void DummyEnemy::Update(float deltaTime)
 
 }
 
-void DummyEnemy::UseRandomAttack(BaseAttack* attack)
+void DummyEnemy::UseDefinedAttack(BaseAttack* attack)
 {
 	attack->FireAttack();
 
@@ -15,4 +15,6 @@ void DummyEnemy::UseRandomAttack(BaseAttack* attack)
 	{
 		
 	}
+
+	attack->ResetAttack();
 }
