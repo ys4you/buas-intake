@@ -12,6 +12,7 @@ public:
         : GameObject(
             screen,
             pos,
+            1,
             objSize,
             "",
             objName) // Calling the base class constructor

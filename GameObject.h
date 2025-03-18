@@ -13,8 +13,8 @@ public:
     virtual ~GameObject() = default;
 
 
-    GameObject(Surface* screen, const glm::vec2& pos = { 0, 0 }, const glm::vec2& objSize = { 1, 1 }, std::string objPath = nullptr, const std::string& objName = "newGameObj", Collider objCollider = Collider())
-        : screen(screen), position(pos), size(objSize), file_(objPath),  name_(objName), collider(objCollider), Id(-1), isDeleted_(false)
+    GameObject(Surface* screen, const glm::vec2& pos = { 0, 0 }, int frames = 1, const glm::vec2& objSize = { 1, 1 }, std::string objPath = nullptr, const std::string& objName = "newGameObj", Collider objCollider = Collider())
+        : screen(screen), position(pos), size(objSize), file_(objPath),  name_(objName), collider(objCollider), Id(-1), isDeleted_(false), frames_(frames)
     {
         Init();
     }
@@ -24,11 +24,12 @@ public:
         GameObjectManager::Get().RegisterGameObject(this);
 
 
+
         if (collider.type == ColliderType::AABB)
             collider.SetAABB(AABB(position, position + size));
 
         if (!file_.empty())
-            sprite_ = new Sprite(new Surface(file_.c_str()), 1);
+            sprite_ = new Sprite(new Surface(file_.c_str()), frames_);
     }
 
     glm::vec2 GetPosition() const { return position; }
@@ -41,9 +42,15 @@ public:
         }
     }
 
+    glm::vec2 GetSize() const { return  size; }
+
     int GetId() const { return Id; }
     void SetId(int newId) { Id = newId; }
-
+    void SetFrameCount(int frameC)
+    {
+	    frameCount_ = frameC;
+        sprite_ = new Sprite(new Surface(file_.c_str()), frameCount_);
+    }
     Collider GetCollider() const { return collider; }
     std::string GetName() const { return name_;  }
 
@@ -78,16 +85,23 @@ public:
 
     virtual void Render()
     {
-        //std::cout << "Rendering Object: " << name_ << " (" << Id << ")." << std::endl;
-
         if (file_.empty())
         {
             std::cout << "ERROR: Object: " << name_ << " (" << Id << ") Does not have a surface that can be rendered." << std::endl;
             return;
         }
 
+        // Correct the frame update
+        if (frames_ > 1)
+        {
+            sprite_->SetFrame(frameCount_); 
+            if (++frameCount_ >= frames_) frameCount_ = 0; 
+            std::cout << "Frame count of " + name_ + ": " << frameCount_ << "\n";
+        }
+
         sprite_->Draw(screen, position.x, position.y);
     }
+
 
     bool CheckCollision(const GameObject& other) const
     {
@@ -152,8 +166,8 @@ public:
 
 
 protected:
-    GameObject(Surface* screen, const glm::vec2& pos, const glm::vec2& objSize, std::string objSurface, const std::string& objName, int objId, Collider objCollider)
-        : screen(screen), position(pos), size(objSize), file_(objSurface), name_(objName), collider(objCollider), Id(objId), isDeleted_(false)
+    GameObject(Surface* screen, const glm::vec2& pos, int frames, const glm::vec2& objSize, std::string objSurface, const std::string& objName, int objId, Collider objCollider)
+        : screen(screen), position(pos), size(objSize), file_(objSurface), name_(objName), collider(objCollider), Id(objId), isDeleted_(false), frames_(frames)
     {
     }
 
@@ -168,4 +182,6 @@ protected:
     std::string file_;
     Sprite* sprite_;
     bool isDeleted_;
+    int frames_;
+    int frameCount_;
 };

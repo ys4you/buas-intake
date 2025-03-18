@@ -25,6 +25,7 @@ public:
 	int2 mousePos;
 private:
 	float gameTime;
+	Sprite* test;
 };
 
 } // namespace Tmpl8

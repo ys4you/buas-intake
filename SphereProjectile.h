@@ -17,6 +17,7 @@ public:
         :  GameObject(
             screen,
             pos,
+            1,
             objSize,
             std::move(filePath),
             objName,
@@ -35,7 +36,7 @@ public:
     GameObject* playerObj = nullptr;
     PlayerSoul* player = nullptr;
 
-    void Test();
+    void CollisionCheck();
     void Update(float deltaTime) override;
 
     void Render() override;

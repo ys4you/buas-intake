@@ -3,7 +3,7 @@
 #include "common.h"
 
 
-void SphereProjectile::Test()
+void SphereProjectile::CollisionCheck()
 {
     if (playerObj == nullptr)
         return;
@@ -65,7 +65,7 @@ void SphereProjectile::Update(float deltaTime)
     else
         Render();
 
-    Test();
+    CollisionCheck();
 }
 
 

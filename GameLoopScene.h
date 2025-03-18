@@ -5,10 +5,8 @@
 #include "PlayerSoul.h"
 #include "Box.h"
 #include "ActionMenu.h"
+#include "DummyEnemy.h"
 
-//attacks
-#include "CircleAttack.h"
-#include "DummyAttackOne.h"
 
 class GameLoopScene : public SceneBaseState {
 public:
@@ -23,8 +21,6 @@ public:
     PlayerSoul* player = nullptr;
     Box* box = nullptr;
     ActionMenu* actionMenu = nullptr;
-    DummyAttackOne* attack = nullptr;
-    CircleAttack* cAttack = nullptr;
-    SphereProjectile* projectile = nullptr;
+    DummyEnemy* dummy = nullptr;
     bool isDeleted_ = false;
 };

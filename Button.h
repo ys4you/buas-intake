@@ -11,7 +11,7 @@ public:
         const std::string& buttonInactivePath = "",
         const std::string& buttonActivePath = "",
         const std::string& objName = "Player")
-        : GameObject(screen, pos, objSize, buttonInactivePath, objName), // Calling base class
+        : GameObject(screen, pos, 1, objSize, buttonInactivePath, objName), // Calling base class
         buttonInactivePath(buttonInactivePath),
         buttonActivePath(buttonActivePath)
     {

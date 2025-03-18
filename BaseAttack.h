@@ -3,12 +3,17 @@ class BaseAttack
 {
 public:
 
-	BaseAttack(Surface* screen, int duration) :
+	BaseAttack(Surface* screen, int duration, float interval) :
 	screen(screen),
-	attackTime(duration)
+	attackTime(duration),
+	interval(interval)
 	{
 	}
-	
+
+	void SetInterval(float newInterval) { interval = newInterval; }
+
+	float GetInterval() { return interval; }
+
 	virtual ~BaseAttack() = default;
 
 	virtual void FireAttack()
@@ -21,6 +26,7 @@ public:
 	{
 		return isAttacking && timer <= 0;
 	}
+
 	virtual void ResetAttack()
 	{
 		isAttacking = false;
@@ -31,7 +37,7 @@ public:
 	Surface* screen;
 protected:
 	float attackTime;
-
+	float interval = 0.f;
 	float timer = 0.f;
 	bool isAttacking = false;
 	bool isDestroying = false;

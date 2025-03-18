@@ -20,6 +20,7 @@ public:
         : GameObject(
             screen,
             pos,
+            1,
             objSize,
             std::move(filePath),
             objName,

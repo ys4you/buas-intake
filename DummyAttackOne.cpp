@@ -2,7 +2,7 @@
 #include "DummyAttackOne.h"
 
 DummyAttackOne::DummyAttackOne(Surface* screen, int amount, int duration) :
-BaseAttack(screen, duration),
+BaseAttack(screen, duration, 0),
 projectilesAmount(amount)
 {
 	projectiles.reserve(projectilesAmount);
@@ -25,6 +25,9 @@ void DummyAttackOne::Update(float deltaTime)
 	if (isDestroying)
         return;
 
+    if(!isAttacking)
+        return;
+
     const float deltaTimeInSeconds = deltaTime / 1000.f;
     timer += deltaTimeInSeconds;
 
@@ -42,7 +45,7 @@ void DummyAttackOne::Update(float deltaTime)
                 continue;
             }
             newPos.x -= projectiles[i]->speed * deltaTimeInSeconds;
-            projectiles[i]->SetPosition(newPos); // Use -> to access members of a pointer
+            projectiles[i]->SetPosition(newPos); 
             //std::cout << "i: " << i << " sphere(" << projectiles[i]->GetId() << ") should be moving to x: " << newPos.x << " y: " << newPos.y << std::endl;
         }
     }
@@ -61,12 +64,12 @@ void DummyAttackOne::ResetAttack()
 
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<int> distrib(SCRHEIGHT / 3 - 125, SCRHEIGHT / 3 + 125 - 32);
+    std::uniform_int_distribution<int> dist(SCRHEIGHT / 3 - 125, SCRHEIGHT / 3 + 125 - 32);
 
 
     for (auto i = 0; i < projectilesAmount; i++)
     {
-        int randomY = distrib(gen);
+        int randomY = dist(gen);
         glm::vec2 currentPos = projectiles[i]->GetPosition();
         projectiles[i]->SetPosition({ SCRWIDTH + 64, randomY });
     }

@@ -14,7 +14,7 @@ public:
     //~CircleAttack() override;
 
     void ResetAttack() override;
-    void Update(float deltaTime);
+    void Update(float deltaTime) override;
     void FireAttack() override;
 
 

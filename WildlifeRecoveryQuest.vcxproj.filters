@@ -62,12 +62,6 @@
     <ClCompile Include="MainMenuScene.cpp">
       <Filter>Code\Scenes\MainMenu</Filter>
     </ClCompile>
-    <ClCompile Include="FSMSceneController.cpp">
-      <Filter>Code\Managers\GameObjectManager</Filter>
-    </ClCompile>
-    <ClCompile Include="BaseAttack.cpp">
-      <Filter>Code\GameObjects\Enemy\BaseAttack</Filter>
-    </ClCompile>
     <ClCompile Include="DummyAttackOne.cpp">
       <Filter>Code\GameObjects\Enemy\Dummy\Attacks\Attack 1</Filter>
     </ClCompile>
@@ -79,6 +73,24 @@
     </ClCompile>
     <ClCompile Include="Circle.cpp">
       <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomBlasterSpam.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy\Attacks\Attack 3</Filter>
+    </ClCompile>
+    <ClCompile Include="Blaster.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\Blaster</Filter>
+    </ClCompile>
+    <ClCompile Include="Blast.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\Blaster\Blast</Filter>
+    </ClCompile>
+    <ClCompile Include="DiamondProjectile.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\DiamondProjectile</Filter>
+    </ClCompile>
+    <ClCompile Include="DiamondRain.cpp">
+      <Filter>Code\GameObjects\Enemy\Dummy\Attacks\Attack 4</Filter>
+    </ClCompile>
+    <ClCompile Include="FSMSceneController.cpp">
+      <Filter>Code\Managers\SceneManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +188,24 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="Circle.h">
       <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\Circle</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomBlasterSpam.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Attacks\Attack 3</Filter>
+    </ClInclude>
+    <ClInclude Include="Blaster.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\Blaster</Filter>
+    </ClInclude>
+    <ClInclude Include="Blast.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\Blaster\Blast</Filter>
+    </ClInclude>
+    <ClInclude Include="DiamondProjectile.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles\DiamondProjectile</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="DiamondRain.h">
+      <Filter>Code\GameObjects\Enemy\Dummy\Attacks\Attack 4</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -276,6 +306,21 @@
     </Filter>
     <Filter Include="Code\GameObjects\Enemy\Dummy\Projectiles\Circle">
       <UniqueIdentifier>{95306841-eed0-4803-b426-29ddbbb8a2e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Attacks\Attack 3">
+      <UniqueIdentifier>{aabf5ae4-a871-4ab0-b5c3-472b9c377fad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Projectiles\Blaster">
+      <UniqueIdentifier>{470bbe01-9361-44be-b66a-0cb3791cb716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Projectiles\Blaster\Blast">
+      <UniqueIdentifier>{1db3c81a-9999-4f72-a0a8-c3db634b56e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Attacks\Attack 4">
+      <UniqueIdentifier>{5a0dcf56-d693-4a1c-8759-e9de90d84b73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\GameObjects\Enemy\Dummy\Projectiles\DiamondProjectile">
+      <UniqueIdentifier>{73632da7-895c-4aa3-a27e-aee34294cd4c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

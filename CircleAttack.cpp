@@ -4,7 +4,7 @@
 #include <random>
 
 CircleAttack::CircleAttack(Surface* screen, int duration, int amountOfProj, int amountOfCircles)
-    : BaseAttack(screen, duration), projectilesAmount(amountOfProj), circleAmount(amountOfCircles), radius(200.f)
+    : BaseAttack(screen, duration, 0), projectilesAmount(amountOfProj), circleAmount(amountOfCircles), radius(200.f)
 {
 	if (circleAmount == 0)
 	{

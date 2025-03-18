@@ -1,5 +1,6 @@
 #include "precomp.h"
 #include "GameLoopScene.h"
+
 #include "FSMSceneController.h"
 #include "PlayerSoul.h"
 #include "common.h"
@@ -9,6 +10,7 @@ void GameLoopScene::onEnter(Surface* screen)
 {
 	std::cout << "Entering Game Loop Scene\n";
 
+#pragma region GameObjects initializing
 	player = new PlayerSoul(
 		screen,
 		glm::vec2(700, 300),
@@ -18,12 +20,15 @@ void GameLoopScene::onEnter(Surface* screen)
 		100,
 		100);
 
+
 	box = new Box(
 		screen,
 		glm::vec2((SCRWIDTH/2)-125, SCRHEIGHT / 3 -125),
 		glm::vec2(250, 250),
 		"Box"
 		);
+
+	dummy = new DummyEnemy(screen, box, { SCRWIDTH / 4 * 3, SCRHEIGHT/ 2} );
 	int centerValue = 200;
 	actionMenu = new ActionMenu(
 		screen,
@@ -31,12 +36,8 @@ void GameLoopScene::onEnter(Surface* screen)
 		glm::vec2(SCRWIDTH - (centerValue*2), 200-1),
 		"ActionMenu"
 	);
+#pragma endregion
 
-	cAttack = new CircleAttack(screen, 10, 10, 3);
-	cAttack->FireAttack();
-
-	//attack = new DummyAttackOne(screen, 20, 10.f);
-	//attack->FireAttack();
 }
 
 void GameLoopScene::onUpdate(float deltaTime, Surface* screen)
@@ -44,24 +45,19 @@ void GameLoopScene::onUpdate(float deltaTime, Surface* screen)
 	screen->Clear(0);
 	player->KeepInsideBoundary(box->GetCollider());
 
-	//attack->Update(deltaTime);
-	cAttack->Update(deltaTime);
 }
 
 void GameLoopScene::onExit(Surface* screen)
 {
+	std::cout << "Exiting Game Loop Scene\n";
+
 	if(isDeleted_)
 		return;
 
-	std::cout << "Exiting Game Loop Scene\n";
-	// Clean up other dynamically allocated resources
-	delete attack;
 	box->MarkForDeletion();
 	actionMenu->MarkForDeletion();
 	player->MarkForDeletion();
 
-	// Set the pointers to nullptr to avoid using them after cleanup
-	attack = nullptr;
 	box = nullptr;
 	actionMenu = nullptr;
 	player = nullptr;
