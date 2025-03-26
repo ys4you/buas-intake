@@ -42,4 +42,6 @@ public:
 private:
 
     void Update(float deltaTime) override;
+
+    glm::vec2 positionOfUI = { 100.f,20.f };
 };

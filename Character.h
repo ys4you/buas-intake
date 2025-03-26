@@ -30,13 +30,5 @@ public:
     void TakeDamage(int amount);
 
     void Die();
-
-    //Buttons
-	void Fight();
-    virtual void PerformUniqueAction();
-    void Item();
-    void Spare();
-    void Defend();
-
-};
+    };
 

@@ -13,7 +13,8 @@ void Button::Update(float deltaTime)
 
 void Button::IsActive(bool isActive)
 {
-    RenderButton(isActive ? buttonActive: buttonInactive);
+	if(shouldRender)
+		RenderButton(isActive ? buttonActive: buttonInactive);
 }
 
 void Button::RenderButton(Sprite* sprite)

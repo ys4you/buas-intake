@@ -11,28 +11,37 @@ CircleAttack::CircleAttack(Surface* screen, int duration, int amountOfProj, int 
         std::cout << "CircleAttack initialized without circleAmount. Plaese give in a valid Amount\n";
         return;
 	}
-    //reserves the right amount 
     circles.reserve(circleAmount);
 	for (int i = 0; i < circleAmount; ++i)
 	{
         circles.push_back(new Circle(screen, projectilesAmount));
-
-        circles[i]->projectiles.reserve(amountOfProj);
-        circles[i]->SpawnCircle();
 	}
 
 }
 
-
+CircleAttack::~CircleAttack()
+{
+	for (auto circle : circles)
+	{
+		if (circle != nullptr)
+		{
+            delete circle;
+		}
+	}
+}
 
 
 void CircleAttack::ResetAttack()
 {
 	BaseAttack::ResetAttack();
     startingIndex = 0;
+    activeCircleIndex = 0;
+    std::vector<Circle*> v;
+    circles = v;
+    circles.reserve(circleAmount);
+    for (int i = 0; i < circleAmount; ++i)
+        circles.push_back(new Circle(screen, projectilesAmount));
 }
-
-
 
 void CircleAttack::Update(float deltaTime)
 {
@@ -42,18 +51,20 @@ void CircleAttack::Update(float deltaTime)
     if (!isAttacking)
         return;
 
-    UpdateCircles(deltaTime);
+    if (timer <= attackTime)
+    {
+        timer += deltaTime / 1000.f;
+		UpdateCircles(deltaTime);
+    }
+    else
+    {
+        ResetAttack();
+    }
 }
 
 void CircleAttack::FireAttack()
 {
 	BaseAttack::FireAttack();
-
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    uniform_int_distribution<> dist(0, projectilesAmount);
-
-    startingIndex = dist(gen);
 }
 
 void CircleAttack::UpdateCircles(float deltaTime)
@@ -65,6 +76,11 @@ void CircleAttack::UpdateCircles(float deltaTime)
     {
         if (i < circles.size() && circles[i])
         {
+
+	        if (circles[i]->projectiles.empty())
+	        {
+                circles[i]->SpawnCircle();
+	        }
             circles[i]->SpiralCircle(deltaTime);
         }
     }
@@ -74,4 +90,3 @@ void CircleAttack::UpdateCircles(float deltaTime)
         activeCircleIndex++;
     }
 }
-

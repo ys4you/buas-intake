@@ -207,6 +207,9 @@
     <ClInclude Include="DiamondRain.h">
       <Filter>Code\GameObjects\Enemy\Dummy\Attacks\Attack 4</Filter>
     </ClInclude>
+    <ClInclude Include="Turn.h">
+      <Filter>Code\Util</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
@@ -286,9 +289,6 @@
     <Filter Include="Code\Scenes\Death">
       <UniqueIdentifier>{1b896030-c2f0-4783-9ef4-3e877cb5765d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Code\Scenes\Game">
-      <UniqueIdentifier>{6eb793fb-3908-41c1-a174-74ec9c189085}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Code\Scenes\MainMenu">
       <UniqueIdentifier>{aa758f62-f90a-4820-961a-67a4305c5782}</UniqueIdentifier>
     </Filter>
@@ -321,6 +321,9 @@
     </Filter>
     <Filter Include="Code\GameObjects\Enemy\Dummy\Projectiles\DiamondProjectile">
       <UniqueIdentifier>{73632da7-895c-4aa3-a27e-aee34294cd4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Scenes\Game">
+      <UniqueIdentifier>{6eb793fb-3908-41c1-a174-74ec9c189085}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

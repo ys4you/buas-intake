@@ -1,6 +1,7 @@
 #include "precomp.h"
 #include "DiamondProjectile.h"
 
+
 void DiamondProjectile::Update(float deltaTime)
 {
 	Projectile::Update(deltaTime);

@@ -41,13 +41,26 @@ void PlayerSoul::Update(float deltaTime)
         moveY /= magnitude;
     }
 
-    // Apply movement
     position.x += moveX * speed * deltaTime;
     position.y += moveY * speed * deltaTime;
 
-
+    int j = 0;
     SetPosition(position);
     //std::cout << "Player pos: x: " << position.x << " y: " << position.y << std::endl;
+    screen->PrintScaled("HP:", positionOfUI.x - 50.f, positionOfUI.y + 10.f, 2, 2, 0xFFFFFF);
+    for (int i = 0; i < maxHealthPoints; ++i)
+    {
+	    if (i <= healthPoints)
+	    {
+			screen->Line(positionOfUI.x + i, positionOfUI.y, positionOfUI.x + i, positionOfUI.y + 25, 0xFF0000);
+	    }
+        else
+        {
+            screen->Line(positionOfUI.x + i, positionOfUI.y, positionOfUI.x + i, positionOfUI.y + 25, 0x222222);
+        }
+    }
+    std::string hpUI = std::to_string(healthPoints) + "/" + std::to_string(maxHealthPoints);
+    screen->PrintScaled(hpUI.c_str(), positionOfUI.x + maxHealthPoints + 10.f, positionOfUI.y + 10.f, 2, 2, 0xFFFFFF);
 
 }
 
@@ -57,12 +70,11 @@ void PlayerSoul::TakeDamage(int damageAmount) {
     healthPoints -= damageAmount;
     std::cout << "player took damage heath is now: "  << healthPoints << std::endl;
     if (healthPoints <= 0) {
-        healthPoints = 0; // Prevent negative health
-        Die(); // Call die function if health is zero or less
+        healthPoints = 0;
+        Die(); 
     }
 }
 
-// Function to handle death
 void PlayerSoul::Die() {
     hasDied = true;
     std::cout << "player has died!" << std::endl;
@@ -72,6 +84,6 @@ void PlayerSoul::Die() {
 void PlayerSoul::Heal(int healAmount) {
     healthPoints += healAmount;
     if (healthPoints > maxHealthPoints) {
-        healthPoints = maxHealthPoints; // clamp
+        healthPoints = maxHealthPoints; 
     }
 }

@@ -94,6 +94,7 @@ void main()
 	AudioManager& audio = AudioManager::Get();
 
 	audio.initialize();
+	audio.playAudio("hit");
 	// open a window
 	if (!glfwInit()) FatalError( "glfwInit failed." );
 	glfwSetErrorCallback( ErrorCallback );

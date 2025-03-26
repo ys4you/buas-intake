@@ -29,7 +29,7 @@ void DummyAttackOne::Update(float deltaTime)
         return;
 
     const float deltaTimeInSeconds = deltaTime / 1000.f;
-    timer += deltaTimeInSeconds;
+
 
     float interval = attackTime / projectilesAmount;
     //float interval = 0.5f; //test
@@ -53,6 +53,10 @@ void DummyAttackOne::Update(float deltaTime)
     if (timer >= attackTime)
     {
         ResetAttack();
+    }
+    else
+    {
+        timer += deltaTimeInSeconds;
     }
 }
 

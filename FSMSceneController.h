@@ -1,40 +1,40 @@
 #include "SceneBaseState.h"
 #include <memory>
 
+/// @brief Manages scene states in a finite state machine (FSM) architecture.
 class FSMSceneController {
 private:
-    // Private constructor to prevent direct instantiation
-    FSMSceneController() : currentState(nullptr), pHealth(100), mainMenuButtonState(1), buttonsDisabled(false) {}
+    /// @brief Private constructor to enforce the singleton pattern.
+    FSMSceneController() : currentState(nullptr) {}
 
-    // Prevent copy construction and copy assignment
+    /// @brief Deleted copy constructor to prevent copying.
     FSMSceneController(const FSMSceneController&) = delete;
+
+    /// @brief Deleted copy assignment operator to prevent copying.
     FSMSceneController& operator=(const FSMSceneController&) = delete;
 
     std::unique_ptr<SceneBaseState> currentState;
     Surface* screen;
 
 public:
-    // Static method to get the single instance of the class
-    static FSMSceneController* Get();
+    /// @brief Retrieves the singleton instance of the FSMSceneController.
+    /// @return Pointer to the FSMSceneController instance.
+	static FSMSceneController* Get();
 
-    // Optionally, you can also add a method to delete the instance, if needed
+    /// @brief Deletes the singleton instance if necessary.
     static void destroyInstance();
 
-    // Initialize with screen
-    void initialize(Surface* screen);
+    /// @brief Initializes the scene controller with a screen surface.
+    /// @param screen The surface used for rendering.
+	void initialize(Surface* screen);
 
-    // Change the current state
-    void changeState(std::unique_ptr<SceneBaseState> newState);
+    /// @brief Changes the current scene state.
+    /// @param newState The new scene state to switch to.
+	void changeState(std::unique_ptr<SceneBaseState> newState);
 
-    // Update the current state
-    void update(float deltaTime);
-
-    // Accessible variables
-    int pHealth;
-
-    // MainMenu
-    int mainMenuButtonState = 1;
-    bool buttonsDisabled = false;
+    /// @brief Updates the current scene state.
+    /// @param deltaTime The time elapsed since the last update.
+	void update(float deltaTime);
 
 private:
     // Static instance pointer (declaration only)

@@ -29,6 +29,7 @@ public:
             std::move(filePath),
             objName), box(box)
     {
+        playerPos = GameObjectManager::Get().GetGameObjectByName("PlayerSoul")->GetPosition();
         std::random_device rd;
         std::mt19937 gen(rd());
         uniform_int_distribution<> dist(0, 3);

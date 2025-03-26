@@ -1,8 +1,20 @@
 ﻿#include "precomp.h"
 #include "Circle.h"
 
+Circle::~Circle()
+{
+	for (const auto projectile : projectiles)
+	{
+		if (projectile != nullptr)
+		{
+            projectile->MarkForDeletion();
+		}
+	}
+}
+
 void Circle::SpawnCircle()
 {
+    std::cout << "spawning circle\n";
     projectiles.reserve(projectilesAmount);
     for (int i = 0; i < projectilesAmount; i++)
     {

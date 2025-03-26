@@ -79,25 +79,26 @@ void GameObjectManager::UpdateAllObjects(float deltaTime)
     if (gameObjects.empty())
         return;
 
-    std::vector<int> objectsToRemove;
+    for (auto it = gameObjects.begin(); it != gameObjects.end(); )
+    {
+        if (!it->second || it->second->ShouldBeRemoved())
+        {
+            it = gameObjects.erase(it); // erase returns the next valid iterator
+        }
+        else
+        {
+            ++it;
+        }
+    }
 
     for (auto& [id, gameObj] : gameObjects)
     {
         if (!gameObj)
             continue;
 
+        //std::cout << "Updating GameObject: " << gameObj->GetName() << std::endl;
         gameObj->Update(deltaTime);
-
-        if (gameObj->ShouldBeRemoved()) 
-        {
-            objectsToRemove.push_back(id);
-        }
-    }
-
-    // Remove all marked objects AFTER iteration
-    for (int id : objectsToRemove)
-    {
-        RemoveGameObject(id);
     }
 }
+
 

@@ -6,6 +6,7 @@
 #include "Box.h"
 #include "ActionMenu.h"
 #include "DummyEnemy.h"
+#include "Turn.h"
 
 
 class GameLoopScene : public SceneBaseState {
@@ -22,5 +23,10 @@ public:
     Box* box = nullptr;
     ActionMenu* actionMenu = nullptr;
     DummyEnemy* dummy = nullptr;
+
+
     bool isDeleted_ = false;
+    Turn turn = Turn::Player;
+private:
+    std::string GetTurnName(Turn turn);
 };

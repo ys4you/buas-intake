@@ -201,6 +201,7 @@
     <ClInclude Include="template\sprite.h" />
     <ClInclude Include="template\surface.h" />
     <ClInclude Include="template\tmpl8math.h" />
+    <ClInclude Include="Turn.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cl\kernels.cl" />

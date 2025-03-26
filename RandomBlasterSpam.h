@@ -18,11 +18,7 @@ public:
 private:
 	vector<Blaster*> blasters;
 	Box* box = nullptr;
-	float interval = 0;
 
 	//timers
 	float SpawnCooldown = 0;
-
-	bool isBlastInitialized = false; 
 };
-

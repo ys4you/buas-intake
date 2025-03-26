@@ -13,6 +13,7 @@ DiamondRain::DiamondRain(Surface* screen, float duration, float interval, float 
 
 DiamondRain::~DiamondRain()
 {
+	isDestroying = true;
 	for (auto diamond : projectiles)
 	{
 		if (diamond != nullptr)
@@ -24,11 +25,11 @@ DiamondRain::~DiamondRain()
 
 void DiamondRain::Update(float deltaTime)
 {
-	//if (isDestroying)
-	//	return;
+	if (isDestroying)
+		return;
 
-	//if (!isAttacking)
-	//	return;
+	if (!isAttacking)
+		return;
 
 	timer += deltaTime / 1000.f;
 
@@ -57,7 +58,7 @@ void DiamondRain::Update(float deltaTime)
 		SpawnCooldown -= deltaTime / 1000.f;
 	}
 
-	if (timer >= 20.f)
+	if (timer >= attackTime)
 	{
 		ResetAttack();
 	}

@@ -11,6 +11,7 @@ RandomBlasterSpam::RandomBlasterSpam(Surface* screen, int duration, float interv
 
 RandomBlasterSpam::~RandomBlasterSpam()
 {
+	isDestroying = true;
 	for (auto blaster : blasters)
 	{
 		if (blaster != nullptr)
@@ -27,37 +28,28 @@ void RandomBlasterSpam::ResetAttack()
 
 void RandomBlasterSpam::Update(float deltaTime)
 {
-	if (!isBlastInitialized)
-	{
-		Blaster* blaster = new Blaster(screen, box);
-		blasters.push_back(blaster);
-		isBlastInitialized = true;
-	}
-
 	if(isDestroying)
 		return;
 
 	if (!isAttacking)
 		return;
 
-
-
 	timer += deltaTime / 1000.f;
 
 	if(SpawnCooldown <= 0)
 	{
-		std::cout << "spawn a new blaster\n";
+		//std::cout << "spawn a new blaster\n";
 		new Blaster(screen, box);
 		SpawnCooldown = interval;
 	}
 	else
 	{
-		std::cout << "SpawnCooldown at: " << SpawnCooldown << std::endl;;
+		//std::cout << "SpawnCooldown at: " << SpawnCooldown << std::endl;;
 
 		SpawnCooldown -= deltaTime / 1000.f;
 	}
 
-	if(timer >= 20.f)
+	if(timer >= attackTime)
 	{
 		ResetAttack();
 	}

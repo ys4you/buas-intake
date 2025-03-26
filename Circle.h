@@ -9,7 +9,7 @@ public:
 	{
 		
 	}
-
+	~Circle();
 	Surface* screen;
 	std::vector<SphereProjectile*> projectiles;
 	glm::vec2 projSize = { 64, 64 };

@@ -60,6 +60,7 @@ public:
 	void InitCharset();
 	void SetChar( int c, const char* c1, const char* c2, const char* c3, const char* c4, const char* c5 );
 	void Print( const char* t, int x1, int y1, uint c );
+	void PrintScaled(const char* a_String, int x1, int y1, int xscale, int yscale, uint color);
 	void Clear( uint c );
 	void Line( float x1, float y1, float x2, float y2, uint c );
 	void Plot( int x, int y, uint c );

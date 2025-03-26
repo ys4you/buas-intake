@@ -3,80 +3,66 @@
 #include <glm/vec2.hpp>
 #include <glm/glm.hpp>
 
+/// @brief Enum representing different types of colliders.
 enum class ColliderType { AABB, Circle, None };
 
+/// @brief Axis-Aligned Bounding Box (AABB) structure.
 struct AABB
 {
+    /// @brief Default constructor initializing an empty AABB.
+    AABB() : min(0.0f), max(0.0f) {}
+
+    /// @brief Constructor initializing an AABB with given min and max points.
+	/// @param min The minimum (bottom-left) point.
+	/// @param max The maximum (top-right) point.
+    AABB(glm::vec2 min, glm::vec2 max) : min(min), max(max) {}
+
     glm::vec2 min;
     glm::vec2 max;
 
-    AABB() : min(0.0f), max(0.0f) {}
-    AABB(glm::vec2 min, glm::vec2 max) : min(min), max(max) {}
 };
 
-struct CircleCollider
-{
-    glm::vec2 center;
-    float radius;
-
-    CircleCollider() : center(0.0f), radius(0.0f) {}
-    CircleCollider(glm::vec2 center, float radius) : center(center), radius(radius) {}
-};
-
+/// @brief Collider component for collision detection.
 struct Collider
 {
     ColliderType type;
     AABB aabb;
-    CircleCollider circle;
 
-    Collider() : type(ColliderType::None), aabb(), circle() {}
+    /// @brief Default constructor initializing a collider with no type.
+    Collider() : type(ColliderType::None), aabb(){}
 
-	explicit Collider(ColliderType type) : type(type), aabb(), circle() {}
+    /// @brief Constructor initializing a collider with a specific type.
+	/// @param type The type of collider.
+	explicit Collider(ColliderType type) : type(type), aabb() {}
 
+    /// @brief Sets the AABB values if the collider type is AABB.
+	/// @param newAABB The new AABB values to be set.
     void SetAABB(const AABB& newAABB)
     {
         if (type == ColliderType::AABB)
             aabb = newAABB;
     }
 
-    void SetCircle(const CircleCollider& newCircle)
-    {
-        if (type == ColliderType::Circle)
-            circle = newCircle;
-        else
-            std::cout << "Error Colliders: Cannot Set Circle Collider if the type does not match\n";
-    }
-
+    /// @brief Checks collision between this collider and another.
+	/// @param other The other collider to check collision against.
+	/// @return Returns true if there is a collision; otherwise, false.
     bool CheckCollision(const Collider& other) const
     {
-        if (this->type == other.type)
-        {
+
             if (this->type == ColliderType::AABB)
             {
                 return CheckAABBCollision(this->aabb, other.aabb);
             }
-            else if (this->type == ColliderType::Circle)
-            {
-                return CheckCircleCollision(this->circle, other.circle);
-            }
-        }
-        if ((this->type == ColliderType::AABB && other.type == ColliderType::Circle) ||
-            (this->type == ColliderType::Circle && other.type == ColliderType::AABB))
-        {
-            if (this->type == ColliderType::AABB)
-            {
-                return CheckAABBCollisionWithCircle(this->aabb, other.circle);
-            }
-            else
-            {
-                return CheckAABBCollisionWithCircle(other.aabb, this->circle);
-            }
-        }
+
         return false;
     }
 
 
 private:
+    /// @brief Checks if two AABBs are colliding.
+	/// @param a First AABB.
+	/// @param b Second AABB.
+	/// @return Returns true if the two AABBs overlap.
     static bool CheckAABBCollision(const AABB& a, const AABB& b)
     {
         return (a.min.x < b.max.x &&
@@ -85,19 +71,4 @@ private:
             a.max.y > b.min.y);
     }
 
-    static bool CheckCircleCollision(const CircleCollider& a, const CircleCollider& b)
-    {
-        float distance = glm::distance(a.center, b.center);
-        float radiiSum = a.radius + b.radius;
-        return distance <= radiiSum;
-    }
-
-    static bool CheckAABBCollisionWithCircle(const AABB& aabb, const CircleCollider& circle)
-    {
-        float closestX = glm::clamp(circle.center.x, aabb.min.x, aabb.max.x);
-        float closestY = glm::clamp(circle.center.y, aabb.min.y, aabb.max.y);
-        glm::vec2 closestPoint(closestX, closestY);
-        float distance = glm::distance(circle.center, closestPoint);
-        return distance <= circle.radius;
-    }
 };

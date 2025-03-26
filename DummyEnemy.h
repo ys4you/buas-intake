@@ -34,8 +34,12 @@ public:
             std::move(filePath),
             objName) // Calling the base class constructor
     {
-        //register Attacks
-        attacks.push_back(new DummyAttackOne(screen, 2.f, 10.f));
+        glm::vec2 p = box->GetPosition();
+        glm::vec2 s = box->GetSize();
+
+        std::cout << "Box Position: (" << p.x << ", " << p.y << ")\n";
+        std::cout << "Box Size: (" << s.x << ", " << s.y << ")\n";
+        attacks.push_back(new DummyAttackOne(screen, 15, 10.f));
 
         attacks.push_back(new CircleAttack(screen, 10.f, 10, amountOfCircles));
 
@@ -44,13 +48,22 @@ public:
         if (box != nullptr)
 			attacks.push_back(new DiamondRain(screen, 10.f, 0.2f, 0.5f, box));
     }
+    ~DummyEnemy();
 
     vector<BaseAttack*> attacks;
 
-protected:
-    int amountOfCircles = 3;
     void Update(float deltaTime) override;
+    void Attack();
 
+    bool IsDone() { return isDone; }
+    void SetDone(bool newState);
+    
+protected:
+    bool isAttacking = false;
+    bool isDone = false;
+    int attackIteration = 0; 
+    int amountOfCircles = 3;
+    void UseSequenceAttack();
     void UseDefinedAttack(BaseAttack* attack);
 };
 

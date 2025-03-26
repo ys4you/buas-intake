@@ -11,7 +11,7 @@ class CircleAttack : public BaseAttack
 {
 public:
     CircleAttack(Surface* screen, int duration, int amountOfProj,  int amountOfCircles = 1);
-    //~CircleAttack() override;
+    ~CircleAttack();
 
     void ResetAttack() override;
     void Update(float deltaTime) override;
@@ -19,8 +19,6 @@ public:
 
 
 private:
-
-
     //spawning naccesaries
     std::vector<Circle*> circles;
 
@@ -29,17 +27,14 @@ private:
     int projectilesAmount = 0;
     int circleAmount = 0;
     float radius = 0;
-
-    //timers
-    float circleTimer = 0;
-    //attack vars
+	//attack vars
     int startingIndex = 0;
 
     int activeCircleIndex = 0;
 
-    void UpdateCircles(float deltaTime);
-
 
     //functions
+    void UpdateCircles(float deltaTime);
+
     void SpawnCircle(Circle circle);
 };
