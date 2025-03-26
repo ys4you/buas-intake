@@ -73,10 +73,15 @@ void Surface::Plot( int x, int y, uint c )
 
 void Surface::Box( int x1, int y1, int x2, int y2, uint c )
 {
-	Line( (float)x1, (float)y1, (float)x2, (float)y1, c );
-	Line( (float)x2, (float)y1, (float)x2, (float)y2, c );
-	Line( (float)x1, (float)y2, (float)x2, (float)y2, c );
-	Line( (float)x1, (float)y1, (float)x1, (float)y2, c );
+	Box((float)x1, (float)y1, (float)x2, (float)y2, c);
+}
+
+void Surface::Box(float x1, float y1, float x2, float y2, uint c)
+{
+	Line(x1, y1, x2, y1, c);
+	Line(x2, y1, x2, y2, c);
+	Line(x1, y2, x2, y2, c);
+	Line(x1, y1, x1, y2, c);
 }
 
 void Surface::Bar( int x1, int y1, int x2, int y2, uint c )

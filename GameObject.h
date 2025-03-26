@@ -98,7 +98,7 @@ public:
 
     /// @brief Updates the GameObject's state.
     /// @param deltaTime The time elapsed since the last update.
-    virtual void Update(float deltaTime)
+    virtual void Update(float /*deltaTime*/)
     {
         // Default behavior, override in derived classes if needed
 
