@@ -47,14 +47,14 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>template;.;lib\glad;lib\glfw\include;lib\OpenCL\inc;lib\zlib;lib;lib\Audio\;lib\libsndfile-1.2.2-win64\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>template;.;lib\glad;lib\glfw\include;lib\OpenCL\inc;lib\zlib;lib;lib\Audio\;lib\libsndfile-1.2.2-win64\include;lib\glm</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
       <ExceptionHandling>Sync</ExceptionHandling>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;advapi32.lib;user32.lib;glfw3.lib;gdi32.lib;shell32.lib;OpenCL.lib;OpenGL32.lib;libz-static.lib;OpenAL32.lib;sndfile.lib</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;advapi32.lib;user32.lib;glfw3.lib;gdi32.lib;shell32.lib;OpenCL.lib;OpenGL32.lib;libz-static.lib</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <OutputFile>$(TargetPath)</OutputFile>
