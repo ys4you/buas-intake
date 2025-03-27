@@ -12,8 +12,11 @@ private:
     bool leftPressed = false;
     bool rightPressed = false;
     bool enterPressed = false;
+    bool isControlsActive = false;
 
     std::vector<Button*> buttons;
+
+    Sprite* controls = nullptr;
 
 public:
     /// @brief Called when this scene is entered.

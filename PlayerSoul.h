@@ -5,7 +5,7 @@
 
 /// @brief A class representing the player's soul or character in the game.
 /// This class extends GameObject and adds health management features like taking damage, dying, and healing.
-/// It is responsible for tracking the player's health and rendering the player's soul UI.
+/// It is responsible for tracking the player's health and rendering the player's soul.
 class PlayerSoul : public GameObject
 {
 public:

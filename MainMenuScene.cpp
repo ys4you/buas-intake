@@ -44,12 +44,27 @@ void MainMenuScene::onEnter(Surface* screen)
         "quitButton"
     ));
 
+    controls = new Sprite(new Surface("assets/art/controls.png"), 1);
+
 }
 
 
 void MainMenuScene::onUpdate(float deltaTime, Surface* screen)
 {
     screen->Clear(0);
+
+    if (isControlsActive)
+    {
+	    if (controls)
+			controls->Draw(screen,0, 0);
+
+        if (GetAsyncKeyState(VK_BACK) & 0x8000)
+            isControlsActive = false;
+	    return;
+    }
+
+
+
 
     if (GetAsyncKeyState(VK_RETURN) & 0x8000)
     {
@@ -100,6 +115,8 @@ void MainMenuScene::onUpdate(float deltaTime, Surface* screen)
         buttons[0]->IsActive(true);
         buttons[1]->IsActive(false);
         buttons[2]->IsActive(false);
+        if (enterPressed)
+            isControlsActive = true;
         break;
 
     case 2:
