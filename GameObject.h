@@ -9,6 +9,8 @@
 
 //TODO: Make logic to cpp source file
 
+/// @brief Represents a general object in the game world. 
+/// Contains properties like position, size, collider, and sprite, and provides methods for updating, rendering, and checking collisions.
 class GameObject
 {
 public:

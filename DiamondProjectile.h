@@ -2,9 +2,18 @@
 #include "GameObject.h"
 #include "Projectile.h"
 
-class DiamondProjectile : public Projectile
-{
+/// @brief Represents a diamond-shaped projectile fired in the game.
+class DiamondProjectile : public Projectile {
 public:
+    /// @brief Constructor to initialize the DiamondProjectile object.
+    /// @param screen A pointer to the Surface object for rendering.
+    /// @param speed The speed of the projectile (default is 0).
+    /// @param pos The position of the projectile (default is {0, 0}).
+    /// @param goingUp A flag indicating whether the projectile is moving upwards (default is true).
+    /// @param objSize The size of the projectile (default is {32, 64}).
+    /// @param filePath The file path for the texture (default is "assets/art/enemy/dummy/sharpDiamond.png").
+    /// @param objName The name of the object (default is "DiamondProjectile").
+    /// @param collider The collider type for the object (default is AABB).
     DiamondProjectile(
         Surface* screen,
         float speed = 0.f,
@@ -27,7 +36,9 @@ public:
     }
 
 private:
-    void Update(float deltaTime) override;
-	bool goingUp = true;
-};
+    bool goingUp = true;
 
+    /// @brief Updates the projectile's position and behavior.
+    /// @param deltaTime The time elapsed since the last frame update.
+    void Update(float deltaTime) override;
+};

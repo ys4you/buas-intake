@@ -2,9 +2,17 @@
 #include "GameObject.h"
 #include "PlayerSoul.h"
 
-class Projectile : public GameObject
-{
+/// @brief Represents a basic projectile fired in the game.
+class Projectile : public GameObject {
 public:
+    /// @brief Constructor to initialize the Projectile object.
+    /// @param screen A pointer to the Surface object for rendering.
+    /// @param pos The position of the projectile (default is {0, 0}).
+    /// @param objSize The size of the projectile (default is {32, 32}).
+    /// @param speed The speed of the projectile (default is 0).
+    /// @param filePath The file path for the texture (default is an empty string).
+    /// @param objName The name of the object (default is "Projectile").
+    /// @param collider The collider type for the object (default is AABB).
     Projectile(
         Surface* screen,
         const glm::vec2& pos = { 0,0 },
@@ -25,14 +33,13 @@ public:
         playerObj = GameObjectManager::Get().GetGameObjectByName("PlayerSoul");
     }
 
-
 protected:
     float speed = 0;
-
     GameObject* playerObj = nullptr;
     PlayerSoul* player = nullptr;
     bool shouldRender = true;
 
+    /// @brief Checks for collisions of the projectile with the player.
     void CollisionCheck()
     {
         if (playerObj == nullptr)
@@ -55,6 +62,8 @@ protected:
         }
     }
 
+    /// @brief Updates the projectile's position, checks boundaries, and handles collisions.
+    /// @param deltaTime The time elapsed since the last frame update.
     void Update(float /*deltaTime */) override
     {
         if (collider.type == ColliderType::AABB)
@@ -78,21 +87,19 @@ protected:
         CollisionCheck();
     }
 
+    /// @brief Renders the projectile on the screen.
     void Render() override
     {
         if (position.x - size.x <= SCRWIDTH && position.x + size.x >= 0 &&
             position.y + size.y <= SCRHEIGHT && position.y >= 0 - size.y)
         {
-            //std::cout << "Rendering Object: " << name_ << " (" << Id << ")." << std::endl;
-
             if (file_.empty())
             {
                 std::cout << "ERROR: Object: " << name_ << " (" << Id << ") Does not have a surface that can be rendered." << std::endl;
                 return;
             }
 
-            sprite_->Draw(screen, position.x, position.y );
+            sprite_->Draw(screen, position.x, position.y);
         }
     }
 };
-

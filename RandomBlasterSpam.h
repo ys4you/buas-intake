@@ -4,21 +4,36 @@
 #include "Blaster.h"
 #include "Box.h"
 
-class RandomBlasterSpam : public BaseAttack
-{
+/// @brief A random blaster spam attack, spawning projectiles at random intervals.
+class RandomBlasterSpam : public BaseAttack {
 public:
-	RandomBlasterSpam(Surface* screen, float duration, float interval, Box* box);
-	~RandomBlasterSpam();
+    /// @brief Constructor to initialize the attack.
+    /// @param screen A pointer to the Surface object for rendering.
+    /// @param duration The duration of the attack.
+    /// @param interval The time interval between each blaster spawn.
+    /// @param box A pointer to the Box object, which may affect attack behavior.
+    RandomBlasterSpam(Surface* screen, float duration, float interval, Box* box);
 
-	void ResetAttack() override;
-	void Update(float deltaTime) override;
-	void FireAttack() override;
+    /// @brief Destructor for RandomBlasterSpam.
+    ~RandomBlasterSpam();
 
+    /// @brief Resets the attack state.
+    void ResetAttack() override;
+
+    /// @brief Updates the attack logic.
+    /// @param deltaTime The time elapsed since the last frame update.
+    void Update(float deltaTime) override;
+
+    /// @brief Fires the attack, spawning random blasters at intervals.
+    void FireAttack() override;
 
 private:
-	vector<Blaster*> blasters;
-	Box* box = nullptr;
+    // List of blasters spawned during the attack.
+    vector<Blaster*> blasters;
 
-	//timers
-	float SpawnCooldown = 0;
+    // A pointer to the Box object, which may affect the blaster spawn behavior.
+    Box* box = nullptr;
+
+    // Timer variables for controlling spawn intervals.
+    float SpawnCooldown = 0;
 };
