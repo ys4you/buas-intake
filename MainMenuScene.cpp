@@ -6,41 +6,45 @@
 #include "FSMSceneController.h"
 #include "GameLoopScene.h"
 
-extern std::unique_ptr<SceneBaseState> gameLoopScene = std::make_unique<GameLoopScene>();
 
 void MainMenuScene::onEnter(Surface* screen)
 {
     std::cout << "Entering Main Menu Scene\n";
 
-    controlsButton = new Button(
+    int y = SCRHEIGHT / 3 * 2;
+    int padding = 200;
+    int x1 = 0 + padding;
+    int x2 = SCRWIDTH - 128 - padding; 
+
+    int spacing = (x2 - x1) / (3 - 1); // Calculate even spacing
+    buttons.push_back(new Button(
         screen,
-        glm::vec2(50, 50),
-        glm::vec2(0, 0),
+        glm::vec2(x1, y),
+        glm::vec2(128, 64),
         "assets/art/mainmenu/controls_inactive.png",
-        "assets/art/mainmenu/controls_active.png",  
+        "assets/art/mainmenu/controls_active.png",
         "controlsButton"
-    );
+    ));
 
-    playButton = new Button(
+    buttons.push_back(new Button(
         screen,
-        glm::vec2(50, 150),
-        glm::vec2(0, 0),
+        glm::vec2(x1 + spacing, y),
+        glm::vec2(128, 64),
         "assets/art/mainmenu/play_inactive.png",
-        "assets/art/mainmenu/play_active.png",  
+        "assets/art/mainmenu/play_active.png",
         "playButton"
-    );
+    ));
 
-    quitButton = new Button(
+    buttons.push_back(new Button(
         screen,
-        glm::vec2(50, 250),
-        glm::vec2(0, 0),
+        glm::vec2(x2, y),
+        glm::vec2(128, 64),
         "assets/art/mainmenu/quit_inactive.png",
-        "assets/art/mainmenu/quit_active.png",  
+        "assets/art/mainmenu/quit_active.png",
         "quitButton"
-    );
+    ));
 
 }
-
 
 
 void MainMenuScene::onUpdate(float deltaTime, Surface* screen)
@@ -83,31 +87,31 @@ void MainMenuScene::onUpdate(float deltaTime, Surface* screen)
 
     if (mainMenuButtonState <= 0)
     {
-        mainMenuButtonState = 3;
+        mainMenuButtonState = 1;
     }
     else if (mainMenuButtonState >= 4)
     {
-        mainMenuButtonState = 1;
+        mainMenuButtonState = 3;
     }
 
     switch (mainMenuButtonState)
     {
     case 1: // start at 1
-        controlsButton->IsActive(true);
-        playButton->IsActive(false);
-        quitButton->IsActive(false);
+        buttons[0]->IsActive(true);
+        buttons[1]->IsActive(false);
+        buttons[2]->IsActive(false);
         break;
 
     case 2:
-        controlsButton->IsActive(false);
-        playButton->IsActive(true);
-        quitButton->IsActive(false);
+        buttons[0]->IsActive(false);
+        buttons[1]->IsActive(true);
+        buttons[2]->IsActive(false);
         break;
 
     case 3:
-        controlsButton->IsActive(false);
-        playButton->IsActive(false);
-        quitButton->IsActive(true);
+        buttons[0]->IsActive(false);
+        buttons[1]->IsActive(false);
+        buttons[2]->IsActive(true);
         if (leftPressed)
             exit(0);
         break;
@@ -116,21 +120,19 @@ void MainMenuScene::onUpdate(float deltaTime, Surface* screen)
         break;
     }
 
+    screen->PrintScaled("Enter is confirming/pressing the button and backspace is going 1 step back into a menu", 96, SCRHEIGHT - 32, 2, 2, 0xffffff);
+    screen->PrintScaled("Menu's are moved with the arrow keys", SCRWIDTH / 3, SCRHEIGHT - 32 * 2, 2, 2, 0xffffff);
 }
 
 void MainMenuScene::onExit(Surface* screen)
 {
     std::cout << "Exiting Main Menu Scene\n";
 
-    // Delete the dynamically allocated Button objects
-    controlsButton->MarkForDeletion();
-    playButton->MarkForDeletion();
-    quitButton->MarkForDeletion();
-
-    // Set the pointers to nullptr to avoid dangling references
-    controlsButton = nullptr;
-    playButton = nullptr;
-    quitButton = nullptr;
+    for (auto button : buttons)
+    {
+        button->MarkForDeletion();
+        button = nullptr;
+    }
 }
 
 
@@ -138,8 +140,6 @@ void MainMenuScene::checkSwitchState()
 {
     if (mainMenuButtonState == 2 && enterPressed)
     {
-        FSMSceneController::Get()->changeState(std::move(gameLoopScene));
-        gameLoopScene = std::make_unique<GameLoopScene>(); // Reset de variabele na switch
+        FSMSceneController::Get()->changeState(std::move(std::make_unique<GameLoopScene>()));
     }
-
 }

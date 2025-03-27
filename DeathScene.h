@@ -5,6 +5,8 @@
 class DeathScene : public SceneBaseState {
 
 public:
+    bool enterPressed;
+
     void onEnter(Surface* screen) override;
 
     void onUpdate(float deltaTime, Surface* screen) override;

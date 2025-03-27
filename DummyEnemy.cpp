@@ -32,8 +32,8 @@ void DummyEnemy::Attack()
 	{
 		std::random_device rd;
 		std::mt19937 gen(rd());
-		std::uniform_int_distribution<int> distrib(0, attacks.size() - 1);
-		UseDefinedAttack(attacks[distrib(gen)]);
+		std::uniform_int_distribution<int> distribute(0, attacks.size() - 1);
+		UseDefinedAttack(attacks[distribute(gen)]);
 	}
 
 	//UseDefinedAttack(attacks[1]);

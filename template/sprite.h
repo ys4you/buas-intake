@@ -15,6 +15,7 @@ public:
 	Sprite( Surface* surface, unsigned int frameCount );
 	~Sprite();
 	// methods
+	void Draw(Surface* target, float x, float y);
 	void Draw( Surface* target, int x, int y );
 	void DrawScaled( int x, int y, int width, int height, Surface* target );
 	void SetFlags( unsigned int f ) { flags = f; }

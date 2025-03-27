@@ -10,7 +10,7 @@
 class CircleAttack : public BaseAttack
 {
 public:
-    CircleAttack(Surface* screen, int duration, int amountOfProj,  int amountOfCircles = 1);
+    CircleAttack(Surface* screen, float duration, int amountOfProj,  int amountOfCircles = 1);
     ~CircleAttack();
 
     void ResetAttack() override;

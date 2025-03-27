@@ -28,5 +28,5 @@ public:
     bool isDeleted_ = false;
     Turn turn = Turn::Player;
 private:
-    std::string GetTurnName(Turn turn);
+    std::string GetTurnName(Turn currentTurn);
 };

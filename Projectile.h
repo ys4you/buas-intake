@@ -55,7 +55,7 @@ protected:
         }
     }
 
-    void Update(float deltaTime) override
+    void Update(float /*deltaTime */) override
     {
         if (collider.type == ColliderType::AABB)
         {

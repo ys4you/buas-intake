@@ -18,7 +18,7 @@ void GameLoopScene::onEnter(Surface* screen)
 		"assets/art/player.png",
 		"PlayerSoul",
 		100,
-		100);
+		1);
 
 
 	box = new Box(
@@ -43,7 +43,7 @@ void GameLoopScene::onEnter(Surface* screen)
 
 }
 
-void GameLoopScene::onUpdate(float deltaTime, Surface* screen)
+void GameLoopScene::onUpdate(float /* deltaTime */, Surface* screen)
 {
 	screen->Clear(0);
 	player->KeepInsideBoundary(box->GetCollider());
@@ -93,7 +93,7 @@ void GameLoopScene::onUpdate(float deltaTime, Surface* screen)
 
 }
 
-void GameLoopScene::onExit(Surface* screen)
+void GameLoopScene::onExit(Surface* /*screen */)
 {
 	std::cout << "Exiting Game Loop Scene\n";
 
@@ -122,9 +122,9 @@ void GameLoopScene::checkSwitchState()
 	}
 }
 
-std::string GameLoopScene::GetTurnName(Turn turn)
+std::string GameLoopScene::GetTurnName(Turn currentTurn)
 {
-	switch (turn)
+	switch (currentTurn)
 	{
 		case Turn::None: return "None";
 		case Turn::Player: return "Player";

@@ -132,7 +132,7 @@ public:
             //std::cout << "Frame count of " + name_ + ": " << frameCount_ << "\n";
         }
 
-        sprite_->Draw(screen, position.x, position.y);
+        sprite_->Draw(screen, static_cast<int>(position.x), static_cast<int>(position.y));
     }
 
 
@@ -213,8 +213,9 @@ protected:
     /// @param objName The name of the object.
     /// @param objId The unique ID of the object.
     /// @param objCollider The collider associated with the object.
+    // ReSharper disable once CppPossiblyUninitializedMember
     GameObject(Surface* screen, const glm::vec2& pos, int frames, const glm::vec2& objSize, std::string objSurface, const std::string& objName, int objId, Collider objCollider)
-        : screen(screen), position(pos), size(objSize), file_(objSurface), name_(objName), collider(objCollider), Id(objId), isDeleted_(false), frames_(frames)
+        : screen(screen), position(pos), size(objSize), file_(objSurface), name_(objName), collider(objCollider), Id(objId), isDeleted_(false), frames_(frames), sprite_(nullptr)
     {
     }
 

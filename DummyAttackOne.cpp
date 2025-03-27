@@ -1,7 +1,7 @@
 #include "precomp.h"
 #include "DummyAttackOne.h"
 
-DummyAttackOne::DummyAttackOne(Surface* screen, int amount, int duration) :
+DummyAttackOne::DummyAttackOne(Surface* screen, int amount, float duration) :
 BaseAttack(screen, duration, 0),
 projectilesAmount(amount)
 {
@@ -31,12 +31,12 @@ void DummyAttackOne::Update(float deltaTime)
     const float deltaTimeInSeconds = deltaTime / 1000.f;
 
 
-    float interval = attackTime / projectilesAmount;
+	const float intrVal = attackTime / projectilesAmount;
     //float interval = 0.5f; //test
 
     for (int i = 0; i < projectilesAmount; ++i)
     {
-        if (timer >= i * interval) 
+        if (timer >= i * intrVal) 
         {
             glm::vec2 newPos = projectiles[i]->GetPosition();
 

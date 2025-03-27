@@ -13,9 +13,8 @@ private:
     bool rightPressed = false;
     bool enterPressed = false;
 
-    Button* controlsButton = nullptr;
-    Button* playButton = nullptr;
-    Button* quitButton = nullptr;
+    std::vector<Button*> buttons = {
+    };
 
 
 public:

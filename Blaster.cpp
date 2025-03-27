@@ -62,7 +62,7 @@ void Blaster::Update(float deltaTime)
 
     if(blastCooldown >= 0)
     {
-		FireBlast(deltaTime);
+		FireBlast();
         blastCooldown -= deltaTime / 1000.f;
         return;
     }
@@ -77,7 +77,7 @@ void Blaster::Update(float deltaTime)
 
 }
 
-void Blaster::FireBlast(float deltaTime)
+void Blaster::FireBlast()
 {
 	if (blast == nullptr)
 	{

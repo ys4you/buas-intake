@@ -28,8 +28,10 @@ public:
         const std::string& objName = "Dummy")
         : Enemy(
             screen,
-            pos,
+            5,
+            5,
             8,
+            pos,
             objSize,
             std::move(filePath),
             objName) // Calling the base class constructor

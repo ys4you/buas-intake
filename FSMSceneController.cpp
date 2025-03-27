@@ -20,26 +20,26 @@ void FSMSceneController::destroyInstance()
 
 void FSMSceneController::initialize(Surface* screen)
 {
-    this->screen = screen;
+    this->screen_ = screen;
 }
 
 void FSMSceneController::changeState(std::unique_ptr<SceneBaseState> newState)
 {
     if (currentState)
     {
-        currentState->onExit(screen);
+        currentState->onExit(screen_);
     }
     currentState = std::move(newState);
     if (currentState)
     {
-        currentState->onEnter(screen);
+        currentState->onEnter(screen_);
     }
 }
 
 void FSMSceneController::update(float deltaTime)
 {
     if (currentState) {
-        currentState->onUpdate(deltaTime, screen);
+        currentState->onUpdate(deltaTime, screen_);
         currentState->checkSwitchState();
     }
 }

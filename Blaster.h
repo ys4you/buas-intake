@@ -60,5 +60,5 @@ private:
     glm::vec2 blastSize = { 0,0 };
 
     void SpawnBlasterAtPlayer();
-    void FireBlast(float deltaTime);
+    void FireBlast();
 };

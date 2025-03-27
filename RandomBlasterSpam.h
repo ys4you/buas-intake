@@ -7,7 +7,7 @@
 class RandomBlasterSpam : public BaseAttack
 {
 public:
-	RandomBlasterSpam(Surface* screen, int duration, float interval, Box* box);
+	RandomBlasterSpam(Surface* screen, float duration, float interval, Box* box);
 	~RandomBlasterSpam();
 
 	void ResetAttack() override;

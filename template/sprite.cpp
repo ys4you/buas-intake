@@ -27,6 +27,8 @@ Sprite::~Sprite()
 	delete start;
 }
 
+void Sprite::Draw(Surface* target, float x, float y){ Draw(target, static_cast<int>(x), static_cast<int>(y)); }
+
 // draw sprite to target surface
 void Sprite::Draw( Surface* target, int x, int y )
 {

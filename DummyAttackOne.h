@@ -9,10 +9,10 @@
 class DummyAttackOne : public BaseAttack
 {
 public:
-    DummyAttackOne(Surface* screen, int amount, int duration);
     ~DummyAttackOne() override;
 
 	void ResetAttack() override;
+    DummyAttackOne(Surface* screen, int amount, float duration);
     void Update(float deltaTime);
 
 private:

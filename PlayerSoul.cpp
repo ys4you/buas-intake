@@ -44,7 +44,6 @@ void PlayerSoul::Update(float deltaTime)
     position.x += moveX * speed * deltaTime;
     position.y += moveY * speed * deltaTime;
 
-    int j = 0;
     SetPosition(position);
     //std::cout << "Player pos: x: " << position.x << " y: " << position.y << std::endl;
     screen->PrintScaled("HP:", positionOfUI.x - 50.f, positionOfUI.y + 10.f, 2, 2, 0xFFFFFF);

@@ -3,9 +3,8 @@
 
 
 
-RandomBlasterSpam::RandomBlasterSpam(Surface* screen, int duration, float interval,  Box* box)
+RandomBlasterSpam::RandomBlasterSpam(Surface* screen, float duration, float interval,  Box* box)
 	: BaseAttack(screen, duration, interval), box(box)
-
 {
 }
 

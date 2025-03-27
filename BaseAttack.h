@@ -14,7 +14,7 @@ public:
     /// @param screen Pointer to the screen where the attack is displayed.
     /// @param duration Duration of the attack in seconds.
     /// @param interval Time between attack activations in seconds.
-    BaseAttack(Surface* screen, int duration, float interval) :
+    BaseAttack(Surface* screen, float duration, float interval) :
         screen(screen),
         attackTime(duration),
         interval(interval)

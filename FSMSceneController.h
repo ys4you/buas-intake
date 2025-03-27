@@ -5,7 +5,7 @@
 class FSMSceneController {
 private:
     /// @brief Private constructor to enforce the singleton pattern.
-    FSMSceneController() : currentState(nullptr) {}
+    FSMSceneController() : currentState(nullptr), screen_(nullptr) {}
 
     /// @brief Deleted copy constructor to prevent copying.
     FSMSceneController(const FSMSceneController&) = delete;
@@ -14,7 +14,7 @@ private:
     FSMSceneController& operator=(const FSMSceneController&) = delete;
 
     std::unique_ptr<SceneBaseState> currentState;
-    Surface* screen;
+    Surface* screen_ = nullptr;
 
 public:
     /// @brief Retrieves the singleton instance of the FSMSceneController.

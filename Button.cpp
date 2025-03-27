@@ -6,7 +6,7 @@ Button::~Button()
 	GameObject::~GameObject();
 }
 
-void Button::Update(float deltaTime)
+void Button::Update(float /*deltaTime */)
 {
 	//GameObject::Update(deltaTime); // calls the base Update function. Not going to Use since we want to handle Rendering differently.
 }
@@ -14,7 +14,9 @@ void Button::Update(float deltaTime)
 void Button::IsActive(bool isActive)
 {
 	if(shouldRender)
+	{
 		RenderButton(isActive ? buttonActive: buttonInactive);
+	}
 }
 
 void Button::RenderButton(Sprite* sprite)

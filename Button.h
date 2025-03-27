@@ -16,7 +16,7 @@ public:
     /// @param sRender Determines if the button should be rendered initially.
     Button(Surface* screen,
         const glm::vec2& pos = { 0, 0 },
-        const glm::vec2& objSize = { 1, 1 },
+        const glm::vec2& objSize = { 128, 64 },
         const std::string& buttonInactivePath = "",
         const std::string& buttonActivePath = "",
         const std::string& objName = "Box",
@@ -24,8 +24,9 @@ public:
         : GameObject(screen, pos, 1, objSize, buttonInactivePath, objName), // Calling base class
         buttonInactivePath(buttonInactivePath),
         buttonActivePath(buttonActivePath),
-        shouldRender(sRender)
-
+        shouldRender(sRender),
+        buttonActive(nullptr),
+        buttonInactive(nullptr)
     {
         if (!buttonActivePath.empty())
             buttonActive = new Sprite(new Surface(buttonActivePath.c_str()), 1);
@@ -52,7 +53,7 @@ private:
     std::string buttonInactivePath;
     std::string buttonActivePath;
     bool shouldRender = true;
-    Sprite* buttonActive;
-    Sprite* buttonInactive;
+    Sprite* buttonActive = nullptr;
+    Sprite* buttonInactive = nullptr;
     void RenderButton(Sprite* sprite);
 };

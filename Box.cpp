@@ -1,7 +1,7 @@
 #include "precomp.h"
 #include "Box.h"
 
-void Box::Update(float deltaTime)
+void Box::Update(float /* deltaTime */)
 {
 	Box::Render();
 }
