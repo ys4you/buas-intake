@@ -1,8 +1,8 @@
 var class_enemy =
 [
-    [ "Enemy", "class_enemy.html#a9fb0783f79ac49239b5800fcaeed64aa", null ],
-    [ "Die", "class_enemy.html#a8a2daf2544bc307b1ac11de356608feb", null ],
-    [ "isDead", "class_enemy.html#acc414ebb944c270c9ad8192dcc4a67b6", null ],
-    [ "TakeDamage", "class_enemy.html#a94a9682743ed3cc2f68f7d5657af0a2d", null ],
-    [ "Update", "class_enemy.html#ae76a938c75c1497d46f357da4ff09065", null ]
+    [ "Enemy", "class_enemy.html#ae1f844ff76f27bd3aaaef499c010e9bf", null ],
+    [ "Die", "class_enemy.html#a1cfd85c8c7cac6f389f98484ba10b329", null ],
+    [ "isDead", "class_enemy.html#a518a8371304a2b678a65d56ac830eafa", null ],
+    [ "TakeDamage", "class_enemy.html#aca300c0d2555fbd308f866956515a567", null ],
+    [ "Update", "class_enemy.html#a723b79407b55383b2c327f674e3ab3bc", null ]
 ];

@@ -1,7 +1,7 @@
 var class_dummy_attack_one =
 [
-    [ "~DummyAttackOne", "class_dummy_attack_one.html#a18c222cc2588ca9de6bd2045260013d1", null ],
-    [ "DummyAttackOne", "class_dummy_attack_one.html#a89e61f4e3218c821b2cdf612429b6ea6", null ],
-    [ "ResetAttack", "class_dummy_attack_one.html#a9e58f392ced8fff720d48dabf64c475c", null ],
-    [ "Update", "class_dummy_attack_one.html#a3c176fc0ed6fe00f3a0179dee897429a", null ]
+    [ "~DummyAttackOne", "class_dummy_attack_one.html#aa479ddd7926105f0c996612e2100dc01", null ],
+    [ "DummyAttackOne", "class_dummy_attack_one.html#af7306be16570c5dc59309b209732c21d", null ],
+    [ "ResetAttack", "class_dummy_attack_one.html#ab25851bc0518f68339ccebd7408ee17b", null ],
+    [ "Update", "class_dummy_attack_one.html#ab442268261deb860d97dae851af88ce7", null ]
 ];

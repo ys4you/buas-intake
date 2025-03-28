@@ -1,7 +1,7 @@
 var class_game_loop_scene =
 [
-    [ "checkSwitchState", "class_game_loop_scene.html#a2503a783ec3339e04f46b3db278bfbfa", null ],
-    [ "onEnter", "class_game_loop_scene.html#a2e6db30a339174fd62060140f95d30d3", null ],
-    [ "onExit", "class_game_loop_scene.html#af2ba392c3cce1f4401171ad57785d561", null ],
-    [ "onUpdate", "class_game_loop_scene.html#a6c15f9a6eead88774b8a24be99826bb0", null ]
+    [ "checkSwitchState", "class_game_loop_scene.html#a9fa66c8700f8c128ee934171116a2ea1", null ],
+    [ "onEnter", "class_game_loop_scene.html#a189f93f7bdbca928dba445aca46c12dc", null ],
+    [ "onExit", "class_game_loop_scene.html#aa414dad4e21564be26febfc1b322a9bf", null ],
+    [ "onUpdate", "class_game_loop_scene.html#a46352b13e13d1f52d27fa7789d50f5ba", null ]
 ];

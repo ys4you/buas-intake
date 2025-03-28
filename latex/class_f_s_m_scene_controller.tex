@@ -12,18 +12,18 @@ Manages scene states in a finite state machine (FSM) architecture.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_f_s_m_scene_controller_aad19b6bf62c735a562a6e82dae080153}{initialize}} (Surface \texorpdfstring{$\ast$}{*}screen)
+void \mbox{\hyperlink{class_f_s_m_scene_controller_a6699c32f3eb86371d118783caa9f6738}{initialize}} (Surface \texorpdfstring{$\ast$}{*}screen)
 \begin{DoxyCompactList}\small\item\em Initializes the scene controller with a screen surface. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_f_s_m_scene_controller_aa4ebeafba7d79020423f0140e853be72}{change\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_scene_base_state}{Scene\+Base\+State}} $>$ new\+State)
+void \mbox{\hyperlink{class_f_s_m_scene_controller_a463cfba8843ccb223b6bc26926578751}{change\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_scene_base_state}{Scene\+Base\+State}} $>$ new\+State)
 \begin{DoxyCompactList}\small\item\em Changes the current scene state. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_f_s_m_scene_controller_ac52ac34d9f452d759ea1ce3f8df9f682}{update}} (float delta\+Time)
+void \mbox{\hyperlink{class_f_s_m_scene_controller_a2b6b27ff0f10349b4e9d49ca51816ea9}{update}} (float delta\+Time)
 \begin{DoxyCompactList}\small\item\em Updates the current scene state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_f_s_m_scene_controller}{FSMScene\+Controller}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_f_s_m_scene_controller_aea9e55737146dc523dd6d1c389f9d94b}{Get}} ()
+static \mbox{\hyperlink{class_f_s_m_scene_controller}{FSMScene\+Controller}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_f_s_m_scene_controller_a7b8778e8e6392445a573667cb4957f5c}{Get}} ()
 \begin{DoxyCompactList}\small\item\em Retrieves the singleton instance of the \doxylink{class_f_s_m_scene_controller}{FSMScene\+Controller}. \end{DoxyCompactList}\item 
-\Hypertarget{class_f_s_m_scene_controller_a0335ddb53c05077807e142dc57c561d9}\label{class_f_s_m_scene_controller_a0335ddb53c05077807e142dc57c561d9} 
+\Hypertarget{class_f_s_m_scene_controller_a0effe2cd7c1499e76bec13b6db023e32}\label{class_f_s_m_scene_controller_a0effe2cd7c1499e76bec13b6db023e32} 
 static void {\bfseries destroy\+Instance} ()
 \begin{DoxyCompactList}\small\item\em Deletes the singleton instance if necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -32,11 +32,11 @@ static void {\bfseries destroy\+Instance} ()
 Manages scene states in a finite state machine (FSM) architecture. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_f_s_m_scene_controller_aa4ebeafba7d79020423f0140e853be72}\index{FSMSceneController@{FSMSceneController}!changeState@{changeState}}
+\Hypertarget{class_f_s_m_scene_controller_a463cfba8843ccb223b6bc26926578751}\index{FSMSceneController@{FSMSceneController}!changeState@{changeState}}
 \index{changeState@{changeState}!FSMSceneController@{FSMSceneController}}
 \doxysubsubsection{\texorpdfstring{changeState()}{changeState()}}
-{\footnotesize\ttfamily \label{class_f_s_m_scene_controller_aa4ebeafba7d79020423f0140e853be72} 
-void change\+State (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_scene_base_state}{Scene\+Base\+State}} $>$}]{new\+State}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_f_s_m_scene_controller_a463cfba8843ccb223b6bc26926578751} 
+void FSMScene\+Controller\+::change\+State (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_scene_base_state}{Scene\+Base\+State}} $>$}]{new\+State}{}\end{DoxyParamCaption})}
 
 
 
@@ -47,11 +47,11 @@ Changes the current scene state.
 {\em new\+State} & The new scene state to switch to. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_f_s_m_scene_controller_aea9e55737146dc523dd6d1c389f9d94b}\index{FSMSceneController@{FSMSceneController}!Get@{Get}}
+\Hypertarget{class_f_s_m_scene_controller_a7b8778e8e6392445a573667cb4957f5c}\index{FSMSceneController@{FSMSceneController}!Get@{Get}}
 \index{Get@{Get}!FSMSceneController@{FSMSceneController}}
 \doxysubsubsection{\texorpdfstring{Get()}{Get()}}
-{\footnotesize\ttfamily \label{class_f_s_m_scene_controller_aea9e55737146dc523dd6d1c389f9d94b} 
-\mbox{\hyperlink{class_f_s_m_scene_controller}{FSMScene\+Controller}} \texorpdfstring{$\ast$}{*} Get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{class_f_s_m_scene_controller_a7b8778e8e6392445a573667cb4957f5c} 
+\mbox{\hyperlink{class_f_s_m_scene_controller}{FSMScene\+Controller}} \texorpdfstring{$\ast$}{*} FSMScene\+Controller\+::\+Get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -60,11 +60,11 @@ Retrieves the singleton instance of the \doxylink{class_f_s_m_scene_controller}{
 \begin{DoxyReturn}{Returns}
 Pointer to the \doxylink{class_f_s_m_scene_controller}{FSMScene\+Controller} instance. 
 \end{DoxyReturn}
-\Hypertarget{class_f_s_m_scene_controller_aad19b6bf62c735a562a6e82dae080153}\index{FSMSceneController@{FSMSceneController}!initialize@{initialize}}
+\Hypertarget{class_f_s_m_scene_controller_a6699c32f3eb86371d118783caa9f6738}\index{FSMSceneController@{FSMSceneController}!initialize@{initialize}}
 \index{initialize@{initialize}!FSMSceneController@{FSMSceneController}}
 \doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
-{\footnotesize\ttfamily \label{class_f_s_m_scene_controller_aad19b6bf62c735a562a6e82dae080153} 
-void initialize (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_f_s_m_scene_controller_a6699c32f3eb86371d118783caa9f6738} 
+void FSMScene\+Controller\+::initialize (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})}
 
 
 
@@ -75,11 +75,11 @@ Initializes the scene controller with a screen surface.
 {\em screen} & The surface used for rendering. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_f_s_m_scene_controller_ac52ac34d9f452d759ea1ce3f8df9f682}\index{FSMSceneController@{FSMSceneController}!update@{update}}
+\Hypertarget{class_f_s_m_scene_controller_a2b6b27ff0f10349b4e9d49ca51816ea9}\index{FSMSceneController@{FSMSceneController}!update@{update}}
 \index{update@{update}!FSMSceneController@{FSMSceneController}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily \label{class_f_s_m_scene_controller_ac52ac34d9f452d759ea1ce3f8df9f682} 
-void update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_f_s_m_scene_controller_a2b6b27ff0f10349b4e9d49ca51816ea9} 
+void FSMScene\+Controller\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
 
 
 

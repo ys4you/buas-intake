@@ -10,7 +10,7 @@ void Enemy::Update(float deltaTime)
 void Enemy::TakeDamage(int amount)
 {
 	std::cout << "enemy took damage\n";
-	healthPoints = -amount;
+	healthPoints -= amount;
 	std::cout << "new health points: " << healthPoints << std::endl;
 
 	if (healthPoints <= 0)

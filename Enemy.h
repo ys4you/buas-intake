@@ -33,6 +33,7 @@ public:
             objName), // Calling the base class constructor
         maxHealthPoints(maxHealthPoints), healthPoints(healthPoints), damage(0)
     {
+        std::cout << "Enemy health points: " << healthPoints << std::endl;
     }
 
     int maxHealthPoints = 0;

@@ -1,7 +1,7 @@
 var class_projectile =
 [
-    [ "Projectile", "class_projectile.html#a9819981be44037ca04d5497cd9f97708", null ],
-    [ "CollisionCheck", "class_projectile.html#a39b36d2fd4367b64cf713770e82e6299", null ],
-    [ "Render", "class_projectile.html#a86cc9114d2e36dbc3a174547c4569798", null ],
-    [ "Update", "class_projectile.html#a42889fb375ac4d949af8f245dfedc305", null ]
+    [ "Projectile", "class_projectile.html#abbc3dba1b6dc85f55c9ff6b711e72589", null ],
+    [ "CollisionCheck", "class_projectile.html#af569af06e289ca9f2b5e4d30c742c47e", null ],
+    [ "Render", "class_projectile.html#a4f86eeed5f8307d1a0441f89e6531f53", null ],
+    [ "Update", "class_projectile.html#a0b617977671f289cf5eba43379376b0b", null ]
 ];

@@ -1,8 +1,8 @@
 var class_win_scene =
 [
-    [ "checkSwitchState", "class_win_scene.html#a2503a783ec3339e04f46b3db278bfbfa", null ],
-    [ "onEnter", "class_win_scene.html#a2e6db30a339174fd62060140f95d30d3", null ],
-    [ "onExit", "class_win_scene.html#af2ba392c3cce1f4401171ad57785d561", null ],
-    [ "onUpdate", "class_win_scene.html#a6c15f9a6eead88774b8a24be99826bb0", null ],
-    [ "enterPressed", "class_win_scene.html#af6522413f5848b7a8a5dd87195189564", null ]
+    [ "checkSwitchState", "class_win_scene.html#a1a0a509f8954b0409c04aac1e9e3f619", null ],
+    [ "onEnter", "class_win_scene.html#a53d2dc7241a2bf020878dd3b6762283b", null ],
+    [ "onExit", "class_win_scene.html#abd4cc1a15db308ff4c4c82b458c9d06c", null ],
+    [ "onUpdate", "class_win_scene.html#ae235902bf2836d8e923d85292239a3b2", null ],
+    [ "enterPressed", "class_win_scene.html#ab09ed3ddd4ae13d8185c3b45d2747a88", null ]
 ];

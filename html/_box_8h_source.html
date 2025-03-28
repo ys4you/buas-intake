@@ -108,7 +108,7 @@ $(function(){initNavTree('_box_8h_source.html',''); initResizable(true); });
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;GameObject.h&quot;</span></div>
 <div class="foldopen" id="foldopen00003" data-start="{" data-end="};">
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="class_box.html">    3</a></span><span class="keyword">class </span>Box : <span class="keyword">public</span> <a class="code hl_function" href="class_game_object.html#aa5bc0afc26c61d18f453b18d9fb2f8e0">GameObject</a></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="class_box.html">    3</a></span><span class="keyword">class </span>Box : <span class="keyword">public</span> <a class="code hl_function" href="class_game_object.html#a02f7e723afef7e304603b7bc6de68ade">GameObject</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    Box(</div>
@@ -117,7 +117,7 @@ $(function(){initNavTree('_box_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">const</span> glm::vec2&amp; objSize = { 1, 1 },</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">const</span> std::string&amp; objName = <span class="stringliteral">&quot;Box&quot;</span>,</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_struct" href="struct_collider.html">Collider</a> collider = <a class="code hl_struct" href="struct_collider.html">Collider</a>(ColliderType::AABB))</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        : <a class="code hl_function" href="class_game_object.html#aa5bc0afc26c61d18f453b18d9fb2f8e0">GameObject</a>(</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        : <a class="code hl_function" href="class_game_object.html#a02f7e723afef7e304603b7bc6de68ade">GameObject</a>(</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            screen,</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            pos,</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            1,</div>
@@ -128,14 +128,14 @@ $(function(){initNavTree('_box_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_box.html#ae76a938c75c1497d46f357da4ff09065">Update</a>(<span class="keywordtype">float</span> deltaTime) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_box.html#aaad916b87d9f0de8ccf1ec77bf993a36">Update</a>(<span class="keywordtype">float</span> deltaTime) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_box.html#a86cc9114d2e36dbc3a174547c4569798">Render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_box.html#ab7986c47ba4afe74d6679110740d86a2">Render</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
 </div>
-<div class="ttc" id="aclass_box_html_a86cc9114d2e36dbc3a174547c4569798"><div class="ttname"><a href="class_box.html#a86cc9114d2e36dbc3a174547c4569798">Box::Render</a></div><div class="ttdeci">void Render() override</div><div class="ttdoc">Renders the GameObject on the screen.</div><div class="ttdef"><b>Definition</b> Box.cpp:10</div></div>
-<div class="ttc" id="aclass_box_html_ae76a938c75c1497d46f357da4ff09065"><div class="ttname"><a href="class_box.html#ae76a938c75c1497d46f357da4ff09065">Box::Update</a></div><div class="ttdeci">void Update(float deltaTime) override</div><div class="ttdoc">Updates the GameObject&#39;s state.</div><div class="ttdef"><b>Definition</b> Box.cpp:4</div></div>
-<div class="ttc" id="aclass_game_object_html_aa5bc0afc26c61d18f453b18d9fb2f8e0"><div class="ttname"><a href="class_game_object.html#aa5bc0afc26c61d18f453b18d9fb2f8e0">GameObject::GameObject</a></div><div class="ttdeci">GameObject(Surface *screen, const glm::vec2 &amp;pos={ 0, 0 }, int frames=1, const glm::vec2 &amp;objSize={ 1, 1 }, std::string objPath=nullptr, const std::string &amp;objName=&quot;newGameObj&quot;, Collider objCollider=Collider())</div><div class="ttdoc">Constructs a GameObject with specified parameters.</div><div class="ttdef"><b>Definition</b> GameObject.h:27</div></div>
+<div class="ttc" id="aclass_box_html_aaad916b87d9f0de8ccf1ec77bf993a36"><div class="ttname"><a href="class_box.html#aaad916b87d9f0de8ccf1ec77bf993a36">Box::Update</a></div><div class="ttdeci">void Update(float deltaTime) override</div><div class="ttdoc">Updates the GameObject&#39;s state.</div><div class="ttdef"><b>Definition</b> Box.cpp:4</div></div>
+<div class="ttc" id="aclass_box_html_ab7986c47ba4afe74d6679110740d86a2"><div class="ttname"><a href="class_box.html#ab7986c47ba4afe74d6679110740d86a2">Box::Render</a></div><div class="ttdeci">void Render() override</div><div class="ttdoc">Renders the GameObject on the screen.</div><div class="ttdef"><b>Definition</b> Box.cpp:10</div></div>
+<div class="ttc" id="aclass_game_object_html_a02f7e723afef7e304603b7bc6de68ade"><div class="ttname"><a href="class_game_object.html#a02f7e723afef7e304603b7bc6de68ade">GameObject::GameObject</a></div><div class="ttdeci">GameObject(Surface *screen, const glm::vec2 &amp;pos={ 0, 0 }, int frames=1, const glm::vec2 &amp;objSize={ 1, 1 }, std::string objPath=nullptr, const std::string &amp;objName=&quot;newGameObj&quot;, Collider objCollider=Collider())</div><div class="ttdoc">Constructs a GameObject with specified parameters.</div><div class="ttdef"><b>Definition</b> GameObject.h:27</div></div>
 <div class="ttc" id="astruct_collider_html"><div class="ttname"><a href="struct_collider.html">Collider</a></div><div class="ttdoc">Collider component for collision detection.</div><div class="ttdef"><b>Definition</b> Collider.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -5,9 +5,9 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}GameObject.h"{}}}
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}PlayerSoul.h"{}}}
 \DoxyCodeLine{00004\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_blast_ade752ec9005fb7de4ccb05d6324afd2e}{Blast}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_blast_a687486ecbb35226af237e6a567ded211}{Blast}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}\ \{}
 \DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_blast_ade752ec9005fb7de4ccb05d6324afd2e}{Blast}}(}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_blast_a687486ecbb35226af237e6a567ded211}{Blast}}(}
 \DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ Surface*\ screen,}
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,0\ \},}
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 0,\ 0\ \},}
@@ -15,7 +15,7 @@
 \DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::string\ filePath\ =\ \textcolor{stringliteral}{"{}assets/art/enemy/dummy/pixel.png"{}},}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}Blast"{}},}
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Collider\ collider\ =\ Collider(ColliderType::AABB))}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}(}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}(}
 \DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ screen,}
 \DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ pos,}
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ 1,}
@@ -24,11 +24,11 @@
 \DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ objName,}
 \DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ collider),\ randomDir(randomDir)}
 \DoxyCodeLine{00032\ \ \ \ \ \{}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ playerObj\ =\ \mbox{\hyperlink{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_af74e90dee995644928e59b98e3207b5a}{GetGameObjectByName}}(\textcolor{stringliteral}{"{}PlayerSoul"{}});}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ playerObj\ =\ \mbox{\hyperlink{class_game_object_manager_af1ee3e2264127f5690645e7e1fbc797f}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_aa8092cb3a2b03163abdaa38782c32324}{GetGameObjectByName}}(\textcolor{stringliteral}{"{}PlayerSoul"{}});}
 \DoxyCodeLine{00034\ \ \ \ \ \}}
 \DoxyCodeLine{00035\ }
 \DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}*\ playerObj\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}*\ playerObj\ =\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{00038\ \ \ \ \ PlayerSoul*\ player\ =\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ randomDir\ =\ -\/1;}
 \DoxyCodeLine{00040\ }

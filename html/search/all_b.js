@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['onenter_0',['onEnter',['../class_death_scene.html#a2e6db30a339174fd62060140f95d30d3',1,'DeathScene::onEnter()'],['../class_game_loop_scene.html#a2e6db30a339174fd62060140f95d30d3',1,'GameLoopScene::onEnter()'],['../class_main_menu_scene.html#a2e6db30a339174fd62060140f95d30d3',1,'MainMenuScene::onEnter()'],['../class_scene_base_state.html#a7e2926c61228ce85d0ad02dec535031d',1,'SceneBaseState::onEnter()'],['../class_win_scene.html#a2e6db30a339174fd62060140f95d30d3',1,'WinScene::onEnter()']]],
-  ['onexit_1',['onExit',['../class_death_scene.html#af2ba392c3cce1f4401171ad57785d561',1,'DeathScene::onExit()'],['../class_game_loop_scene.html#af2ba392c3cce1f4401171ad57785d561',1,'GameLoopScene::onExit()'],['../class_main_menu_scene.html#af2ba392c3cce1f4401171ad57785d561',1,'MainMenuScene::onExit()'],['../class_scene_base_state.html#ad104cd2165f4bae7d64c7a7f1439f243',1,'SceneBaseState::onExit()'],['../class_win_scene.html#af2ba392c3cce1f4401171ad57785d561',1,'WinScene::onExit()']]],
-  ['onupdate_2',['onUpdate',['../class_death_scene.html#a6c15f9a6eead88774b8a24be99826bb0',1,'DeathScene::onUpdate()'],['../class_game_loop_scene.html#a6c15f9a6eead88774b8a24be99826bb0',1,'GameLoopScene::onUpdate()'],['../class_main_menu_scene.html#a6c15f9a6eead88774b8a24be99826bb0',1,'MainMenuScene::onUpdate()'],['../class_scene_base_state.html#afa40104bcfa983df324dd26fc708eeb1',1,'SceneBaseState::onUpdate()'],['../class_win_scene.html#a6c15f9a6eead88774b8a24be99826bb0',1,'WinScene::onUpdate()']]]
+  ['mainmenuscene_0',['MainMenuScene',['../class_main_menu_scene.html',1,'']]],
+  ['markfordeletion_1',['MarkForDeletion',['../class_game_object.html#a348a03f16010f5da1e1e0bc98a434cb3',1,'GameObject']]],
+  ['moveprojtocenter_2',['MoveProjToCenter',['../class_circle.html#a23077b0bfe8aef12f1264d515cfd86cc',1,'Circle']]]
 ];

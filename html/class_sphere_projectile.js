@@ -1,7 +1,7 @@
 var class_sphere_projectile =
 [
-    [ "SphereProjectile", "class_sphere_projectile.html#a07146126123f056209a3586308535c06", null ],
-    [ "CollisionCheck", "class_sphere_projectile.html#a39b36d2fd4367b64cf713770e82e6299", null ],
-    [ "Render", "class_sphere_projectile.html#a86cc9114d2e36dbc3a174547c4569798", null ],
-    [ "Update", "class_sphere_projectile.html#ae76a938c75c1497d46f357da4ff09065", null ]
+    [ "SphereProjectile", "class_sphere_projectile.html#aed6d22a624ccac4417cf882d1ff6123a", null ],
+    [ "CollisionCheck", "class_sphere_projectile.html#a87b6ce59c905c113a7fae907a2a5bc95", null ],
+    [ "Render", "class_sphere_projectile.html#aa21f74192b021b7192b9100f1c56e047", null ],
+    [ "Update", "class_sphere_projectile.html#abf6e5b59fc4275edf163e042082b3aea", null ]
 ];

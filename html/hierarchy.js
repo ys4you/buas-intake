@@ -38,6 +38,6 @@ var hierarchy =
       [ "WinScene", "class_win_scene.html", null ]
     ] ],
     [ "TheApp", null, [
-      [ "Game", "class_tmpl8_1_1_game.html", null ]
+      [ "Tmpl8::Game", "class_tmpl8_1_1_game.html", null ]
     ] ]
 ];

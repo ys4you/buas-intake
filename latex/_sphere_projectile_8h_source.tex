@@ -6,9 +6,9 @@
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}common.h"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}PlayerSoul.h"{}}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sphere_projectile_a07146126123f056209a3586308535c06}{SphereProjectile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sphere_projectile_aed6d22a624ccac4417cf882d1ff6123a}{SphereProjectile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}\ \{}
 \DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_sphere_projectile_a07146126123f056209a3586308535c06}{SphereProjectile}}(}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_sphere_projectile_aed6d22a624ccac4417cf882d1ff6123a}{SphereProjectile}}(}
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ Surface*\ screen,}
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,0\ \},}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 32,\ 32\ \},}
@@ -16,7 +16,7 @@
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::string\ filePath\ =\ \textcolor{stringliteral}{"{}assets/art/enemy/dummy/bullet.png"{}},}
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}SphereProjectile"{}},}
 \DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Collider\ collider\ =\ Collider(ColliderType::AABB))}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}(}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}(}
 \DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ screen,}
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ pos,}
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ 1,}
@@ -25,7 +25,7 @@
 \DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ objName,}
 \DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ collider),\ angle(angle)}
 \DoxyCodeLine{00033\ \ \ \ \ \{}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ playerObj\ =\ \mbox{\hyperlink{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_af74e90dee995644928e59b98e3207b5a}{GetGameObjectByName}}(\textcolor{stringliteral}{"{}PlayerSoul"{}});}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ playerObj\ =\ \mbox{\hyperlink{class_game_object_manager_af1ee3e2264127f5690645e7e1fbc797f}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_aa8092cb3a2b03163abdaa38782c32324}{GetGameObjectByName}}(\textcolor{stringliteral}{"{}PlayerSoul"{}});}
 \DoxyCodeLine{00035\ \ \ \ \ \}}
 \DoxyCodeLine{00036\ }
 \DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ 0;}
@@ -34,14 +34,14 @@
 \DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ shouldRender\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{00041\ \ \ \ \ glm::vec2\ initialDirection\ =\ glm::vec2(0.f,\ 0.f);}
 \DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}*\ playerObj\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}*\ playerObj\ =\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{00044\ \ \ \ \ PlayerSoul*\ player\ =\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{00045\ }
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sphere_projectile_a39b36d2fd4367b64cf713770e82e6299}{CollisionCheck}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sphere_projectile_a87b6ce59c905c113a7fae907a2a5bc95}{CollisionCheck}}();}
 \DoxyCodeLine{00048\ }
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sphere_projectile_ae76a938c75c1497d46f357da4ff09065}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sphere_projectile_abf6e5b59fc4275edf163e042082b3aea}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00052\ }
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sphere_projectile_a86cc9114d2e36dbc3a174547c4569798}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sphere_projectile_aa21f74192b021b7192b9100f1c56e047}{Render}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00055\ \};}
 
 \end{DoxyCode}

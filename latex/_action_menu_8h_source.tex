@@ -8,14 +8,14 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}PlayerSoul.h"{}}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Turn.h"{}}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_healing_item_ac51376a3581bdd148f49c42df1bd6bcf}{HealingItem}}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_healing_item_abad689b7f1d47c3f32e8fd421ceaf147}{HealingItem}}}
 \DoxyCodeLine{00010\ \{}
 \DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_healing_item_ac51376a3581bdd148f49c42df1bd6bcf}{HealingItem}}(std::string\ nameOfItem,\ \textcolor{keywordtype}{int}\ healingAmount)\ :\ itemName(nameOfItem),\ amountItHeals(healingAmount)}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_healing_item_abad689b7f1d47c3f32e8fd421ceaf147}{HealingItem}}(std::string\ nameOfItem,\ \textcolor{keywordtype}{int}\ healingAmount)\ :\ itemName(nameOfItem),\ amountItHeals(healingAmount)}
 \DoxyCodeLine{00016\ \ \ \ \ \{}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ player\_\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_player_soul}{PlayerSoul}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_af74e90dee995644928e59b98e3207b5a}{GetGameObjectByName}}(\textcolor{stringliteral}{"{}PlayerSoul"{}}));}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ player\_\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_player_soul}{PlayerSoul}}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_game_object_manager_af1ee3e2264127f5690645e7e1fbc797f}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_aa8092cb3a2b03163abdaa38782c32324}{GetGameObjectByName}}(\textcolor{stringliteral}{"{}PlayerSoul"{}}));}
 \DoxyCodeLine{00018\ \ \ \ \ \}}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_healing_item_a09c29b3855f0f3492473cba9e728dad9}{HealPlayer}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_healing_item_a25bdfa08f0a2d1b62d91a4d812d46f24}{HealPlayer}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{00021\ \textcolor{keyword}{\ \ \ \ }\{}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ player\_-\/>Heal(amountItHeals);}
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \textcolor{keyword}{this};}
@@ -27,9 +27,9 @@
 \DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_player_soul}{PlayerSoul}}*\ player\_;}
 \DoxyCodeLine{00030\ \};}
 \DoxyCodeLine{00031\ }
-\DoxyCodeLine{00033\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_character_box_a4e51df3c16cda749cf2a645986c39b14}{CharacterBox}}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_character_box_a0a8ec2e4c4595101d02eada1dc6e1685}{CharacterBox}}}
 \DoxyCodeLine{00034\ \{}
-\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{struct_character_box_a4e51df3c16cda749cf2a645986c39b14}{CharacterBox}}(\textcolor{keywordtype}{float}\ x1,\ \textcolor{keywordtype}{float}\ y1,\ \textcolor{keywordtype}{float}\ x2,\ \textcolor{keywordtype}{float}\ y2)}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{struct_character_box_a0a8ec2e4c4595101d02eada1dc6e1685}{CharacterBox}}(\textcolor{keywordtype}{float}\ x1,\ \textcolor{keywordtype}{float}\ y1,\ \textcolor{keywordtype}{float}\ x2,\ \textcolor{keywordtype}{float}\ y2)}
 \DoxyCodeLine{00041\ \ \ \ \ \{}
 \DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ x1\_\ =\ x1;}
 \DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ y1\_\ =\ y1;}
@@ -42,16 +42,16 @@
 \DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ y2\_\ =\ 0;}
 \DoxyCodeLine{00051\ \};}
 \DoxyCodeLine{00052\ }
-\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_action_menu_a275acaac45a376910791dd47e90aba39}{ActionMenu}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}}
+\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_action_menu_af1c72388ce80a97f68faa59b9cefa583}{ActionMenu}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}}
 \DoxyCodeLine{00055\ \{}
 \DoxyCodeLine{00056\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_action_menu_a275acaac45a376910791dd47e90aba39}{ActionMenu}}(}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_action_menu_af1c72388ce80a97f68faa59b9cefa583}{ActionMenu}}(}
 \DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ Surface*\ screen,}
 \DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_enemy}{Enemy}}*\ enemy,}
 \DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,\ 0\ \},}
 \DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 1,\ 1\ \},}
 \DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}ActionMenu"{}})}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}(}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}(}
 \DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ screen,}
 \DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ pos,}
 \DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ 1,}
@@ -125,29 +125,29 @@
 \DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ healingItems.push\_back(\textcolor{keyword}{new}\ HealingItem(\textcolor{stringliteral}{"{}Lemonade"{}},\ 50));}
 \DoxyCodeLine{00141\ \ \ \ \ \}}
 \DoxyCodeLine{00142\ }
-\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a86cc9114d2e36dbc3a174547c4569798}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a14158f205c0c7fe238216fcfaee09d02}{Render}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00145\ }
 \DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//Buttons}}
 \DoxyCodeLine{00147\ }
-\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_aa15c055a8ed42283754e81a550aa5239}{Fight}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a6f9bfa8dce00c9ace9ead9f8039d17ed}{Fight}}();}
 \DoxyCodeLine{00150\ }
-\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_ac0dd4076d0250ffb8d1be5328419e524}{Item}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a55bb57cc0825bb531c133f8c687f5167}{Item}}();}
 \DoxyCodeLine{00153\ }
-\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a39b4fe52b8488b9a14004bd4a5f9883a}{Spare}}();}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_aacf6ad66268ce206c0930d6cc6c6a9ef}{Spare}}();}
 \DoxyCodeLine{00156\ }
-\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_abbbd8351674d67aad82e3425dca7bfdf}{Defend}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a36e04e369f775fd35b9a8b1b2c9f17e4}{Defend}}();}
 \DoxyCodeLine{00159\ }
-\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a80494896b2e203a8198e211dd6b4127b}{ResetMenu}}();}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a4b8993ea1c5ec37783becc55ab223cfe}{ResetMenu}}();}
 \DoxyCodeLine{00162\ }
-\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a90aaa71a62e5f79b1946499958ffabbd}{SwitchActiveState}}(\textcolor{keywordtype}{bool}\ shouldBeActive);}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_ae27aa502dc581c394f87fb361b12881f}{SwitchActiveState}}(\textcolor{keywordtype}{bool}\ shouldBeActive);}
 \DoxyCodeLine{00166\ }
-\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_action_menu_a089245f41eb881804c741184cba6b10e}{DidAction}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_action_menu_a121d7a82ba99b7bce53f88f125c6258d}{DidAction}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00170\ }
-\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_aa2c601201508cb82a27efd9f0c43d103}{resetAction}}();}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a2ba22ad03a0a70cfd198e1ec9053888a}{resetAction}}();}
 \DoxyCodeLine{00173\ }
-\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_aa1363198466214ddfefdf8140dab48d7}{RenderActiveMenu}}();}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_a0bcfb6fdf54173603d7e0ee2d45fa0f0}{RenderActiveMenu}}();}
 \DoxyCodeLine{00176\ }
-\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_ae76a938c75c1497d46f357da4ff09065}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_action_menu_ac5af4499c8b86461456a740e95bfee51}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00180\ }
 \DoxyCodeLine{00181\ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{class_enemy}{Enemy}}*\ enemy\_;}

@@ -33,7 +33,9 @@ void DummyEnemy::Attack()
 		std::random_device rd;
 		std::mt19937 gen(rd());
 		std::uniform_int_distribution<int> distribute(0, attacks.size() - 1);
-		UseDefinedAttack(attacks[distribute(gen)]);
+		int random = distribute(gen);
+		std::cout << "random attack: " << random << std::endl;
+		UseDefinedAttack(attacks[random]);
 	}
 
 	//UseDefinedAttack(attacks[1]);
@@ -59,13 +61,14 @@ void DummyEnemy::UseSequenceAttack()
 	{
 		std::cout << "Attack " << attackIteration << " ended.\n";
 
-		if (attackIteration < 3)
+
+		attacks[attackIteration]->ResetAttack();
+		if (attackIteration <= 3)
 		{
 			attackIteration++;
 		}
-		SetDone(true);
-		attacks[attackIteration]->ResetAttack();
 		isAttacking = false;
+		SetDone(true);
 	}
 }
 

@@ -13,16 +13,16 @@
 \DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{float}\ x1,\ x2,\ y1,\ y2;}
 \DoxyCodeLine{00011\ \};}
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_blaster_aa232d5006fd388c8f0cbbc5107248be3}{Blaster}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_blaster_aedf6e979e494090ce138e4088ee3f338}{Blaster}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}\ \{}
 \DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_blaster_aa232d5006fd388c8f0cbbc5107248be3}{Blaster}}(}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_blaster_aedf6e979e494090ce138e4088ee3f338}{Blaster}}(}
 \DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Surface*\ screen,}
 \DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_box}{Box}}*\ box\ =\ \textcolor{keyword}{nullptr},}
 \DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,\ 0\ \},}
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 64,\ 64\ \},}
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::string\ filePath\ =\ \textcolor{stringliteral}{"{}assets/art/enemy/dummy/diamond.png"{}},}
 \DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}Blaster"{}})}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}(}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}(}
 \DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ screen,}
 \DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ pos,}
 \DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ 1,}
@@ -30,7 +30,7 @@
 \DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ std::move(filePath),}
 \DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ objName),\ box(box)}
 \DoxyCodeLine{00037\ \ \ \ \ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ playerPos\ =\ \mbox{\hyperlink{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_af74e90dee995644928e59b98e3207b5a}{GetGameObjectByName}}(\textcolor{stringliteral}{"{}PlayerSoul"{}})-\/>\mbox{\hyperlink{class_game_object_adfa70e64c33f2fac05f26f24a061636e}{GetPosition}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ playerPos\ =\ \mbox{\hyperlink{class_game_object_manager_af1ee3e2264127f5690645e7e1fbc797f}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_aa8092cb3a2b03163abdaa38782c32324}{GetGameObjectByName}}(\textcolor{stringliteral}{"{}PlayerSoul"{}})-\/>\mbox{\hyperlink{class_game_object_a707b9d2e436dc58908b5f2a337a4eae2}{GetPosition}}();}
 \DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::random\_device\ rd;}
 \DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::mt19937\ gen(rd());}
 \DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ uniform\_int\_distribution<>\ dist(0,\ 3);}
@@ -39,11 +39,11 @@
 \DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ SpawnBlasterAtPlayer();}
 \DoxyCodeLine{00045\ \ \ \ \ \}}
 \DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_blaster_aa232d5006fd388c8f0cbbc5107248be3}{\string~Blaster}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_blaster_aedf6e979e494090ce138e4088ee3f338}{\string~Blaster}}();}
 \DoxyCodeLine{00048\ }
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_blaster_ab77f196257a39bc9e67b47cd356a9cdd}{isBlastDOne}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_blaster_a3613532d6715c4425368b8cac08c909e}{isBlastDOne}}\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{00051\ }
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_blaster_ae76a938c75c1497d46f357da4ff09065}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_blaster_a86998aedc10b279dd5eba14da298aab9}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00055\ }
 \DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_box}{Box}}*\ box\ =\ \textcolor{keyword}{nullptr};}

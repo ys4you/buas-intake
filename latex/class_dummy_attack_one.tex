@@ -18,32 +18,32 @@ Inheritance diagram for Dummy\+Attack\+One\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_dummy_attack_one_a18c222cc2588ca9de6bd2045260013d1}\label{class_dummy_attack_one_a18c222cc2588ca9de6bd2045260013d1} 
+\Hypertarget{class_dummy_attack_one_aa479ddd7926105f0c996612e2100dc01}\label{class_dummy_attack_one_aa479ddd7926105f0c996612e2100dc01} 
 {\bfseries \texorpdfstring{$\sim$}{\string~}\+Dummy\+Attack\+One} () override
 \begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_dummy_attack_one}{Dummy\+Attack\+One}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_dummy_attack_one_a9e58f392ced8fff720d48dabf64c475c}{Reset\+Attack}} () override
+void \mbox{\hyperlink{class_dummy_attack_one_ab25851bc0518f68339ccebd7408ee17b}{Reset\+Attack}} () override
 \begin{DoxyCompactList}\small\item\em Resets the attack state. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_dummy_attack_one_a89e61f4e3218c821b2cdf612429b6ea6}{Dummy\+Attack\+One}} (Surface \texorpdfstring{$\ast$}{*}screen, int amount, float duration)
+\mbox{\hyperlink{class_dummy_attack_one_af7306be16570c5dc59309b209732c21d}{Dummy\+Attack\+One}} (Surface \texorpdfstring{$\ast$}{*}screen, int amount, float duration)
 \begin{DoxyCompactList}\small\item\em Constructor to initialize the attack. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_dummy_attack_one_a3c176fc0ed6fe00f3a0179dee897429a}{Update}} (float delta\+Time)
+void \mbox{\hyperlink{class_dummy_attack_one_ab442268261deb860d97dae851af88ce7}{Update}} (float delta\+Time)
 \begin{DoxyCompactList}\small\item\em Updates the attack logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_attack}{Base\+Attack}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_base_attack_a614769c75f904d6a99e3ae9813a98a30}{Base\+Attack}} (Surface \texorpdfstring{$\ast$}{*}screen, float duration, float interval)
+\mbox{\hyperlink{class_base_attack_ab8c9501970aed77091bb4eab45ce6b18}{Base\+Attack}} (Surface \texorpdfstring{$\ast$}{*}screen, float duration, float interval)
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_base_attack}{Base\+Attack} object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_base_attack_a77c9c686ee3eaf45a00fa79227c7b630}{Set\+Interval}} (float new\+Interval)
+void \mbox{\hyperlink{class_base_attack_a355cdfbad7bd9d4ce27b4bc5c4396127}{Set\+Interval}} (float new\+Interval)
 \begin{DoxyCompactList}\small\item\em Sets the interval of the attack. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{class_base_attack_a95131e7f00d70037fcf137a4c9bcd2b0}{Get\+Interval}} ()
+float \mbox{\hyperlink{class_base_attack_ab782423496d312c2ad82c759567468b7}{Get\+Interval}} ()
 \begin{DoxyCompactList}\small\item\em Gets the current interval. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Base\+Attack} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_base_attack}{Base\+Attack}. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_base_attack_aef66d29247eac07ec1bf67fc687eb9cd}{Fire\+Attack}} ()
+virtual void \mbox{\hyperlink{class_base_attack_ae0ca9ef012bc31b2bb3ef6cc34ff417e}{Fire\+Attack}} ()
 \begin{DoxyCompactList}\small\item\em Triggers the attack. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_base_attack_a17f26c4e540e012571c599095794b0ed}{Doing\+Attack}} ()
+virtual bool \mbox{\hyperlink{class_base_attack_a6d734f2a6fb2a90924b170217c3e0191}{Doing\+Attack}} ()
 \begin{DoxyCompactList}\small\item\em Checks if the attack is still active. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{class_base_attack}{Base\+Attack}}}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_base_attack}{Base\+Attack}}}
 \begin{DoxyCompactItemize}
 \item 
 Surface \texorpdfstring{$\ast$}{*} {\bfseries screen}
@@ -67,11 +67,11 @@ bool {\bfseries is\+Destroying} = false
 A specific attack pattern used by the Dummy enemy, launching sphere projectiles. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_dummy_attack_one_a89e61f4e3218c821b2cdf612429b6ea6}\index{DummyAttackOne@{DummyAttackOne}!DummyAttackOne@{DummyAttackOne}}
+\Hypertarget{class_dummy_attack_one_af7306be16570c5dc59309b209732c21d}\index{DummyAttackOne@{DummyAttackOne}!DummyAttackOne@{DummyAttackOne}}
 \index{DummyAttackOne@{DummyAttackOne}!DummyAttackOne@{DummyAttackOne}}
 \doxysubsubsection{\texorpdfstring{DummyAttackOne()}{DummyAttackOne()}}
-{\footnotesize\ttfamily \label{class_dummy_attack_one_a89e61f4e3218c821b2cdf612429b6ea6} 
-\mbox{\hyperlink{class_dummy_attack_one}{Dummy\+Attack\+One}} (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{int}]{amount}{, }\item[{float}]{duration}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_dummy_attack_one_af7306be16570c5dc59309b209732c21d} 
+Dummy\+Attack\+One\+::\+Dummy\+Attack\+One (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{int}]{amount}{, }\item[{float}]{duration}{}\end{DoxyParamCaption})}
 
 
 
@@ -89,11 +89,11 @@ Constructor to initialize the attack.
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_dummy_attack_one_a9e58f392ced8fff720d48dabf64c475c}\index{DummyAttackOne@{DummyAttackOne}!ResetAttack@{ResetAttack}}
+\Hypertarget{class_dummy_attack_one_ab25851bc0518f68339ccebd7408ee17b}\index{DummyAttackOne@{DummyAttackOne}!ResetAttack@{ResetAttack}}
 \index{ResetAttack@{ResetAttack}!DummyAttackOne@{DummyAttackOne}}
 \doxysubsubsection{\texorpdfstring{ResetAttack()}{ResetAttack()}}
-{\footnotesize\ttfamily \label{class_dummy_attack_one_a9e58f392ced8fff720d48dabf64c475c} 
-void Reset\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_dummy_attack_one_ab25851bc0518f68339ccebd7408ee17b} 
+void Dummy\+Attack\+One\+::\+Reset\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -101,13 +101,13 @@ Resets the attack state.
 
 
 
-Reimplemented from \mbox{\hyperlink{class_base_attack_a1c0e899750694c87b6bd496b8ec7de6c}{Base\+Attack}}.
+Reimplemented from \mbox{\hyperlink{class_base_attack_ac1fec2be3ae37820768d9ce1543e0323}{Base\+Attack}}.
 
-\Hypertarget{class_dummy_attack_one_a3c176fc0ed6fe00f3a0179dee897429a}\index{DummyAttackOne@{DummyAttackOne}!Update@{Update}}
+\Hypertarget{class_dummy_attack_one_ab442268261deb860d97dae851af88ce7}\index{DummyAttackOne@{DummyAttackOne}!Update@{Update}}
 \index{Update@{Update}!DummyAttackOne@{DummyAttackOne}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily \label{class_dummy_attack_one_a3c176fc0ed6fe00f3a0179dee897429a} 
-void Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_dummy_attack_one_ab442268261deb860d97dae851af88ce7} 
+void Dummy\+Attack\+One\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -120,7 +120,7 @@ Updates the attack logic.
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{class_base_attack_ad75b558459e6aa344841f632e78316b8}{Base\+Attack}}.
+Implements \mbox{\hyperlink{class_base_attack_a8e997325c2193a1dd84094f3b5419fd2}{Base\+Attack}}.
 
 
 

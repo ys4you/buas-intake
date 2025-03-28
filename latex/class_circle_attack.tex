@@ -18,32 +18,32 @@ Inheritance diagram for Circle\+Attack\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_circle_attack_ae08cdcf9f33be1cd298993e3f52b00d8}{Circle\+Attack}} (Surface \texorpdfstring{$\ast$}{*}screen, float duration, int amount\+Of\+Proj, int amount\+Of\+Circles=1)
+\mbox{\hyperlink{class_circle_attack_abfc3de9b11215c4b8835ce59cbc7ce97}{Circle\+Attack}} (Surface \texorpdfstring{$\ast$}{*}screen, float duration, int amount\+Of\+Proj, int amount\+Of\+Circles=1)
 \begin{DoxyCompactList}\small\item\em Constructor to initialize the attack. \end{DoxyCompactList}\item 
-\Hypertarget{class_circle_attack_ae59707081d6771d57f1e2779749407e6}\label{class_circle_attack_ae59707081d6771d57f1e2779749407e6} 
+\Hypertarget{class_circle_attack_a538f97b459f69657dd9fddd8b26eac9f}\label{class_circle_attack_a538f97b459f69657dd9fddd8b26eac9f} 
 {\bfseries \texorpdfstring{$\sim$}{\string~}\+Circle\+Attack} ()
 \begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_circle_attack}{Circle\+Attack}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_circle_attack_a9e58f392ced8fff720d48dabf64c475c}{Reset\+Attack}} () override
+void \mbox{\hyperlink{class_circle_attack_a4630c338d9750db2603e26af182e4df7}{Reset\+Attack}} () override
 \begin{DoxyCompactList}\small\item\em Resets the attack state. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_circle_attack_ae76a938c75c1497d46f357da4ff09065}{Update}} (float delta\+Time) override
+void \mbox{\hyperlink{class_circle_attack_ad2e8990ba7f9f63dcd6b2ad4663dd59e}{Update}} (float delta\+Time) override
 \begin{DoxyCompactList}\small\item\em Updates the attack logic. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_circle_attack_ad4a4a243c364b66f05aa630b53d7dcbd}{Fire\+Attack}} () override
+void \mbox{\hyperlink{class_circle_attack_abcba1791c3ca38605e9fe4d80be4c9a1}{Fire\+Attack}} () override
 \begin{DoxyCompactList}\small\item\em Triggers the attack, spawning projectiles in a circular pattern. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_attack}{Base\+Attack}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_base_attack_a614769c75f904d6a99e3ae9813a98a30}{Base\+Attack}} (Surface \texorpdfstring{$\ast$}{*}screen, float duration, float interval)
+\mbox{\hyperlink{class_base_attack_ab8c9501970aed77091bb4eab45ce6b18}{Base\+Attack}} (Surface \texorpdfstring{$\ast$}{*}screen, float duration, float interval)
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_base_attack}{Base\+Attack} object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_base_attack_a77c9c686ee3eaf45a00fa79227c7b630}{Set\+Interval}} (float new\+Interval)
+void \mbox{\hyperlink{class_base_attack_a355cdfbad7bd9d4ce27b4bc5c4396127}{Set\+Interval}} (float new\+Interval)
 \begin{DoxyCompactList}\small\item\em Sets the interval of the attack. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{class_base_attack_a95131e7f00d70037fcf137a4c9bcd2b0}{Get\+Interval}} ()
+float \mbox{\hyperlink{class_base_attack_ab782423496d312c2ad82c759567468b7}{Get\+Interval}} ()
 \begin{DoxyCompactList}\small\item\em Gets the current interval. \end{DoxyCompactList}\item 
 virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Base\+Attack} ()=default
 \begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_base_attack}{Base\+Attack}. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_base_attack_a17f26c4e540e012571c599095794b0ed}{Doing\+Attack}} ()
+virtual bool \mbox{\hyperlink{class_base_attack_a6d734f2a6fb2a90924b170217c3e0191}{Doing\+Attack}} ()
 \begin{DoxyCompactList}\small\item\em Checks if the attack is still active. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{class_base_attack}{Base\+Attack}}}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_base_attack}{Base\+Attack}}}
 \begin{DoxyCompactItemize}
 \item 
 Surface \texorpdfstring{$\ast$}{*} {\bfseries screen}
@@ -67,11 +67,11 @@ bool {\bfseries is\+Destroying} = false
 An attack that spawns circles and launches projectiles in a circular pattern. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_circle_attack_ae08cdcf9f33be1cd298993e3f52b00d8}\index{CircleAttack@{CircleAttack}!CircleAttack@{CircleAttack}}
+\Hypertarget{class_circle_attack_abfc3de9b11215c4b8835ce59cbc7ce97}\index{CircleAttack@{CircleAttack}!CircleAttack@{CircleAttack}}
 \index{CircleAttack@{CircleAttack}!CircleAttack@{CircleAttack}}
 \doxysubsubsection{\texorpdfstring{CircleAttack()}{CircleAttack()}}
-{\footnotesize\ttfamily \label{class_circle_attack_ae08cdcf9f33be1cd298993e3f52b00d8} 
-\mbox{\hyperlink{class_circle_attack}{Circle\+Attack}} (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{float}]{duration}{, }\item[{int}]{amount\+Of\+Proj}{, }\item[{int}]{amount\+Of\+Circles}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_circle_attack_abfc3de9b11215c4b8835ce59cbc7ce97} 
+Circle\+Attack\+::\+Circle\+Attack (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{float}]{duration}{, }\item[{int}]{amount\+Of\+Proj}{, }\item[{int}]{amount\+Of\+Circles}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
 
 
 
@@ -91,11 +91,11 @@ Constructor to initialize the attack.
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_circle_attack_ad4a4a243c364b66f05aa630b53d7dcbd}\index{CircleAttack@{CircleAttack}!FireAttack@{FireAttack}}
+\Hypertarget{class_circle_attack_abcba1791c3ca38605e9fe4d80be4c9a1}\index{CircleAttack@{CircleAttack}!FireAttack@{FireAttack}}
 \index{FireAttack@{FireAttack}!CircleAttack@{CircleAttack}}
 \doxysubsubsection{\texorpdfstring{FireAttack()}{FireAttack()}}
-{\footnotesize\ttfamily \label{class_circle_attack_ad4a4a243c364b66f05aa630b53d7dcbd} 
-void Fire\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_circle_attack_abcba1791c3ca38605e9fe4d80be4c9a1} 
+void Circle\+Attack\+::\+Fire\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -103,13 +103,13 @@ Triggers the attack, spawning projectiles in a circular pattern.
 
 
 
-Reimplemented from \mbox{\hyperlink{class_base_attack_aef66d29247eac07ec1bf67fc687eb9cd}{Base\+Attack}}.
+Reimplemented from \mbox{\hyperlink{class_base_attack_ae0ca9ef012bc31b2bb3ef6cc34ff417e}{Base\+Attack}}.
 
-\Hypertarget{class_circle_attack_a9e58f392ced8fff720d48dabf64c475c}\index{CircleAttack@{CircleAttack}!ResetAttack@{ResetAttack}}
+\Hypertarget{class_circle_attack_a4630c338d9750db2603e26af182e4df7}\index{CircleAttack@{CircleAttack}!ResetAttack@{ResetAttack}}
 \index{ResetAttack@{ResetAttack}!CircleAttack@{CircleAttack}}
 \doxysubsubsection{\texorpdfstring{ResetAttack()}{ResetAttack()}}
-{\footnotesize\ttfamily \label{class_circle_attack_a9e58f392ced8fff720d48dabf64c475c} 
-void Reset\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_circle_attack_a4630c338d9750db2603e26af182e4df7} 
+void Circle\+Attack\+::\+Reset\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -117,13 +117,13 @@ Resets the attack state.
 
 
 
-Reimplemented from \mbox{\hyperlink{class_base_attack_a1c0e899750694c87b6bd496b8ec7de6c}{Base\+Attack}}.
+Reimplemented from \mbox{\hyperlink{class_base_attack_ac1fec2be3ae37820768d9ce1543e0323}{Base\+Attack}}.
 
-\Hypertarget{class_circle_attack_ae76a938c75c1497d46f357da4ff09065}\index{CircleAttack@{CircleAttack}!Update@{Update}}
+\Hypertarget{class_circle_attack_ad2e8990ba7f9f63dcd6b2ad4663dd59e}\index{CircleAttack@{CircleAttack}!Update@{Update}}
 \index{Update@{Update}!CircleAttack@{CircleAttack}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily \label{class_circle_attack_ae76a938c75c1497d46f357da4ff09065} 
-void Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_circle_attack_ad2e8990ba7f9f63dcd6b2ad4663dd59e} 
+void Circle\+Attack\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -136,7 +136,7 @@ Updates the attack logic.
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{class_base_attack_ad75b558459e6aa344841f632e78316b8}{Base\+Attack}}.
+Implements \mbox{\hyperlink{class_base_attack_a8e997325c2193a1dd84094f3b5419fd2}{Base\+Attack}}.
 
 
 

@@ -1,7 +1,7 @@
 var class_main_menu_scene =
 [
-    [ "checkSwitchState", "class_main_menu_scene.html#a2503a783ec3339e04f46b3db278bfbfa", null ],
-    [ "onEnter", "class_main_menu_scene.html#a2e6db30a339174fd62060140f95d30d3", null ],
-    [ "onExit", "class_main_menu_scene.html#af2ba392c3cce1f4401171ad57785d561", null ],
-    [ "onUpdate", "class_main_menu_scene.html#a6c15f9a6eead88774b8a24be99826bb0", null ]
+    [ "checkSwitchState", "class_main_menu_scene.html#a1797ed97ab60bb6bf1b46623d7d9029e", null ],
+    [ "onEnter", "class_main_menu_scene.html#ac54b223c0e0d6c41bb2c218eee2d0002", null ],
+    [ "onExit", "class_main_menu_scene.html#aaf03ea20ef4cca39d2b37eb9320d302e", null ],
+    [ "onUpdate", "class_main_menu_scene.html#a5e6d2c2f96062e810f302a14ffe50a8f", null ]
 ];

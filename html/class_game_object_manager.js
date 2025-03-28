@@ -1,8 +1,8 @@
 var class_game_object_manager =
 [
-    [ "GetGameObject", "class_game_object_manager.html#a47da8edc469ee4130f61b97e28bd65f7", null ],
-    [ "GetGameObjectByName", "class_game_object_manager.html#af74e90dee995644928e59b98e3207b5a", null ],
-    [ "RegisterGameObject", "class_game_object_manager.html#aa3f387ac644d264166074a6df14f8c41", null ],
-    [ "RemoveGameObject", "class_game_object_manager.html#a354811ae437d2c1f2bf1c03eaaf09855", null ],
-    [ "UpdateAllObjects", "class_game_object_manager.html#a846d7533360cccdd5081739ed7ede859", null ]
+    [ "GetGameObject", "class_game_object_manager.html#aec75940a3ebf5dbbcdc328d5afe07f87", null ],
+    [ "GetGameObjectByName", "class_game_object_manager.html#aa8092cb3a2b03163abdaa38782c32324", null ],
+    [ "RegisterGameObject", "class_game_object_manager.html#ab020bbc0b61e06a19901f457de59bb61", null ],
+    [ "RemoveGameObject", "class_game_object_manager.html#a993563d3a42b0b66f7fe9c4256425429", null ],
+    [ "UpdateAllObjects", "class_game_object_manager.html#a2bc112d883bd33b33825e81fff00ba7a", null ]
 ];

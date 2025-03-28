@@ -5,17 +5,17 @@
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GameObject.h"{}}}
 \DoxyCodeLine{00004\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button_a88ee49bbeef5cd836d8d7844379bce50}{Button}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button_a2190e874247b848a7fc163edf5fe7869}{Button}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}}
 \DoxyCodeLine{00007\ \{}
 \DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_button_a88ee49bbeef5cd836d8d7844379bce50}{Button}}(Surface*\ screen,}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_button_a2190e874247b848a7fc163edf5fe7869}{Button}}(Surface*\ screen,}
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,\ 0\ \},}
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 128,\ 64\ \},}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ buttonInactivePath\ =\ \textcolor{stringliteral}{"{}"{}},}
 \DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ buttonActivePath\ =\ \textcolor{stringliteral}{"{}"{}},}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}Box"{}},}
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ sRender\ =\ \textcolor{keyword}{true})}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}(screen,\ pos,\ 1,\ objSize,\ buttonInactivePath,\ objName),\ \textcolor{comment}{//\ Calling\ base\ class}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_a02f7e723afef7e304603b7bc6de68ade}{GameObject}}(screen,\ pos,\ 1,\ objSize,\ buttonInactivePath,\ objName),\ \textcolor{comment}{//\ Calling\ base\ class}}
 \DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ buttonInactivePath(buttonInactivePath),}
 \DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ buttonActivePath(buttonActivePath),}
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ shouldRender(sRender),}
@@ -29,13 +29,13 @@
 \DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ buttonInactive\ =\ \textcolor{keyword}{new}\ Sprite(\textcolor{keyword}{new}\ Surface(buttonInactivePath.c\_str()),\ 1);}
 \DoxyCodeLine{00036\ \ \ \ \ \}}
 \DoxyCodeLine{00037\ }
-\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_button_a4d6b8f9344181e1d3f8646cd197ab625}{\string~Button}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_button_acdf8e4ba2f771b795368bccb8e493909}{\string~Button}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00040\ }
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_ae76a938c75c1497d46f357da4ff09065}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_a1dbb1ed974234d1baaeb38e369be4f6f}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00044\ }
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_af6a7f1c1f8faa4745ffbcd11a8d37102}{SetRenderState}}(\textcolor{keywordtype}{bool}\ newRenderState)\ \{shouldRender\ =\ newRenderState;\ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_ae77b990021ff7adf1352ea59144175f0}{SetRenderState}}(\textcolor{keywordtype}{bool}\ newRenderState)\ \{shouldRender\ =\ newRenderState;\ \}}
 \DoxyCodeLine{00048\ }
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_affa1ee61c142f4027afbaa5090c370af}{IsActive}}(\textcolor{keywordtype}{bool}\ isActive);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_a5b0986e79db5f508eed44a879cb8a4e0}{IsActive}}(\textcolor{keywordtype}{bool}\ isActive);}
 \DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00053\ \ \ \ \ std::string\ buttonInactivePath;}
 \DoxyCodeLine{00054\ \ \ \ \ std::string\ buttonActivePath;}

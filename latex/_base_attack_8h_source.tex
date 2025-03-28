@@ -4,42 +4,42 @@
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_base_attack_a614769c75f904d6a99e3ae9813a98a30}{BaseAttack}}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_base_attack_ab8c9501970aed77091bb4eab45ce6b18}{BaseAttack}}}
 \DoxyCodeLine{00010\ \{}
 \DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_base_attack_a614769c75f904d6a99e3ae9813a98a30}{BaseAttack}}(Surface*\ screen,\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ interval)\ :}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_base_attack_ab8c9501970aed77091bb4eab45ce6b18}{BaseAttack}}(Surface*\ screen,\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ interval)\ :}
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ screen(screen),}
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ attackTime(duration),}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ interval(interval)}
 \DoxyCodeLine{00021\ \ \ \ \ \{}
 \DoxyCodeLine{00022\ \ \ \ \ \}}
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_attack_a77c9c686ee3eaf45a00fa79227c7b630}{SetInterval}}(\textcolor{keywordtype}{float}\ newInterval)\ \{\ interval\ =\ newInterval;\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_attack_a355cdfbad7bd9d4ce27b4bc5c4396127}{SetInterval}}(\textcolor{keywordtype}{float}\ newInterval)\ \{\ interval\ =\ newInterval;\ \}}
 \DoxyCodeLine{00027\ }
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_base_attack_a95131e7f00d70037fcf137a4c9bcd2b0}{GetInterval}}()\ \{\ \textcolor{keywordflow}{return}\ interval;\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_base_attack_ab782423496d312c2ad82c759567468b7}{GetInterval}}()\ \{\ \textcolor{keywordflow}{return}\ interval;\ \}}
 \DoxyCodeLine{00031\ }
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_base_attack_aa5c0f2d48c10daa507fa7265202982e7}{\string~BaseAttack}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_base_attack_a3953743fbce05b34f31feb2a24dbbdde}{\string~BaseAttack}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00034\ }
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_attack_aef66d29247eac07ec1bf67fc687eb9cd}{FireAttack}}()}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_attack_ae0ca9ef012bc31b2bb3ef6cc34ff417e}{FireAttack}}()}
 \DoxyCodeLine{00040\ \ \ \ \ \{}
 \DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ isAttacking\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ timer\ +=\ 0.01f;}
 \DoxyCodeLine{00043\ \ \ \ \ \}}
 \DoxyCodeLine{00044\ }
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_base_attack_a17f26c4e540e012571c599095794b0ed}{DoingAttack}}()}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_base_attack_a6d734f2a6fb2a90924b170217c3e0191}{DoingAttack}}()}
 \DoxyCodeLine{00048\ \ \ \ \ \{}
 \DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}Timer:\ "{}\ <<\ std::to\_string(timer)\ <<\ "{}\ isAttacking"{}\ <<\ isAttacking\ <<\ std::endl;}}
 \DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isAttacking\ \&\&\ timer\ >\ 0;}
 \DoxyCodeLine{00051\ \ \ \ \ \}}
 \DoxyCodeLine{00052\ }
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_attack_a1c0e899750694c87b6bd496b8ec7de6c}{ResetAttack}}()}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_attack_ac1fec2be3ae37820768d9ce1543e0323}{ResetAttack}}()}
 \DoxyCodeLine{00057\ \ \ \ \ \{}
 \DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ isAttacking\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ timer\ =\ 0;}
 \DoxyCodeLine{00060\ \ \ \ \ \}}
 \DoxyCodeLine{00061\ }
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_attack_ad75b558459e6aa344841f632e78316b8}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ =\ 0;}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_attack_a8e997325c2193a1dd84094f3b5419fd2}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ =\ 0;}
 \DoxyCodeLine{00065\ }
 \DoxyCodeLine{00066\ \ \ \ \ Surface*\ screen;}
 \DoxyCodeLine{00067\ }
