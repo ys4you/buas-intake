@@ -1,0 +1,31 @@
+\doxysection{Box.\+h}
+\hypertarget{_box_8h_source}{}\label{_box_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}GameObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }Box\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00006\ \ \ \ \ Box(}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ Surface*\ screen,}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,\ 0\ \},}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 1,\ 1\ \},}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}Box"{}},}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_collider}{Collider}}\ collider\ =\ \mbox{\hyperlink{struct_collider}{Collider}}(ColliderType::AABB))}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}(}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ screen,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ pos,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ 1,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ objSize,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ objName,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ collider)\ \textcolor{comment}{//\ Calling\ the\ base\ class\ constructor}}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_box_ae76a938c75c1497d46f357da4ff09065}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_box_a86cc9114d2e36dbc3a174547c4569798}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\doxysection{Game\+Loop\+Scene.\+h}
+\hypertarget{_game_loop_scene_8h_source}{}\label{_game_loop_scene_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}SceneBaseState.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ GameObjects}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}PlayerSoul.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Box.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ActionMenu.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}DummyEnemy.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Turn.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_loop_scene}{GameLoopScene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene_base_state}{SceneBaseState}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_player_soul}{PlayerSoul}}*\ player\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_box}{Box}}*\ box\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_action_menu}{ActionMenu}}*\ actionMenu\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_dummy_enemy}{DummyEnemy}}*\ dummy\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDeleted\_\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00020\ \ \ \ \ Turn\ turn\ =\ Turn::Player;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_loop_scene_a2e6db30a339174fd62060140f95d30d3}{onEnter}}(Surface*\ screen)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_loop_scene_a6c15f9a6eead88774b8a24be99826bb0}{onUpdate}}(\textcolor{keywordtype}{float}\ deltaTime,\ Surface*\ screen)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_loop_scene_af2ba392c3cce1f4401171ad57785d561}{onExit}}(Surface*\ screen)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_loop_scene_a2503a783ec3339e04f46b3db278bfbfa}{checkSwitchState}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ std::string\ GetTurnName(Turn\ currentTurn);}
+\DoxyCodeLine{00043\ \};}
+
+\end{DoxyCode}

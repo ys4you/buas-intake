@@ -1,0 +1,33 @@
+\doxysection{Random\+Blaster\+Spam.\+h}
+\hypertarget{_random_blaster_spam_8h_source}{}\label{_random_blaster_spam_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}BaseAttack.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GameObject.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Blaster.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Box.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_random_blaster_spam_a64034cbc089b13c1d65c99650e0cef83}{RandomBlasterSpam}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_attack_a614769c75f904d6a99e3ae9813a98a30}{BaseAttack}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_random_blaster_spam_a64034cbc089b13c1d65c99650e0cef83}{RandomBlasterSpam}}(Surface*\ screen,\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ interval,\ \mbox{\hyperlink{class_box}{Box}}*\ box);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_random_blaster_spam_ac7765dfb61898e94df01e3627be650e2}{\string~RandomBlasterSpam}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_random_blaster_spam_a9e58f392ced8fff720d48dabf64c475c}{ResetAttack}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_random_blaster_spam_ae76a938c75c1497d46f357da4ff09065}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_random_blaster_spam_ad4a4a243c364b66f05aa630b53d7dcbd}{FireAttack}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ List\ of\ blasters\ spawned\ during\ the\ attack.}}
+\DoxyCodeLine{00032\ \ \ \ \ vector<Blaster*>\ blasters;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ A\ pointer\ to\ the\ Box\ object,\ which\ may\ affect\ the\ blaster\ spawn\ behavior.}}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_box}{Box}}*\ box\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Timer\ variables\ for\ controlling\ spawn\ intervals.}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ SpawnCooldown\ =\ 0;}
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}

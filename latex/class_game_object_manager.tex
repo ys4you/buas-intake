@@ -1,0 +1,135 @@
+\doxysection{Game\+Object\+Manager Class Reference}
+\hypertarget{class_game_object_manager}{}\label{class_game_object_manager}\index{GameObjectManager@{GameObjectManager}}
+
+
+Manages all Game\+Objects in the game.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_object_manager_aa3f387ac644d264166074a6df14f8c41}{Register\+Game\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}new\+Game\+Obj)
+\begin{DoxyCompactList}\small\item\em Registers a new \doxylink{class_game_object}{Game\+Object} in the manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_object_manager_a47da8edc469ee4130f61b97e28bd65f7}{Get\+Game\+Object}} (int id)
+\begin{DoxyCompactList}\small\item\em Retrieves a \doxylink{class_game_object}{Game\+Object} by its unique ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_object_manager_af74e90dee995644928e59b98e3207b5a}{Get\+Game\+Object\+By\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Retrieves a \doxylink{class_game_object}{Game\+Object} by its name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a354811ae437d2c1f2bf1c03eaaf09855}{Remove\+Game\+Object}} (int id)
+\begin{DoxyCompactList}\small\item\em Removes a \doxylink{class_game_object}{Game\+Object} from the manager using its ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_manager_a846d7533360cccdd5081739ed7ede859}{Update\+All\+Objects}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Updates all registered Game\+Objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \& \mbox{\hyperlink{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158}{Get}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of the \doxylink{class_game_object_manager}{Game\+Object\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages all Game\+Objects in the game. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158}\index{GameObjectManager@{GameObjectManager}!Get@{Get}}
+\index{Get@{Get}!GameObjectManager@{GameObjectManager}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158} 
+\mbox{\hyperlink{class_game_object_manager}{Game\+Object\+Manager}} \& Get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of the \doxylink{class_game_object_manager}{Game\+Object\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{class_game_object_manager}{Game\+Object\+Manager} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_manager_a47da8edc469ee4130f61b97e28bd65f7}\index{GameObjectManager@{GameObjectManager}!GetGameObject@{GetGameObject}}
+\index{GetGameObject@{GetGameObject}!GameObjectManager@{GameObjectManager}}
+\doxysubsubsection{\texorpdfstring{GetGameObject()}{GetGameObject()}}
+{\footnotesize\ttfamily \label{class_game_object_manager_a47da8edc469ee4130f61b97e28bd65f7} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Get\+Game\+Object (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a \doxylink{class_game_object}{Game\+Object} by its unique ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the \doxylink{class_game_object}{Game\+Object}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_game_object}{Game\+Object}, or nullptr if not found. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_manager_af74e90dee995644928e59b98e3207b5a}\index{GameObjectManager@{GameObjectManager}!GetGameObjectByName@{GetGameObjectByName}}
+\index{GetGameObjectByName@{GetGameObjectByName}!GameObjectManager@{GameObjectManager}}
+\doxysubsubsection{\texorpdfstring{GetGameObjectByName()}{GetGameObjectByName()}}
+{\footnotesize\ttfamily \label{class_game_object_manager_af74e90dee995644928e59b98e3207b5a} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Get\+Game\+Object\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a \doxylink{class_game_object}{Game\+Object} by its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the \doxylink{class_game_object}{Game\+Object}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_game_object}{Game\+Object}, or nullptr if not found. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_manager_aa3f387ac644d264166074a6df14f8c41}\index{GameObjectManager@{GameObjectManager}!RegisterGameObject@{RegisterGameObject}}
+\index{RegisterGameObject@{RegisterGameObject}!GameObjectManager@{GameObjectManager}}
+\doxysubsubsection{\texorpdfstring{RegisterGameObject()}{RegisterGameObject()}}
+{\footnotesize\ttfamily \label{class_game_object_manager_aa3f387ac644d264166074a6df14f8c41} 
+void Register\+Game\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{new\+Game\+Obj}{}\end{DoxyParamCaption})}
+
+
+
+Registers a new \doxylink{class_game_object}{Game\+Object} in the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Game\+Obj} & Pointer to the \doxylink{class_game_object}{Game\+Object} to register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_manager_a354811ae437d2c1f2bf1c03eaaf09855}\index{GameObjectManager@{GameObjectManager}!RemoveGameObject@{RemoveGameObject}}
+\index{RemoveGameObject@{RemoveGameObject}!GameObjectManager@{GameObjectManager}}
+\doxysubsubsection{\texorpdfstring{RemoveGameObject()}{RemoveGameObject()}}
+{\footnotesize\ttfamily \label{class_game_object_manager_a354811ae437d2c1f2bf1c03eaaf09855} 
+void Remove\+Game\+Object (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a \doxylink{class_game_object}{Game\+Object} from the manager using its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the \doxylink{class_game_object}{Game\+Object} to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_manager_a846d7533360cccdd5081739ed7ede859}\index{GameObjectManager@{GameObjectManager}!UpdateAllObjects@{UpdateAllObjects}}
+\index{UpdateAllObjects@{UpdateAllObjects}!GameObjectManager@{GameObjectManager}}
+\doxysubsubsection{\texorpdfstring{UpdateAllObjects()}{UpdateAllObjects()}}
+{\footnotesize\ttfamily \label{class_game_object_manager_a846d7533360cccdd5081739ed7ede859} 
+void Update\+All\+Objects (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Updates all registered Game\+Objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+Object\+Manager.\+h\item 
+Game\+Object\+Manager.\+cpp\end{DoxyCompactItemize}

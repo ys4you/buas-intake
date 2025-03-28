@@ -1,0 +1,114 @@
+\doxysection{Circle Class Reference}
+\hypertarget{class_circle}{}\label{class_circle}\index{Circle@{Circle}}
+
+
+Represents a circle of projectiles in the game.  
+
+
+
+
+{\ttfamily \#include $<$Circle.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_circle_a1ddd8c487dc7b39a24d9c442e0bb3053}{Circle}} (Surface \texorpdfstring{$\ast$}{*}screen, int amount\+Of\+Projectiles)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the \doxylink{class_circle}{Circle} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_circle_a2c7f3781218f4b5f1439fe88f64fd596}\label{class_circle_a2c7f3781218f4b5f1439fe88f64fd596} 
+void {\bfseries Spawn\+Circle} ()
+\begin{DoxyCompactList}\small\item\em Spawns the projectiles in the circle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circle_a26cac5c1b1c70c6c63010879e4b9f813}{Spiral\+Circle}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Handles the spiral movement of the projectiles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circle_afb1982f48db0e19d0f24291dc61708cd}{Move\+Proj\+To\+Center}} (\mbox{\hyperlink{class_sphere_projectile}{Sphere\+Projectile}} \texorpdfstring{$\ast$}{*}proj, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Moves a projectile towards the center. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_circle_ab2f1b6e27a774f09a2027ea26bc1f954}\label{class_circle_ab2f1b6e27a774f09a2027ea26bc1f954} 
+Surface \texorpdfstring{$\ast$}{*} {\bfseries screen}
+\item 
+\Hypertarget{class_circle_a6c83f813d0e63df7e771801eac7cca1c}\label{class_circle_a6c83f813d0e63df7e771801eac7cca1c} 
+std\+::vector$<$ \mbox{\hyperlink{class_sphere_projectile}{Sphere\+Projectile}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries projectiles}
+\item 
+\Hypertarget{class_circle_abbbc611e266d554ce29da94c28fc88bb}\label{class_circle_abbbc611e266d554ce29da94c28fc88bb} 
+glm\+::vec2 {\bfseries proj\+Size} = \{ 64, 64 \}
+\item 
+\Hypertarget{class_circle_ae62d4cfd089e9a940cb725bed28111bc}\label{class_circle_ae62d4cfd089e9a940cb725bed28111bc} 
+glm\+::vec2 {\bfseries center} = \{ 640 -\/ proj\+Size.\+x / 2, 240 -\/ proj\+Size.\+y / 2 \}
+\item 
+\Hypertarget{class_circle_a15ae1148f7467fe51cebce94bdf5cfd9}\label{class_circle_a15ae1148f7467fe51cebce94bdf5cfd9} 
+int {\bfseries projectiles\+Amount} = 0
+\item 
+\Hypertarget{class_circle_a5050a760c11da521cd4aee6336f6529f}\label{class_circle_a5050a760c11da521cd4aee6336f6529f} 
+float {\bfseries radius} = 200.f
+\item 
+\Hypertarget{class_circle_a7a809e2311f9bd2ccd39e7fcbf4874cf}\label{class_circle_a7a809e2311f9bd2ccd39e7fcbf4874cf} 
+float {\bfseries proj\+Timer} = 0.\+2f
+\item 
+\Hypertarget{class_circle_acf88334201d36e54862b08c953ab7ed9}\label{class_circle_acf88334201d36e54862b08c953ab7ed9} 
+bool {\bfseries spiral\+Is\+Done} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a circle of projectiles in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_circle_a1ddd8c487dc7b39a24d9c442e0bb3053}\index{Circle@{Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}}
+{\footnotesize\ttfamily \label{class_circle_a1ddd8c487dc7b39a24d9c442e0bb3053} 
+\mbox{\hyperlink{class_circle}{Circle}} (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{int}]{amount\+Of\+Projectiles}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize the \doxylink{class_circle}{Circle} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & A pointer to the Surface object for rendering. \\
+\hline
+{\em amount\+Of\+Projectiles} & The number of projectiles in the circle. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_circle_afb1982f48db0e19d0f24291dc61708cd}\index{Circle@{Circle}!MoveProjToCenter@{MoveProjToCenter}}
+\index{MoveProjToCenter@{MoveProjToCenter}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{MoveProjToCenter()}{MoveProjToCenter()}}
+{\footnotesize\ttfamily \label{class_circle_afb1982f48db0e19d0f24291dc61708cd} 
+void Move\+Proj\+To\+Center (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sphere_projectile}{Sphere\+Projectile}} \texorpdfstring{$\ast$}{*}}]{proj}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Moves a projectile towards the center. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proj} & A pointer to the projectile to move. \\
+\hline
+{\em delta\+Time} & The time elapsed since the last frame update. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_circle_a26cac5c1b1c70c6c63010879e4b9f813}\index{Circle@{Circle}!SpiralCircle@{SpiralCircle}}
+\index{SpiralCircle@{SpiralCircle}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{SpiralCircle()}{SpiralCircle()}}
+{\footnotesize\ttfamily \label{class_circle_a26cac5c1b1c70c6c63010879e4b9f813} 
+void Spiral\+Circle (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Handles the spiral movement of the projectiles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed since the last frame update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Circle.\+h\item 
+Circle.\+cpp\end{DoxyCompactItemize}

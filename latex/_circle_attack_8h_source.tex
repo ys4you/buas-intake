@@ -1,0 +1,45 @@
+\doxysection{Circle\+Attack.\+h}
+\hypertarget{_circle_attack_8h_source}{}\label{_circle_attack_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}BaseAttack.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}SphereProjectile.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Circle.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ ReSharper\ disable\ once\ CppInconsistentNaming}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_circle_attack_ae08cdcf9f33be1cd298993e3f52b00d8}{CircleAttack}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_attack_a614769c75f904d6a99e3ae9813a98a30}{BaseAttack}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_circle_attack_ae08cdcf9f33be1cd298993e3f52b00d8}{CircleAttack}}(Surface*\ screen,\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{int}\ amountOfProj,\ \textcolor{keywordtype}{int}\ amountOfCircles\ =\ 1);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_circle_attack_ae59707081d6771d57f1e2779749407e6}{\string~CircleAttack}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circle_attack_a9e58f392ced8fff720d48dabf64c475c}{ResetAttack}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circle_attack_ae76a938c75c1497d46f357da4ff09065}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circle_attack_ad4a4a243c364b66f05aa630b53d7dcbd}{FireAttack}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Spawning\ necessities}}
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<Circle*>\ circles;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ glm::vec2\ projSize\ =\ \{\ 64,\ 64\ \};}
+\DoxyCodeLine{00039\ \ \ \ \ glm::vec2\ center\ =\ \{\ 640\ -\/\ projSize.x\ /\ 2,\ 240\ -\/\ projSize.y\ /\ 2\ \};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ projectilesAmount\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ circleAmount\ =\ 0;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{float}\ radius\ =\ 0;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Attack\ variables}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ startingIndex\ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ activeCircleIndex\ =\ 0;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateCircles(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ SpawnCircle(\mbox{\hyperlink{class_circle}{Circle}}\ circle);}
+\DoxyCodeLine{00055\ \};}
+
+\end{DoxyCode}

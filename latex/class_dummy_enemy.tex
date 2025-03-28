@@ -1,0 +1,252 @@
+\doxysection{Dummy\+Enemy Class Reference}
+\hypertarget{class_dummy_enemy}{}\label{class_dummy_enemy}\index{DummyEnemy@{DummyEnemy}}
+
+
+Represents a dummy enemy that can perform various attacks.  
+
+
+
+
+{\ttfamily \#include $<$Dummy\+Enemy.\+h$>$}
+
+Inheritance diagram for Dummy\+Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_dummy_enemy}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dummy_enemy_aee8fbf0a66e64dccd41eb5484d692bc3}{Dummy\+Enemy}} (Surface \texorpdfstring{$\ast$}{*}screen, \mbox{\hyperlink{class_box}{Box}} \texorpdfstring{$\ast$}{*}box=nullptr, const glm\+::vec2 \&pos=\{ 0, 0 \}, const glm\+::vec2 \&obj\+Size=\{ 1, 1 \}, std\+::string file\+Path="{}assets/art/enemy/dummy/dummy-\/Sheet.\+png"{}, const std\+::string \&obj\+Name="{}Dummy"{})
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_dummy_enemy}{Dummy\+Enemy} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_dummy_enemy_a3e09b2fa65fb702394370f5ad956b2aa}\label{class_dummy_enemy_a3e09b2fa65fb702394370f5ad956b2aa} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Dummy\+Enemy} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_dummy_enemy}{Dummy\+Enemy} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dummy_enemy_ae76a938c75c1497d46f357da4ff09065}{Update}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{class_dummy_enemy}{Dummy\+Enemy} object, including its state and actions. \end{DoxyCompactList}\item 
+\Hypertarget{class_dummy_enemy_aeeae4171d08e4e5ac1c48c8c79d55dc6}\label{class_dummy_enemy_aeeae4171d08e4e5ac1c48c8c79d55dc6} 
+void {\bfseries Attack} ()
+\begin{DoxyCompactList}\small\item\em Executes the attack sequence. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dummy_enemy_a6439db113c7c15c83710c55c8e57af38}{Is\+Done}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{class_dummy_enemy}{Dummy\+Enemy} has finished its attacks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dummy_enemy_ae4f9f9401033d321a1eee9d94d82afed}{Set\+Done}} (bool new\+State)
+\begin{DoxyCompactList}\small\item\em Sets the current state of the \doxylink{class_dummy_enemy}{Dummy\+Enemy} (whether it is done with attacks). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_enemy}{Enemy}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_a9fb0783f79ac49239b5800fcaeed64aa}{Enemy}} (Surface \texorpdfstring{$\ast$}{*}screen, int max\+Health\+Points, int health\+Points, int frames=1, const glm\+::vec2 \&pos=\{ 0, 0 \}, const glm\+::vec2 \&obj\+Size=\{ 1, 1 \}, std\+::string file\+Path="{}"{}, const std\+::string \&obj\+Name="{}Character"{})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize an enemy object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_ae76a938c75c1497d46f357da4ff09065}{Update}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Updates the enemy\textquotesingle{}s state, called every frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_a94a9682743ed3cc2f68f7d5657af0a2d}{Take\+Damage}} (int amount)
+\begin{DoxyCompactList}\small\item\em Reduces the enemy\textquotesingle{}s health by a given amount. \end{DoxyCompactList}\item 
+void {\bfseries Die} ()
+\begin{DoxyCompactList}\small\item\em Handles the enemy\textquotesingle{}s death, typically when health reaches zero. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Dead} () const
+\begin{DoxyCompactList}\small\item\em Returns the alive state of the enemy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{Game\+Object}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos=\{ 0, 0 \}, int frames=1, const glm\+::vec2 \&obj\+Size=\{ 1, 1 \}, std\+::string obj\+Path=nullptr, const std\+::string \&obj\+Name="{}new\+Game\+Obj"{}, \mbox{\hyperlink{struct_collider}{Collider}} obj\+Collider=\mbox{\hyperlink{struct_collider}{Collider}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_game_object}{Game\+Object} with specified parameters. \end{DoxyCompactList}\item 
+virtual void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_game_object}{Game\+Object}, registering it and setting up its collider and sprite. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_adfa70e64c33f2fac05f26f24a061636e}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current position of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_afe39f30629557d1d60c0b188754e6aa0}{Set\+Position}} (const glm\+::vec2 \&new\+Pos)
+\begin{DoxyCompactList}\small\item\em Sets a new position for the \doxylink{class_game_object}{Game\+Object} and updates the collider. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_ab0a2a16ddf1661a02b84266bb4c5453a}{Get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_object_acf7055c41f3f3d9b9ce00888e2974c50}{Get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unique ID of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a96c455daf3755e7091a1359df88fbcb9}{Set\+Id}} (int new\+Id)
+\begin{DoxyCompactList}\small\item\em Sets the ID of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a0273d96d40646b143487678ddba74899}{Set\+Frame\+Count}} (int frameC)
+\begin{DoxyCompactList}\small\item\em Sets the number of animation frames and updates the sprite accordingly. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_collider}{Collider}} \mbox{\hyperlink{class_game_object_a4a759ba05345e180e8fa4cbecb513446}{Get\+Collider}} () const
+\begin{DoxyCompactList}\small\item\em Gets the collider associated with the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a9a98946a64f3893b085f650932c9dfee}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void {\bfseries Mark\+For\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Marks the \doxylink{class_game_object}{Game\+Object} for deletion. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_af66e04a10d7f6d25cb88b770c7449760}{Should\+Be\+Removed}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{class_game_object}{Game\+Object} should be removed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a0bc3f3606d9cf5304dac90cd7a619194}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Renders the \doxylink{class_game_object}{Game\+Object} on the screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_a17b0065d70b65e1ab7cbc38caf2964bf}{Check\+Collision}} (const \mbox{\hyperlink{class_game_object}{Game\+Object}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks if this \doxylink{class_game_object}{Game\+Object} collides with another \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_afcf33669e338b014034e40c0ee50fef3}{Keep\+Inside\+Boundary}} (const \mbox{\hyperlink{struct_collider}{Collider}} \&boundary)
+\begin{DoxyCompactList}\small\item\em Ensures the \doxylink{class_game_object}{Game\+Object} stays within a specified boundary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_dummy_enemy_a57871250ea2cec016d3222f92300c846}\label{class_dummy_enemy_a57871250ea2cec016d3222f92300c846} 
+vector$<$ \mbox{\hyperlink{class_base_attack}{Base\+Attack}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries attacks}
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{class_enemy}{Enemy}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries max\+Health\+Points} = 0
+\item 
+int {\bfseries health\+Points} = 0
+\item 
+int {\bfseries damage} = 0
+\item 
+bool {\bfseries is\+Enemy\+Dead} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_dummy_enemy_acce713b73af397897d66ba124934f059}\label{class_dummy_enemy_acce713b73af397897d66ba124934f059} 
+void {\bfseries Use\+Sequence\+Attack} ()
+\begin{DoxyCompactList}\small\item\em Executes the attack sequence in order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dummy_enemy_a7896e2b65daade197c33d82d874e5c67}{Use\+Defined\+Attack}} (\mbox{\hyperlink{class_base_attack}{Base\+Attack}} \texorpdfstring{$\ast$}{*}attack)
+\begin{DoxyCompactList}\small\item\em Executes a specific defined attack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a020cdbe405a467da68c5d0575e9c2a82}{Game\+Object}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos, int frames, const glm\+::vec2 \&obj\+Size, std\+::string obj\+Surface, const std\+::string \&obj\+Name, int obj\+Id, \mbox{\hyperlink{struct_collider}{Collider}} obj\+Collider)
+\begin{DoxyCompactList}\small\item\em Protected constructor for derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_dummy_enemy_a7c36c7f1c07b0023acb9a3b3af4670ec}\label{class_dummy_enemy_a7c36c7f1c07b0023acb9a3b3af4670ec} 
+bool {\bfseries is\+Attacking} = false
+\item 
+\Hypertarget{class_dummy_enemy_ae0a3e971a44e6337c81cc728d3d81666}\label{class_dummy_enemy_ae0a3e971a44e6337c81cc728d3d81666} 
+bool {\bfseries is\+Done} = false
+\item 
+\Hypertarget{class_dummy_enemy_a3d231d48683cfafe2b6e11f54a119a1c}\label{class_dummy_enemy_a3d231d48683cfafe2b6e11f54a119a1c} 
+int {\bfseries attack\+Iteration} = 0
+\item 
+\Hypertarget{class_dummy_enemy_a2488249b6e8ef646f5fffc3f38a51361}\label{class_dummy_enemy_a2488249b6e8ef646f5fffc3f38a51361} 
+int {\bfseries amount\+Of\+Circles} = 3
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Surface \texorpdfstring{$\ast$}{*} {\bfseries screen}
+\item 
+glm\+::vec2 {\bfseries position}
+\item 
+glm\+::vec2 {\bfseries size}
+\item 
+\mbox{\hyperlink{struct_collider}{Collider}} {\bfseries collider}
+\item 
+int {\bfseries Id}
+\item 
+std\+::string {\bfseries name\+\_\+}
+\item 
+std\+::string {\bfseries file\+\_\+}
+\item 
+Sprite \texorpdfstring{$\ast$}{*} {\bfseries sprite\+\_\+}
+\item 
+bool {\bfseries is\+Deleted\+\_\+}
+\item 
+int {\bfseries frames\+\_\+}
+\item 
+int {\bfseries frame\+Count\+\_\+} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a dummy enemy that can perform various attacks. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_dummy_enemy_aee8fbf0a66e64dccd41eb5484d692bc3}\index{DummyEnemy@{DummyEnemy}!DummyEnemy@{DummyEnemy}}
+\index{DummyEnemy@{DummyEnemy}!DummyEnemy@{DummyEnemy}}
+\doxysubsubsection{\texorpdfstring{DummyEnemy()}{DummyEnemy()}}
+{\footnotesize\ttfamily \label{class_dummy_enemy_aee8fbf0a66e64dccd41eb5484d692bc3} 
+\mbox{\hyperlink{class_dummy_enemy}{Dummy\+Enemy}} (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{\mbox{\hyperlink{class_box}{Box}} \texorpdfstring{$\ast$}{*}}]{box}{ = {\ttfamily nullptr}, }\item[{const glm\+::vec2 \&}]{pos}{ = {\ttfamily \{~0,~0~\}}, }\item[{const glm\+::vec2 \&}]{obj\+Size}{ = {\ttfamily \{~1,~1~\}}, }\item[{std\+::string}]{file\+Path}{ = {\ttfamily "{}assets/art/enemy/dummy/dummy-\/Sheet.png"{}}, }\item[{const std\+::string \&}]{obj\+Name}{ = {\ttfamily "{}Dummy"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for the \doxylink{class_dummy_enemy}{Dummy\+Enemy} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & A pointer to the Surface object for rendering. \\
+\hline
+{\em box} & A pointer to the \doxylink{class_box}{Box} object for collision (default is nullptr). \\
+\hline
+{\em pos} & The position of the enemy (default is \{0, 0\}). \\
+\hline
+{\em obj\+Size} & The size of the enemy (default is \{1, 1\}). \\
+\hline
+{\em file\+Path} & The file path for the texture (default is "{}assets/art/enemy/dummy/dummy-\/\+Sheet.\+png"{}). \\
+\hline
+{\em obj\+Name} & The name of the object (default is "{}\+Dummy"{}). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_dummy_enemy_a6439db113c7c15c83710c55c8e57af38}\index{DummyEnemy@{DummyEnemy}!IsDone@{IsDone}}
+\index{IsDone@{IsDone}!DummyEnemy@{DummyEnemy}}
+\doxysubsubsection{\texorpdfstring{IsDone()}{IsDone()}}
+{\footnotesize\ttfamily \label{class_dummy_enemy_a6439db113c7c15c83710c55c8e57af38} 
+bool Is\+Done (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the \doxylink{class_dummy_enemy}{Dummy\+Enemy} has finished its attacks. 
+
+\begin{DoxyReturn}{Returns}
+A boolean value indicating if the enemy is done with attacks. 
+\end{DoxyReturn}
+\Hypertarget{class_dummy_enemy_ae4f9f9401033d321a1eee9d94d82afed}\index{DummyEnemy@{DummyEnemy}!SetDone@{SetDone}}
+\index{SetDone@{SetDone}!DummyEnemy@{DummyEnemy}}
+\doxysubsubsection{\texorpdfstring{SetDone()}{SetDone()}}
+{\footnotesize\ttfamily \label{class_dummy_enemy_ae4f9f9401033d321a1eee9d94d82afed} 
+void Set\+Done (\begin{DoxyParamCaption}\item[{bool}]{new\+State}{}\end{DoxyParamCaption})}
+
+
+
+Sets the current state of the \doxylink{class_dummy_enemy}{Dummy\+Enemy} (whether it is done with attacks). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & The new state to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_dummy_enemy_ae76a938c75c1497d46f357da4ff09065}\index{DummyEnemy@{DummyEnemy}!Update@{Update}}
+\index{Update@{Update}!DummyEnemy@{DummyEnemy}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_dummy_enemy_ae76a938c75c1497d46f357da4ff09065} 
+void Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the \doxylink{class_dummy_enemy}{Dummy\+Enemy} object, including its state and actions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed since the last frame update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_game_object_a062aaecb3e8faa8fcdfe84c4dc5c2607}{Game\+Object}}.
+
+\Hypertarget{class_dummy_enemy_a7896e2b65daade197c33d82d874e5c67}\index{DummyEnemy@{DummyEnemy}!UseDefinedAttack@{UseDefinedAttack}}
+\index{UseDefinedAttack@{UseDefinedAttack}!DummyEnemy@{DummyEnemy}}
+\doxysubsubsection{\texorpdfstring{UseDefinedAttack()}{UseDefinedAttack()}}
+{\footnotesize\ttfamily \label{class_dummy_enemy_a7896e2b65daade197c33d82d874e5c67} 
+void Use\+Defined\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_base_attack}{Base\+Attack}} \texorpdfstring{$\ast$}{*}}]{attack}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Executes a specific defined attack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attack} & A pointer to the \doxylink{class_base_attack}{Base\+Attack} to perform. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Dummy\+Enemy.\+h\item 
+Dummy\+Enemy.\+cpp\end{DoxyCompactItemize}

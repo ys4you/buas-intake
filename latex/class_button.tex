@@ -1,0 +1,186 @@
+\doxysection{Button Class Reference}
+\hypertarget{class_button}{}\label{class_button}\index{Button@{Button}}
+
+
+Represents a UI button in the game.  
+
+
+
+
+{\ttfamily \#include $<$Button.\+h$>$}
+
+Inheritance diagram for Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_button}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_button_a88ee49bbeef5cd836d8d7844379bce50}{Button}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos=\{ 0, 0 \}, const glm\+::vec2 \&obj\+Size=\{ 128, 64 \}, const std\+::string \&button\+Inactive\+Path="{}"{}, const std\+::string \&button\+Active\+Path="{}"{}, const std\+::string \&obj\+Name="{}Box"{}, bool s\+Render=true)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_button}{Button} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_button_a4d6b8f9344181e1d3f8646cd197ab625}\label{class_button_a4d6b8f9344181e1d3f8646cd197ab625} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Button} () override
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_button}{Button}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_button_ae76a938c75c1497d46f357da4ff09065}{Update}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Updates the button\textquotesingle{}s state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_button_af6a7f1c1f8faa4745ffbcd11a8d37102}{Set\+Render\+State}} (bool new\+Render\+State)
+\begin{DoxyCompactList}\small\item\em Sets whether the button should be rendered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_button_affa1ee61c142f4027afbaa5090c370af}{Is\+Active}} (bool is\+Active)
+\begin{DoxyCompactList}\small\item\em Sets the active state of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{Game\+Object}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos=\{ 0, 0 \}, int frames=1, const glm\+::vec2 \&obj\+Size=\{ 1, 1 \}, std\+::string obj\+Path=nullptr, const std\+::string \&obj\+Name="{}new\+Game\+Obj"{}, \mbox{\hyperlink{struct_collider}{Collider}} obj\+Collider=\mbox{\hyperlink{struct_collider}{Collider}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_game_object}{Game\+Object} with specified parameters. \end{DoxyCompactList}\item 
+virtual void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_game_object}{Game\+Object}, registering it and setting up its collider and sprite. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_adfa70e64c33f2fac05f26f24a061636e}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current position of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_afe39f30629557d1d60c0b188754e6aa0}{Set\+Position}} (const glm\+::vec2 \&new\+Pos)
+\begin{DoxyCompactList}\small\item\em Sets a new position for the \doxylink{class_game_object}{Game\+Object} and updates the collider. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_ab0a2a16ddf1661a02b84266bb4c5453a}{Get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_object_acf7055c41f3f3d9b9ce00888e2974c50}{Get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unique ID of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a96c455daf3755e7091a1359df88fbcb9}{Set\+Id}} (int new\+Id)
+\begin{DoxyCompactList}\small\item\em Sets the ID of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a0273d96d40646b143487678ddba74899}{Set\+Frame\+Count}} (int frameC)
+\begin{DoxyCompactList}\small\item\em Sets the number of animation frames and updates the sprite accordingly. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_collider}{Collider}} \mbox{\hyperlink{class_game_object_a4a759ba05345e180e8fa4cbecb513446}{Get\+Collider}} () const
+\begin{DoxyCompactList}\small\item\em Gets the collider associated with the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a9a98946a64f3893b085f650932c9dfee}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void {\bfseries Mark\+For\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Marks the \doxylink{class_game_object}{Game\+Object} for deletion. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_af66e04a10d7f6d25cb88b770c7449760}{Should\+Be\+Removed}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{class_game_object}{Game\+Object} should be removed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a0bc3f3606d9cf5304dac90cd7a619194}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Renders the \doxylink{class_game_object}{Game\+Object} on the screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_a17b0065d70b65e1ab7cbc38caf2964bf}{Check\+Collision}} (const \mbox{\hyperlink{class_game_object}{Game\+Object}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks if this \doxylink{class_game_object}{Game\+Object} collides with another \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_afcf33669e338b014034e40c0ee50fef3}{Keep\+Inside\+Boundary}} (const \mbox{\hyperlink{struct_collider}{Collider}} \&boundary)
+\begin{DoxyCompactList}\small\item\em Ensures the \doxylink{class_game_object}{Game\+Object} stays within a specified boundary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a020cdbe405a467da68c5d0575e9c2a82}{Game\+Object}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos, int frames, const glm\+::vec2 \&obj\+Size, std\+::string obj\+Surface, const std\+::string \&obj\+Name, int obj\+Id, \mbox{\hyperlink{struct_collider}{Collider}} obj\+Collider)
+\begin{DoxyCompactList}\small\item\em Protected constructor for derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Surface \texorpdfstring{$\ast$}{*} {\bfseries screen}
+\item 
+glm\+::vec2 {\bfseries position}
+\item 
+glm\+::vec2 {\bfseries size}
+\item 
+\mbox{\hyperlink{struct_collider}{Collider}} {\bfseries collider}
+\item 
+int {\bfseries Id}
+\item 
+std\+::string {\bfseries name\+\_\+}
+\item 
+std\+::string {\bfseries file\+\_\+}
+\item 
+Sprite \texorpdfstring{$\ast$}{*} {\bfseries sprite\+\_\+}
+\item 
+bool {\bfseries is\+Deleted\+\_\+}
+\item 
+int {\bfseries frames\+\_\+}
+\item 
+int {\bfseries frame\+Count\+\_\+} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a UI button in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_button_a88ee49bbeef5cd836d8d7844379bce50}\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily \label{class_button_a88ee49bbeef5cd836d8d7844379bce50} 
+\mbox{\hyperlink{class_button}{Button}} (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{const glm\+::vec2 \&}]{pos}{ = {\ttfamily \{~0,~0~\}}, }\item[{const glm\+::vec2 \&}]{obj\+Size}{ = {\ttfamily \{~128,~64~\}}, }\item[{const std\+::string \&}]{button\+Inactive\+Path}{ = {\ttfamily "{}"{}}, }\item[{const std\+::string \&}]{button\+Active\+Path}{ = {\ttfamily "{}"{}}, }\item[{const std\+::string \&}]{obj\+Name}{ = {\ttfamily "{}Box"{}}, }\item[{bool}]{s\+Render}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{class_button}{Button} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & The rendering surface. \\
+\hline
+{\em pos} & The position of the button. \\
+\hline
+{\em obj\+Size} & The size of the button. \\
+\hline
+{\em button\+Inactive\+Path} & The file path for the inactive button sprite. \\
+\hline
+{\em button\+Active\+Path} & The file path for the active button sprite. \\
+\hline
+{\em obj\+Name} & The name of the button. \\
+\hline
+{\em s\+Render} & Determines if the button should be rendered initially. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_button_affa1ee61c142f4027afbaa5090c370af}\index{Button@{Button}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily \label{class_button_affa1ee61c142f4027afbaa5090c370af} 
+void Is\+Active (\begin{DoxyParamCaption}\item[{bool}]{is\+Active}{}\end{DoxyParamCaption})}
+
+
+
+Sets the active state of the button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Active} & True if the button is active, false if inactive. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_button_af6a7f1c1f8faa4745ffbcd11a8d37102}\index{Button@{Button}!SetRenderState@{SetRenderState}}
+\index{SetRenderState@{SetRenderState}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{SetRenderState()}{SetRenderState()}}
+{\footnotesize\ttfamily \label{class_button_af6a7f1c1f8faa4745ffbcd11a8d37102} 
+void Set\+Render\+State (\begin{DoxyParamCaption}\item[{bool}]{new\+Render\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets whether the button should be rendered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Render\+State} & True to render, false to hide. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_button_ae76a938c75c1497d46f357da4ff09065}\index{Button@{Button}!Update@{Update}}
+\index{Update@{Update}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_button_ae76a938c75c1497d46f357da4ff09065} 
+void Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the button\textquotesingle{}s state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_game_object_a062aaecb3e8faa8fcdfe84c4dc5c2607}{Game\+Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Button.\+h\item 
+Button.\+cpp\end{DoxyCompactItemize}

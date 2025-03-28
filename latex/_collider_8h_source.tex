@@ -1,0 +1,60 @@
+\doxysection{Collider.\+h}
+\hypertarget{_collider_8h_source}{}\label{_collider_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <glm/vec2.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{enum\ class}\ ColliderType\ \{\ AABB,\ Circle,\ None\ \};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_a_a_b_b_a760fe05f4e4cdf052bc4957618cdb060}{AABB}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{struct_a_a_b_b_a760fe05f4e4cdf052bc4957618cdb060}{AABB}}()\ :\ min(0.0f),\ max(0.0f)\ \{\}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{struct_a_a_b_b_a1f7aa318fb2e093a761abf3b0109e6c6}{AABB}}(glm::vec2\ min,\ glm::vec2\ max)\ :\ min(min),\ max(max)\ \{\}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ glm::vec2\ min;}
+\DoxyCodeLine{00021\ \ \ \ \ glm::vec2\ max;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_collider_a06d7c8b2ea50459e91a0c1ac068b68ea}{Collider}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ ColliderType\ type;}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_a_a_b_b}{AABB}}\ aabb;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{struct_collider_a06d7c8b2ea50459e91a0c1ac068b68ea}{Collider}}()\ :\ type(ColliderType::None),\ aabb()\{\}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{struct_collider_a862a3e65fc5f836aa5f2dbc96bc2c909}{Collider}}(ColliderType\ type)\ :\ type(type),\ aabb()\ \{\}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_collider_a67fa698dd28d9847d08a5a7f54e52824}{SetAABB}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_a_a_b_b}{AABB}}\&\ newAABB)}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ ==\ ColliderType::AABB)}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ aabb\ =\ newAABB;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_collider_aceb4ce25a9bb3ed3ee862e38d0e6b558}{CheckCollision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collider_a06d7c8b2ea50459e91a0c1ac068b68ea}{Collider}}\&\ other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>type\ ==\ ColliderType::AABB)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ CheckAABBCollision(this-\/>aabb,\ other.aabb);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ CheckAABBCollision(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_a_a_b_b}{AABB}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_a_a_b_b}{AABB}}\&\ b)}
+\DoxyCodeLine{00067\ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (a.min.x\ <\ b.max.x\ \&\&}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ a.max.x\ >\ b.min.x\ \&\&}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ a.min.y\ <\ b.max.y\ \&\&}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ a.max.y\ >\ b.min.y);}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \};}
+
+\end{DoxyCode}

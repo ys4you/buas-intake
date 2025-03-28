@@ -1,0 +1,119 @@
+\doxysection{Win\+Scene Class Reference}
+\hypertarget{class_win_scene}{}\label{class_win_scene}\index{WinScene@{WinScene}}
+
+
+A derived class from \doxylink{class_scene_base_state}{Scene\+Base\+State} that manages the player\textquotesingle{}s win scene.  
+
+
+
+
+{\ttfamily \#include $<$Win\+Scene.\+h$>$}
+
+Inheritance diagram for Win\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_win_scene}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_win_scene_a2e6db30a339174fd62060140f95d30d3}{on\+Enter}} (Surface \texorpdfstring{$\ast$}{*}screen) override
+\begin{DoxyCompactList}\small\item\em Called when this scene is entered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_win_scene_a6c15f9a6eead88774b8a24be99826bb0}{on\+Update}} (float delta\+Time, Surface \texorpdfstring{$\ast$}{*}screen) override
+\begin{DoxyCompactList}\small\item\em Updates the scene based on the elapsed time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_win_scene_af2ba392c3cce1f4401171ad57785d561}{on\+Exit}} (Surface \texorpdfstring{$\ast$}{*}screen) override
+\begin{DoxyCompactList}\small\item\em Called when this scene is exited. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_win_scene_a2503a783ec3339e04f46b3db278bfbfa}{check\+Switch\+State}} () override
+\begin{DoxyCompactList}\small\item\em Checks whether a transition to another scene should occur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_win_scene_af6522413f5848b7a8a5dd87195189564}\label{class_win_scene_af6522413f5848b7a8a5dd87195189564} 
+bool {\bfseries enter\+Pressed}
+\begin{DoxyCompactList}\small\item\em Tracks whether the Enter key has been pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A derived class from \doxylink{class_scene_base_state}{Scene\+Base\+State} that manages the player\textquotesingle{}s win scene. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_win_scene_a2503a783ec3339e04f46b3db278bfbfa}\index{WinScene@{WinScene}!checkSwitchState@{checkSwitchState}}
+\index{checkSwitchState@{checkSwitchState}!WinScene@{WinScene}}
+\doxysubsubsection{\texorpdfstring{checkSwitchState()}{checkSwitchState()}}
+{\footnotesize\ttfamily \label{class_win_scene_a2503a783ec3339e04f46b3db278bfbfa} 
+void check\+Switch\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether a transition to another scene should occur. 
+
+
+
+Implements \mbox{\hyperlink{class_scene_base_state_a1a4dd0b870993e51d9ce4c928223d389}{Scene\+Base\+State}}.
+
+\Hypertarget{class_win_scene_a2e6db30a339174fd62060140f95d30d3}\index{WinScene@{WinScene}!onEnter@{onEnter}}
+\index{onEnter@{onEnter}!WinScene@{WinScene}}
+\doxysubsubsection{\texorpdfstring{onEnter()}{onEnter()}}
+{\footnotesize\ttfamily \label{class_win_scene_a2e6db30a339174fd62060140f95d30d3} 
+void on\+Enter (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when this scene is entered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & A pointer to the Surface object for rendering. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_scene_base_state_a7e2926c61228ce85d0ad02dec535031d}{Scene\+Base\+State}}.
+
+\Hypertarget{class_win_scene_af2ba392c3cce1f4401171ad57785d561}\index{WinScene@{WinScene}!onExit@{onExit}}
+\index{onExit@{onExit}!WinScene@{WinScene}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily \label{class_win_scene_af2ba392c3cce1f4401171ad57785d561} 
+void on\+Exit (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when this scene is exited. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & A pointer to the Surface object for rendering. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_scene_base_state_ad104cd2165f4bae7d64c7a7f1439f243}{Scene\+Base\+State}}.
+
+\Hypertarget{class_win_scene_a6c15f9a6eead88774b8a24be99826bb0}\index{WinScene@{WinScene}!onUpdate@{onUpdate}}
+\index{onUpdate@{onUpdate}!WinScene@{WinScene}}
+\doxysubsubsection{\texorpdfstring{onUpdate()}{onUpdate()}}
+{\footnotesize\ttfamily \label{class_win_scene_a6c15f9a6eead88774b8a24be99826bb0} 
+void on\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{, }\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the scene based on the elapsed time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed since the last frame update. \\
+\hline
+{\em screen} & A pointer to the Surface object for rendering. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_scene_base_state_afa40104bcfa983df324dd26fc708eeb1}{Scene\+Base\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Win\+Scene.\+h\item 
+Win\+Scene.\+cpp\end{DoxyCompactItemize}

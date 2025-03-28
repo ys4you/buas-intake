@@ -1,0 +1,38 @@
+var annotated_dup =
+[
+    [ "Tmpl8", null, [
+      [ "Game", "class_tmpl8_1_1_game.html", null ]
+    ] ],
+    [ "AABB", "struct_a_a_b_b.html", "struct_a_a_b_b" ],
+    [ "ActionMenu", "class_action_menu.html", "class_action_menu" ],
+    [ "AudioManager", "class_audio_manager.html", "class_audio_manager" ],
+    [ "BaseAttack", "class_base_attack.html", "class_base_attack" ],
+    [ "Blast", "class_blast.html", "class_blast" ],
+    [ "Blaster", "class_blaster.html", "class_blaster" ],
+    [ "BlastPos", "struct_blast_pos.html", null ],
+    [ "Box", "class_box.html", "class_box" ],
+    [ "Button", "class_button.html", "class_button" ],
+    [ "Character", "class_character.html", null ],
+    [ "CharacterBox", "struct_character_box.html", "struct_character_box" ],
+    [ "Circle", "class_circle.html", "class_circle" ],
+    [ "CircleAttack", "class_circle_attack.html", "class_circle_attack" ],
+    [ "Collider", "struct_collider.html", "struct_collider" ],
+    [ "DeathScene", "class_death_scene.html", "class_death_scene" ],
+    [ "DiamondProjectile", "class_diamond_projectile.html", "class_diamond_projectile" ],
+    [ "DiamondRain", "class_diamond_rain.html", "class_diamond_rain" ],
+    [ "DummyAttackOne", "class_dummy_attack_one.html", "class_dummy_attack_one" ],
+    [ "DummyEnemy", "class_dummy_enemy.html", "class_dummy_enemy" ],
+    [ "Enemy", "class_enemy.html", "class_enemy" ],
+    [ "FSMSceneController", "class_f_s_m_scene_controller.html", "class_f_s_m_scene_controller" ],
+    [ "GameLoopScene", "class_game_loop_scene.html", "class_game_loop_scene" ],
+    [ "GameObject", "class_game_object.html", "class_game_object" ],
+    [ "GameObjectManager", "class_game_object_manager.html", "class_game_object_manager" ],
+    [ "HealingItem", "class_healing_item.html", "class_healing_item" ],
+    [ "MainMenuScene", "class_main_menu_scene.html", "class_main_menu_scene" ],
+    [ "PlayerSoul", "class_player_soul.html", "class_player_soul" ],
+    [ "Projectile", "class_projectile.html", "class_projectile" ],
+    [ "RandomBlasterSpam", "class_random_blaster_spam.html", "class_random_blaster_spam" ],
+    [ "SceneBaseState", "class_scene_base_state.html", "class_scene_base_state" ],
+    [ "SphereProjectile", "class_sphere_projectile.html", "class_sphere_projectile" ],
+    [ "WinScene", "class_win_scene.html", "class_win_scene" ]
+];

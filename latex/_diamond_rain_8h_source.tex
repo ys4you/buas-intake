@@ -1,0 +1,31 @@
+\doxysection{Diamond\+Rain.\+h}
+\hypertarget{_diamond_rain_8h_source}{}\label{_diamond_rain_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}BaseAttack.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Box.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}DiamondProjectile.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_diamond_rain_a0c012d6b42888de589776fbd3403646c}{DiamondRain}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_attack_a614769c75f904d6a99e3ae9813a98a30}{BaseAttack}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_diamond_rain_a0c012d6b42888de589776fbd3403646c}{DiamondRain}}(Surface*\ screen,\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ interval,\ \textcolor{keywordtype}{float}\ bulletSpeed,\ \mbox{\hyperlink{class_box}{Box}}*\ box,\ \textcolor{keywordtype}{bool}\ goingUp\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_diamond_rain_a96e070948ddf75b293bd61ec48322b15}{\string~DiamondRain}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_diamond_rain_ae76a938c75c1497d46f357da4ff09065}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ speed\ =\ 0.5f;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ goingUp\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ glm::vec2\ playerPos\ =\ \{0,\ 0\};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_box}{Box}}*\ box\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ SpawnCooldown\ =\ 0.f;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ vector<DiamondProjectile*>\ projectiles;}
+\DoxyCodeLine{00037\ \};}
+
+\end{DoxyCode}

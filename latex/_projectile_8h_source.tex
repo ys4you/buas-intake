@@ -1,0 +1,97 @@
+\doxysection{Projectile.\+h}
+\hypertarget{_projectile_8h_source}{}\label{_projectile_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}GameObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}PlayerSoul.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_projectile_a9819981be44037ca04d5497cd9f97708}{Projectile}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_projectile_a9819981be44037ca04d5497cd9f97708}{Projectile}}(}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ Surface*\ screen,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,0\ \},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 32,\ 32\ \},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ speed\ =\ 0,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::string\ filePath\ =\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}Projectile"{}},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Collider\ collider\ =\ Collider(ColliderType::AABB))}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}(}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ screen,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ pos,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ 1,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ objSize,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ std::move(filePath),}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ objName,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ collider),\ speed(speed)}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ playerObj\ =\ \mbox{\hyperlink{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_af74e90dee995644928e59b98e3207b5a}{GetGameObjectByName}}(\textcolor{stringliteral}{"{}PlayerSoul"{}});}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ speed\ =\ 0;}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}*\ playerObj\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00039\ \ \ \ \ PlayerSoul*\ player\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ shouldRender\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_projectile_a39b36d2fd4367b64cf713770e82e6299}{CollisionCheck}}()}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (playerObj\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_game_object_a17b0065d70b65e1ab7cbc38caf2964bf}{CheckCollision}}(*playerObj))}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!player)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_player_soul}{PlayerSoul}}*\textcolor{keyword}{>}(playerObj);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (player\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (player\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player-\/>TakeDamage(1);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_projectile_a42889fb375ac4d949af8f245dfedc305}{Update}}(\textcolor{keywordtype}{float}\ \textcolor{comment}{/*deltaTime\ */})\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00068\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collider.type\ ==\ ColliderType::AABB)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ collider.SetAABB(\mbox{\hyperlink{struct_a_a_b_b}{AABB}}(position,\ position\ +\ size));}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#ifdef\ \_DEBUG}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ uint\ color\ =\ 0xFF0000;\ \textcolor{comment}{//\ Red\ color}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ screen-\/>Box(collider.aabb.min.x,\ collider.aabb.min.y,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collider.aabb.max.x,\ collider.aabb.max.y,\ color);}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (position.x\ -\/\ size.x\ <=\ SCRWIDTH\ \&\&\ position.x\ +\ size.x\ >=\ 0\ \&\&}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ position.y\ +\ size.y\ <=\ SCRHEIGHT\ \&\&\ position.y\ >=\ 0\ -\/\ size.y)}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ shouldRender\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ shouldRender\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_projectile_a86cc9114d2e36dbc3a174547c4569798}{Render}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_projectile_a39b36d2fd4367b64cf713770e82e6299}{CollisionCheck}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_projectile_a86cc9114d2e36dbc3a174547c4569798}{Render}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00092\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (position.x\ -\/\ size.x\ <=\ SCRWIDTH\ \&\&\ position.x\ +\ size.x\ >=\ 0\ \&\&}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ position.y\ +\ size.y\ <=\ SCRHEIGHT\ \&\&\ position.y\ >=\ 0\ -\/\ size.y)}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file\_.empty())}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ Object:\ "{}}\ <<\ name\_\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ Id\ <<\ \textcolor{stringliteral}{"{})\ Does\ not\ have\ a\ surface\ that\ can\ be\ rendered."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ sprite\_-\/>Draw(screen,\ position.x,\ position.y);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \};}
+
+\end{DoxyCode}

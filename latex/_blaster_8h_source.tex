@@ -1,0 +1,67 @@
+\doxysection{Blaster.\+h}
+\hypertarget{_blaster_8h_source}{}\label{_blaster_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Box.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}GameObject.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Blast.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_blast_pos}{BlastPos}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{float}\ x1,\ x2,\ y1,\ y2;}
+\DoxyCodeLine{00011\ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_blaster_aa232d5006fd388c8f0cbbc5107248be3}{Blaster}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_blaster_aa232d5006fd388c8f0cbbc5107248be3}{Blaster}}(}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Surface*\ screen,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_box}{Box}}*\ box\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,\ 0\ \},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 64,\ 64\ \},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::string\ filePath\ =\ \textcolor{stringliteral}{"{}assets/art/enemy/dummy/diamond.png"{}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}Blaster"{}})}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}(}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ screen,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ pos,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ 1,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ objSize,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ std::move(filePath),}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ objName),\ box(box)}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ playerPos\ =\ \mbox{\hyperlink{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_af74e90dee995644928e59b98e3207b5a}{GetGameObjectByName}}(\textcolor{stringliteral}{"{}PlayerSoul"{}})-\/>\mbox{\hyperlink{class_game_object_adfa70e64c33f2fac05f26f24a061636e}{GetPosition}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::random\_device\ rd;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::mt19937\ gen(rd());}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ uniform\_int\_distribution<>\ dist(0,\ 3);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ randomDir\ =\ dist(gen);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ SpawnBlasterAtPlayer();}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_blaster_aa232d5006fd388c8f0cbbc5107248be3}{\string~Blaster}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_blaster_ab77f196257a39bc9e67b47cd356a9cdd}{isBlastDOne}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_blaster_ae76a938c75c1497d46f357da4ff09065}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_box}{Box}}*\ box\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00058\ \ \ \ \ glm::vec2\ playerPos\ =\ \{\ 0,\ 0\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ randomDir\ =\ -\/1;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ Timer\ variables}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{float}\ SpawnCooldown\ =\ 2.f;}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{float}\ blastCooldown\ =\ 0.25f;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Blast-\/related\ variables}}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_blast}{Blast}}*\ blast\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00068\ \ \ \ \ glm::vec2\ blastSize\ =\ \{\ 0,\ 0\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ SpawnBlasterAtPlayer();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ FireBlast();}
+\DoxyCodeLine{00075\ \};}
+
+\end{DoxyCode}

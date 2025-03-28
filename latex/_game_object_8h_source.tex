@@ -1,0 +1,195 @@
+\doxysection{Game\+Object.\+h}
+\hypertarget{_game_object_8h_source}{}\label{_game_object_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <glm/vec2.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Collider.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameObjectManager.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}sprite.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//TODO:\ Make\ logic\ to\ cpp\ source\ file}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{\string~GameObject}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}(Surface*\ screen,\ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,\ 0\ \},\ \textcolor{keywordtype}{int}\ frames\ =\ 1,\ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 1,\ 1\ \},\ std::string\ objPath\ =\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}newGameObj"{}},\ Collider\ objCollider\ =\ Collider())}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ :\ screen(screen),\ position(pos),\ size(objSize),\ file\_(objPath),\ \ name\_(objName),\ collider(objCollider),\ Id(-\/1),\ isDeleted\_(false),\ frames\_(frames)}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object_a3e0b39e1326de703012f81ac2be7feba}{Init}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a3e0b39e1326de703012f81ac2be7feba}{Init}}()}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158}{GameObjectManager::Get}}().\mbox{\hyperlink{class_game_object_manager_aa3f387ac644d264166074a6df14f8c41}{RegisterGameObject}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collider.type\ ==\ ColliderType::AABB)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ collider.SetAABB(\mbox{\hyperlink{struct_a_a_b_b}{AABB}}(position,\ position\ +\ size));}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!file\_.empty())}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ sprite\_\ =\ \textcolor{keyword}{new}\ Sprite(\textcolor{keyword}{new}\ Surface(file\_.c\_str()),\ frames\_);}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00049\ \ \ \ \ glm::vec2\ \mbox{\hyperlink{class_game_object_adfa70e64c33f2fac05f26f24a061636e}{GetPosition}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ position;\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_afe39f30629557d1d60c0b188754e6aa0}{SetPosition}}(\textcolor{keyword}{const}\ glm::vec2\&\ newPos)}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ position\ =\ newPos;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collider.type\ ==\ ColliderType::AABB)}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ collider.SetAABB(\mbox{\hyperlink{struct_a_a_b_b}{AABB}}(position,\ position\ +\ size));}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00064\ \ \ \ \ glm::vec2\ \mbox{\hyperlink{class_game_object_ab0a2a16ddf1661a02b84266bb4c5453a}{GetSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \ size;\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_object_acf7055c41f3f3d9b9ce00888e2974c50}{GetId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ Id;\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a96c455daf3755e7091a1359df88fbcb9}{SetId}}(\textcolor{keywordtype}{int}\ newId)\ \{\ Id\ =\ newId;\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a0273d96d40646b143487678ddba74899}{SetFrameCount}}(\textcolor{keywordtype}{int}\ frameC)}
+\DoxyCodeLine{00077\ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ frameCount\_\ =\ frameC;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ sprite\_\ =\ \textcolor{keyword}{new}\ Sprite(\textcolor{keyword}{new}\ Surface(file\_.c\_str()),\ frameCount\_);}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{struct_collider}{Collider}}\ \mbox{\hyperlink{class_game_object_a4a759ba05345e180e8fa4cbecb513446}{GetCollider}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ collider;\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00088\ \ \ \ \ std::string\ \mbox{\hyperlink{class_game_object_a9a98946a64f3893b085f650932c9dfee}{GetName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ name\_;\ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_ae232e8f1d65c7223588645585811d018}{MarkForDeletion}}()\{\ isDeleted\_\ =\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_object_af66e04a10d7f6d25cb88b770c7449760}{ShouldBeRemoved}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00096\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isDeleted\_;}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a062aaecb3e8faa8fcdfe84c4dc5c2607}{Update}}(\textcolor{keywordtype}{float}\ \textcolor{comment}{/*deltaTime*/})}
+\DoxyCodeLine{00104\ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Default\ behavior,\ override\ in\ derived\ classes\ if\ needed}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collider.type\ ==\ ColliderType::AABB)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ collider.SetAABB(\mbox{\hyperlink{struct_a_a_b_b}{AABB}}(position,\ position\ +\ size));}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#ifdef\ \_DEBUG}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ uint\ color\ =\ 0xFF0000;\ \textcolor{comment}{//\ Red\ color}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ screen-\/>Box(collider.aabb.min.x,\ collider.aabb.min.y,}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collider.aabb.max.x,\ collider.aabb.max.y,\ color);}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object_a0bc3f3606d9cf5304dac90cd7a619194}{Render}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a0bc3f3606d9cf5304dac90cd7a619194}{Render}}()}
+\DoxyCodeLine{00122\ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file\_.empty())}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}ERROR:\ Object:\ "{}}\ <<\ name\_\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ Id\ <<\ \textcolor{stringliteral}{"{})\ Does\ not\ have\ a\ surface\ that\ can\ be\ rendered."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Correct\ the\ frame\ update}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (frames\_\ >\ 1)}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ sprite\_-\/>SetFrame(frameCount\_);\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (++frameCount\_\ >=\ frames\_)\ frameCount\_\ =\ 0;\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}Frame\ count\ of\ "{}\ +\ name\_\ +\ "{}:\ "{}\ <<\ frameCount\_\ <<\ "{}\(\backslash\)n"{};}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ sprite\_-\/>Draw(screen,\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(position.x),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(position.y));}
+\DoxyCodeLine{00138\ \ \ \ \ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_object_a17b0065d70b65e1ab7cbc38caf2964bf}{CheckCollision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}\&\ other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00145\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ collider.CheckCollision(other.collider);}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_afcf33669e338b014034e40c0ee50fef3}{KeepInsideBoundary}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_collider}{Collider}}\&\ boundary)}
+\DoxyCodeLine{00152\ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collider.type\ ==\ ColliderType::AABB)}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}Before\ Clamping:\ \(\backslash\)n"{};}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}AABB\ Min:\ ("{}\ <<\ collider.aabb.min.x\ <<\ "{},\ "{}\ <<\ collider.aabb.min.y\ <<\ "{}),\ Max:\ ("{}\ <<\ collider.aabb.max.x\ <<\ "{},\ "{}\ <<\ collider.aabb.max.y\ <<\ "{})\(\backslash\)n"{};}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}Boundary\ Min:\ ("{}\ <<\ boundary.aabb.min.x\ <<\ "{},\ "{}\ <<\ boundary.aabb.min.y\ <<\ "{}),\ Max:\ ("{}\ <<\ boundary.aabb.max.x\ <<\ "{},\ "{}\ <<\ boundary.aabb.max.y\ <<\ "{})\(\backslash\)n"{};}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ player's\ AABB\ is\ outside\ the\ box\ and\ clamp\ it}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collider.aabb.min.x\ <\ boundary.aabb.min.x)}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ offset\ =\ boundary.aabb.min.x\ -\/\ collider.aabb.min.x;}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position.x\ +=\ offset;\ \ \textcolor{comment}{//\ Move\ the\ position\ to\ stay\ inside\ boundary}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collider.aabb.min.x\ +=\ offset;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collider.aabb.max.x\ +=\ offset;}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Clamped\ on\ X\ (Left):\ "{}}\ <<\ offset\ <<\ std::endl;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collider.aabb.max.x\ >\ boundary.aabb.max.x)}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ offset\ =\ collider.aabb.max.x\ -\/\ boundary.aabb.max.x;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position.x\ -\/=\ offset;\ \ \textcolor{comment}{//\ Move\ the\ position\ to\ stay\ inside\ boundary}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collider.aabb.min.x\ -\/=\ offset;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collider.aabb.max.x\ -\/=\ offset;}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Clamped\ on\ X\ (Right):\ "{}}\ <<\ offset\ <<\ std::endl;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collider.aabb.min.y\ <\ boundary.aabb.min.y)}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ offset\ =\ boundary.aabb.min.y\ -\/\ collider.aabb.min.y;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position.y\ +=\ offset;\ \ \textcolor{comment}{//\ Move\ the\ position\ to\ stay\ inside\ boundary}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collider.aabb.min.y\ +=\ offset;}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collider.aabb.max.y\ +=\ offset;}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Clamped\ on\ Y\ (Top):\ "{}}\ <<\ offset\ <<\ std::endl;}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (collider.aabb.max.y\ >\ boundary.aabb.max.y)}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ offset\ =\ collider.aabb.max.y\ -\/\ boundary.aabb.max.y;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position.y\ -\/=\ offset;\ \ \textcolor{comment}{//\ Move\ the\ position\ to\ stay\ inside\ boundary}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collider.aabb.min.y\ -\/=\ offset;}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ collider.aabb.max.y\ -\/=\ offset;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Clamped\ on\ Y\ (Bottom):\ "{}}\ <<\ offset\ <<\ std::endl;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Debugging:\ print\ final\ AABB\ values\ after\ clamping}}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}After\ Clamping:\ \(\backslash\)n"{};}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}AABB\ Min:\ ("{}\ <<\ collider.aabb.min.x\ <<\ "{},\ "{}\ <<\ collider.aabb.min.y\ <<\ "{}),\ Max:\ ("{}\ <<\ collider.aabb.max.x\ <<\ "{},\ "{}\ <<\ collider.aabb.max.y\ <<\ "{})\(\backslash\)n"{};}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Not\ an\ AABB\(\backslash\)n"{}};}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00205\ \ \ \ \ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//\ ReSharper\ disable\ once\ CppPossiblyUninitializedMember}}
+\DoxyCodeLine{00219\ \ \ \ \ \mbox{\hyperlink{class_game_object_a020cdbe405a467da68c5d0575e9c2a82}{GameObject}}(Surface*\ screen,\ \textcolor{keyword}{const}\ glm::vec2\&\ pos,\ \textcolor{keywordtype}{int}\ frames,\ \textcolor{keyword}{const}\ glm::vec2\&\ objSize,\ std::string\ objSurface,\ \textcolor{keyword}{const}\ std::string\&\ objName,\ \textcolor{keywordtype}{int}\ objId,\ \mbox{\hyperlink{struct_collider}{Collider}}\ objCollider)}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ :\ screen(screen),\ position(pos),\ size(objSize),\ file\_(objSurface),\ name\_(objName),\ collider(objCollider),\ Id(objId),\ isDeleted\_(false),\ frames\_(frames),\ sprite\_(nullptr)}
+\DoxyCodeLine{00221\ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ Surface*\ screen;}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ glm::vec2\ position;}
+\DoxyCodeLine{00227\ \ \ \ \ glm::vec2\ size;}
+\DoxyCodeLine{00228\ \ \ \ \ \mbox{\hyperlink{struct_collider}{Collider}}\ collider;}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{int}\ Id;}
+\DoxyCodeLine{00230\ \ \ \ \ std::string\ name\_;}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ std::string\ file\_;}
+\DoxyCodeLine{00233\ \ \ \ \ Sprite*\ sprite\_;}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDeleted\_;}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{int}\ frames\_;}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{int}\ frameCount\_\ =\ 0;}
+\DoxyCodeLine{00237\ \};}
+
+\end{DoxyCode}

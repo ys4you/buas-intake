@@ -1,0 +1,36 @@
+\doxysection{game.\+h}
+\hypertarget{game_8h_source}{}\label{game_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Template,\ 2024\ IGAD\ Edition}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Get\ the\ latest\ version\ from:\ https://github.com/jbikker/tmpl8}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ IGAD/NHTV/BUAS/UU\ -\/\ Jacco\ Bikker\ -\/\ 2006-\/2024}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }Tmpl8}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tmpl8_1_1_game}{Game}}\ :\ \textcolor{keyword}{public}\ TheApp}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ game\ flow\ methods}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ Init();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ Tick(\ \textcolor{keywordtype}{float}\ deltaTime\ );}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ Shutdown()\ \{\ \textcolor{comment}{/*\ implement\ if\ you\ want\ to\ do\ something\ on\ exit\ */}\ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ input\ handling}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ MouseUp(\ \textcolor{keywordtype}{int}\ )\ \{\ \textcolor{comment}{/*\ implement\ if\ you\ want\ to\ detect\ mouse\ button\ presses\ */}\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ MouseDown(\ \textcolor{keywordtype}{int}\ )\ \{\ \textcolor{comment}{/*\ implement\ if\ you\ want\ to\ detect\ mouse\ button\ presses\ */}\ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ MouseMove(\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y\ )\ \{\ mousePos.x\ =\ x,\ mousePos.y\ =\ y;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ MouseWheel(\ \textcolor{keywordtype}{float}\ )\ \{\ \textcolor{comment}{/*\ implement\ if\ you\ want\ to\ handle\ the\ mouse\ wheel\ */}\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ KeyUp(\ \textcolor{keywordtype}{int}\ )\ \{\ \textcolor{comment}{/*\ implement\ if\ you\ want\ to\ handle\ keys\ */}\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ KeyDown(\ \textcolor{keywordtype}{int}\ )\ \{\ \textcolor{comment}{/*\ implement\ if\ you\ want\ to\ handle\ keys\ */}\ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ data\ members}}
+\DoxyCodeLine{00025\ \ \ \ \ int2\ mousePos;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ gameTime;}
+\DoxyCodeLine{00028\ \ \ \ \ Sprite*\ test;}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \}\ \textcolor{comment}{//\ namespace\ Tmpl8}}
+
+\end{DoxyCode}

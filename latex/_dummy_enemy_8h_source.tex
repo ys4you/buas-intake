@@ -1,0 +1,72 @@
+\doxysection{Dummy\+Enemy.\+h}
+\hypertarget{_dummy_enemy_8h_source}{}\label{_dummy_enemy_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}BaseAttack.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Enemy.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameObject.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//attacks}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}DummyAttackOne.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}CircleAttack.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}DiamondRain.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}RandomBlasterSpam.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dummy_enemy_aee8fbf0a66e64dccd41eb5484d692bc3}{DummyEnemy}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_enemy_a9fb0783f79ac49239b5800fcaeed64aa}{Enemy}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_dummy_enemy_aee8fbf0a66e64dccd41eb5484d692bc3}{DummyEnemy}}(}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ Surface*\ screen,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_box}{Box}}*\ box\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,\ 0\ \},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 1,\ 1\ \},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::string\ filePath\ =\ \textcolor{stringliteral}{"{}assets/art/enemy/dummy/dummy-\/Sheet.png"{}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}Dummy"{}})}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_enemy_a9fb0783f79ac49239b5800fcaeed64aa}{Enemy}}(}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ screen,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ 15,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ 15,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ 8,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ pos,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ objSize,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ std::move(filePath),}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ objName)\ \textcolor{comment}{//\ Calling\ the\ base\ class\ constructor}}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ glm::vec2\ p\ =\ box-\/>GetPosition();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ glm::vec2\ s\ =\ box-\/>GetSize();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Box\ Position:\ ("{}}\ <<\ p.x\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ p.y\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Box\ Size:\ ("{}}\ <<\ s.x\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ s.y\ <<\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ attacks.push\_back(\textcolor{keyword}{new}\ DummyAttackOne(screen,\ 15,\ 10.f));}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ attacks.push\_back(\textcolor{keyword}{new}\ CircleAttack(screen,\ 10.f,\ 10,\ amountOfCircles));}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ attacks.push\_back(\textcolor{keyword}{new}\ RandomBlasterSpam(screen,\ 10.f,\ 1.f,\ box));}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (box\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ attacks.push\_back(\textcolor{keyword}{new}\ DiamondRain(screen,\ 10.f,\ 0.2f,\ 0.5f,\ box));}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_dummy_enemy_a3e09b2fa65fb702394370f5ad956b2aa}{\string~DummyEnemy}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ vector<BaseAttack*>\ attacks;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dummy_enemy_ae76a938c75c1497d46f357da4ff09065}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dummy_enemy_aeeae4171d08e4e5ac1c48c8c79d55dc6}{Attack}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dummy_enemy_a6439db113c7c15c83710c55c8e57af38}{IsDone}}()\ \{\ \textcolor{keywordflow}{return}\ isDone;\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dummy_enemy_ae4f9f9401033d321a1eee9d94d82afed}{SetDone}}(\textcolor{keywordtype}{bool}\ newState);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ isAttacking\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDone\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ attackIteration\ =\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ amountOfCircles\ =\ 3;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dummy_enemy_acce713b73af397897d66ba124934f059}{UseSequenceAttack}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dummy_enemy_a7896e2b65daade197c33d82d874e5c67}{UseDefinedAttack}}(\mbox{\hyperlink{class_base_attack}{BaseAttack}}*\ attack);}
+\DoxyCodeLine{00086\ \};}
+
+\end{DoxyCode}

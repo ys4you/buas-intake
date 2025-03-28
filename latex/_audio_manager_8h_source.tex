@@ -1,0 +1,36 @@
+\doxysection{Audio\+Manager.\+h}
+\hypertarget{_audio_manager_8h_source}{}\label{_audio_manager_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}miniaudio.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }AudioManager\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ AudioManager\&\ \mbox{\hyperlink{class_audio_manager_a488cc95bbab008477be1c748e104cc12}{Get}}();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_audio_manager_ab3e7cc706c522b3231f9156bba461436}{initialize}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_manager_af7a4a2e0fa19ebb4e38d88dae63f3b25}{deconstruct}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_audio_manager_af90394ef8b357ef9a1eb8798c5752d90}{playAudio}}(\textcolor{keyword}{const}\ std::string\&\ audioName);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ AudioManager();}
+\DoxyCodeLine{00028\ \ \ \ \ \string~AudioManager();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ SetupAudioDict();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Disable\ copy\ and\ assignment}}
+\DoxyCodeLine{00034\ \ \ \ \ AudioManager(\textcolor{keyword}{const}\ AudioManager\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ \ \ \ \ AudioManager\&\ operator=(\textcolor{keyword}{const}\ AudioManager\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ ma\_engine\ m\_engine;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_initialized\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::map<std::string,\ std::string>\ audioDict;}
+\DoxyCodeLine{00041\ \};}
+
+\end{DoxyCode}

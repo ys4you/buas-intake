@@ -1,0 +1,112 @@
+\doxysection{Scene\+Base\+State Class Reference}
+\hypertarget{class_scene_base_state}{}\label{class_scene_base_state}\index{SceneBaseState@{SceneBaseState}}
+
+
+Abstract base class for scene states in a finite state machine.  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Base\+State.\+h$>$}
+
+Inheritance diagram for Scene\+Base\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_base_state}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_scene_base_state_a7e2926c61228ce85d0ad02dec535031d}{on\+Enter}} (Surface \texorpdfstring{$\ast$}{*}screen)=0
+\begin{DoxyCompactList}\small\item\em Called when entering this scene state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_base_state_afa40104bcfa983df324dd26fc708eeb1}{on\+Update}} (float delta\+Time, Surface \texorpdfstring{$\ast$}{*}screen)=0
+\begin{DoxyCompactList}\small\item\em Updates the scene state logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_base_state_ad104cd2165f4bae7d64c7a7f1439f243}{on\+Exit}} (Surface \texorpdfstring{$\ast$}{*}screen)=0
+\begin{DoxyCompactList}\small\item\em Called when exiting this scene state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_base_state_a1a4dd0b870993e51d9ce4c928223d389}{check\+Switch\+State}} ()=0
+\begin{DoxyCompactList}\small\item\em Checks and handles transitions between scene states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for scene states in a finite state machine. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_scene_base_state_a1a4dd0b870993e51d9ce4c928223d389}\index{SceneBaseState@{SceneBaseState}!checkSwitchState@{checkSwitchState}}
+\index{checkSwitchState@{checkSwitchState}!SceneBaseState@{SceneBaseState}}
+\doxysubsubsection{\texorpdfstring{checkSwitchState()}{checkSwitchState()}}
+{\footnotesize\ttfamily \label{class_scene_base_state_a1a4dd0b870993e51d9ce4c928223d389} 
+virtual void check\+Switch\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks and handles transitions between scene states. 
+
+
+
+Implemented in \mbox{\hyperlink{class_death_scene_a2503a783ec3339e04f46b3db278bfbfa}{Death\+Scene}}, \mbox{\hyperlink{class_game_loop_scene_a2503a783ec3339e04f46b3db278bfbfa}{Game\+Loop\+Scene}}, \mbox{\hyperlink{class_main_menu_scene_a2503a783ec3339e04f46b3db278bfbfa}{Main\+Menu\+Scene}}, and \mbox{\hyperlink{class_win_scene_a2503a783ec3339e04f46b3db278bfbfa}{Win\+Scene}}.
+
+\Hypertarget{class_scene_base_state_a7e2926c61228ce85d0ad02dec535031d}\index{SceneBaseState@{SceneBaseState}!onEnter@{onEnter}}
+\index{onEnter@{onEnter}!SceneBaseState@{SceneBaseState}}
+\doxysubsubsection{\texorpdfstring{onEnter()}{onEnter()}}
+{\footnotesize\ttfamily \label{class_scene_base_state_a7e2926c61228ce85d0ad02dec535031d} 
+virtual void on\+Enter (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Called when entering this scene state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & The surface where the scene will be drawn. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_death_scene_a2e6db30a339174fd62060140f95d30d3}{Death\+Scene}}, \mbox{\hyperlink{class_game_loop_scene_a2e6db30a339174fd62060140f95d30d3}{Game\+Loop\+Scene}}, \mbox{\hyperlink{class_main_menu_scene_a2e6db30a339174fd62060140f95d30d3}{Main\+Menu\+Scene}}, and \mbox{\hyperlink{class_win_scene_a2e6db30a339174fd62060140f95d30d3}{Win\+Scene}}.
+
+\Hypertarget{class_scene_base_state_ad104cd2165f4bae7d64c7a7f1439f243}\index{SceneBaseState@{SceneBaseState}!onExit@{onExit}}
+\index{onExit@{onExit}!SceneBaseState@{SceneBaseState}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily \label{class_scene_base_state_ad104cd2165f4bae7d64c7a7f1439f243} 
+virtual void on\+Exit (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Called when exiting this scene state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & The surface where the scene was drawn. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_death_scene_af2ba392c3cce1f4401171ad57785d561}{Death\+Scene}}, \mbox{\hyperlink{class_game_loop_scene_af2ba392c3cce1f4401171ad57785d561}{Game\+Loop\+Scene}}, \mbox{\hyperlink{class_main_menu_scene_af2ba392c3cce1f4401171ad57785d561}{Main\+Menu\+Scene}}, and \mbox{\hyperlink{class_win_scene_af2ba392c3cce1f4401171ad57785d561}{Win\+Scene}}.
+
+\Hypertarget{class_scene_base_state_afa40104bcfa983df324dd26fc708eeb1}\index{SceneBaseState@{SceneBaseState}!onUpdate@{onUpdate}}
+\index{onUpdate@{onUpdate}!SceneBaseState@{SceneBaseState}}
+\doxysubsubsection{\texorpdfstring{onUpdate()}{onUpdate()}}
+{\footnotesize\ttfamily \label{class_scene_base_state_afa40104bcfa983df324dd26fc708eeb1} 
+virtual void on\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{, }\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Updates the scene state logic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed since the last update. \\
+\hline
+{\em screen} & The surface where the scene is drawn. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_death_scene_a6c15f9a6eead88774b8a24be99826bb0}{Death\+Scene}}, \mbox{\hyperlink{class_game_loop_scene_a6c15f9a6eead88774b8a24be99826bb0}{Game\+Loop\+Scene}}, \mbox{\hyperlink{class_main_menu_scene_a6c15f9a6eead88774b8a24be99826bb0}{Main\+Menu\+Scene}}, and \mbox{\hyperlink{class_win_scene_a6c15f9a6eead88774b8a24be99826bb0}{Win\+Scene}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scene\+Base\+State.\+h\end{DoxyCompactItemize}

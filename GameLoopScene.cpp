@@ -20,7 +20,7 @@ void GameLoopScene::onEnter(Surface* screen)
 		"assets/art/player.png",
 		"PlayerSoul",
 		100,
-		1);
+		100);
 
 
 	box = new Box(

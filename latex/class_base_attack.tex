@@ -1,0 +1,184 @@
+\doxysection{Base\+Attack Class Reference}
+\hypertarget{class_base_attack}{}\label{class_base_attack}\index{BaseAttack@{BaseAttack}}
+
+
+Base class for attack mechanics in a game.  
+
+
+
+
+{\ttfamily \#include $<$Base\+Attack.\+h$>$}
+
+Inheritance diagram for Base\+Attack\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_base_attack}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_attack_a614769c75f904d6a99e3ae9813a98a30}{Base\+Attack}} (Surface \texorpdfstring{$\ast$}{*}screen, float duration, float interval)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_base_attack}{Base\+Attack} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_attack_a77c9c686ee3eaf45a00fa79227c7b630}{Set\+Interval}} (float new\+Interval)
+\begin{DoxyCompactList}\small\item\em Sets the interval of the attack. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_base_attack_a95131e7f00d70037fcf137a4c9bcd2b0}{Get\+Interval}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current interval. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_attack_aa5c0f2d48c10daa507fa7265202982e7}\label{class_base_attack_aa5c0f2d48c10daa507fa7265202982e7} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Base\+Attack} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_base_attack}{Base\+Attack}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_attack_aef66d29247eac07ec1bf67fc687eb9cd}{Fire\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em Triggers the attack. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_base_attack_a17f26c4e540e012571c599095794b0ed}{Doing\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the attack is still active. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_attack_a1c0e899750694c87b6bd496b8ec7de6c}{Reset\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em Resets the attack state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_attack_ad75b558459e6aa344841f632e78316b8}{Update}} (float delta\+Time)=0
+\begin{DoxyCompactList}\small\item\em Updates the attack state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_base_attack_ab2f1b6e27a774f09a2027ea26bc1f954}\label{class_base_attack_ab2f1b6e27a774f09a2027ea26bc1f954} 
+Surface \texorpdfstring{$\ast$}{*} {\bfseries screen}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_base_attack_a4143a723b81563abfd7340fdbddc4919}\label{class_base_attack_a4143a723b81563abfd7340fdbddc4919} 
+float {\bfseries attack\+Time} = 0.\+01f
+\item 
+\Hypertarget{class_base_attack_a97df6cb71ca1ed54f2f4fadb312c9bb3}\label{class_base_attack_a97df6cb71ca1ed54f2f4fadb312c9bb3} 
+float {\bfseries interval} = 0.f
+\item 
+\Hypertarget{class_base_attack_abb8bd4fceff21f1beaf39e2aba94840a}\label{class_base_attack_abb8bd4fceff21f1beaf39e2aba94840a} 
+float {\bfseries timer} = 0.f
+\item 
+\Hypertarget{class_base_attack_a7c36c7f1c07b0023acb9a3b3af4670ec}\label{class_base_attack_a7c36c7f1c07b0023acb9a3b3af4670ec} 
+bool {\bfseries is\+Attacking} = false
+\item 
+\Hypertarget{class_base_attack_a71f0d55aa5060ec1eb06678e52b392eb}\label{class_base_attack_a71f0d55aa5060ec1eb06678e52b392eb} 
+bool {\bfseries is\+Destroying} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for attack mechanics in a game. 
+
+This class provides a foundation for implementing attack actions. It includes mechanisms for attack duration, intervals, and status tracking. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_base_attack_a614769c75f904d6a99e3ae9813a98a30}\index{BaseAttack@{BaseAttack}!BaseAttack@{BaseAttack}}
+\index{BaseAttack@{BaseAttack}!BaseAttack@{BaseAttack}}
+\doxysubsubsection{\texorpdfstring{BaseAttack()}{BaseAttack()}}
+{\footnotesize\ttfamily \label{class_base_attack_a614769c75f904d6a99e3ae9813a98a30} 
+\mbox{\hyperlink{class_base_attack}{Base\+Attack}} (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{float}]{duration}{, }\item[{float}]{interval}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{class_base_attack}{Base\+Attack} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & Pointer to the screen where the attack is displayed. \\
+\hline
+{\em duration} & Duration of the attack in seconds. \\
+\hline
+{\em interval} & Time between attack activations in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_base_attack_a17f26c4e540e012571c599095794b0ed}\index{BaseAttack@{BaseAttack}!DoingAttack@{DoingAttack}}
+\index{DoingAttack@{DoingAttack}!BaseAttack@{BaseAttack}}
+\doxysubsubsection{\texorpdfstring{DoingAttack()}{DoingAttack()}}
+{\footnotesize\ttfamily \label{class_base_attack_a17f26c4e540e012571c599095794b0ed} 
+virtual bool Doing\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the attack is still active. 
+
+\begin{DoxyReturn}{Returns}
+Returns true if the attack is still in progress; otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{class_base_attack_aef66d29247eac07ec1bf67fc687eb9cd}\index{BaseAttack@{BaseAttack}!FireAttack@{FireAttack}}
+\index{FireAttack@{FireAttack}!BaseAttack@{BaseAttack}}
+\doxysubsubsection{\texorpdfstring{FireAttack()}{FireAttack()}}
+{\footnotesize\ttfamily \label{class_base_attack_aef66d29247eac07ec1bf67fc687eb9cd} 
+virtual void Fire\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Triggers the attack. 
+
+This function starts the attack, setting {\ttfamily is\+Attacking} to true and incrementing the attack timer. 
+
+Reimplemented in \mbox{\hyperlink{class_circle_attack_ad4a4a243c364b66f05aa630b53d7dcbd}{Circle\+Attack}}, and \mbox{\hyperlink{class_random_blaster_spam_ad4a4a243c364b66f05aa630b53d7dcbd}{Random\+Blaster\+Spam}}.
+
+\Hypertarget{class_base_attack_a95131e7f00d70037fcf137a4c9bcd2b0}\index{BaseAttack@{BaseAttack}!GetInterval@{GetInterval}}
+\index{GetInterval@{GetInterval}!BaseAttack@{BaseAttack}}
+\doxysubsubsection{\texorpdfstring{GetInterval()}{GetInterval()}}
+{\footnotesize\ttfamily \label{class_base_attack_a95131e7f00d70037fcf137a4c9bcd2b0} 
+float Get\+Interval (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current interval. 
+
+\begin{DoxyReturn}{Returns}
+Returns the current interval value as a float. 
+\end{DoxyReturn}
+\Hypertarget{class_base_attack_a1c0e899750694c87b6bd496b8ec7de6c}\index{BaseAttack@{BaseAttack}!ResetAttack@{ResetAttack}}
+\index{ResetAttack@{ResetAttack}!BaseAttack@{BaseAttack}}
+\doxysubsubsection{\texorpdfstring{ResetAttack()}{ResetAttack()}}
+{\footnotesize\ttfamily \label{class_base_attack_a1c0e899750694c87b6bd496b8ec7de6c} 
+virtual void Reset\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Resets the attack state. 
+
+This function stops the attack and resets the attack timer. 
+
+Reimplemented in \mbox{\hyperlink{class_circle_attack_a9e58f392ced8fff720d48dabf64c475c}{Circle\+Attack}}, \mbox{\hyperlink{class_dummy_attack_one_a9e58f392ced8fff720d48dabf64c475c}{Dummy\+Attack\+One}}, and \mbox{\hyperlink{class_random_blaster_spam_a9e58f392ced8fff720d48dabf64c475c}{Random\+Blaster\+Spam}}.
+
+\Hypertarget{class_base_attack_a77c9c686ee3eaf45a00fa79227c7b630}\index{BaseAttack@{BaseAttack}!SetInterval@{SetInterval}}
+\index{SetInterval@{SetInterval}!BaseAttack@{BaseAttack}}
+\doxysubsubsection{\texorpdfstring{SetInterval()}{SetInterval()}}
+{\footnotesize\ttfamily \label{class_base_attack_a77c9c686ee3eaf45a00fa79227c7b630} 
+void Set\+Interval (\begin{DoxyParamCaption}\item[{float}]{new\+Interval}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the interval of the attack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Interval} & A float representing the new interval value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_attack_ad75b558459e6aa344841f632e78316b8}\index{BaseAttack@{BaseAttack}!Update@{Update}}
+\index{Update@{Update}!BaseAttack@{BaseAttack}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_base_attack_ad75b558459e6aa344841f632e78316b8} 
+virtual void Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Updates the attack state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_circle_attack_ae76a938c75c1497d46f357da4ff09065}{Circle\+Attack}}, \mbox{\hyperlink{class_diamond_rain_ae76a938c75c1497d46f357da4ff09065}{Diamond\+Rain}}, \mbox{\hyperlink{class_dummy_attack_one_a3c176fc0ed6fe00f3a0179dee897429a}{Dummy\+Attack\+One}}, and \mbox{\hyperlink{class_random_blaster_spam_ae76a938c75c1497d46f357da4ff09065}{Random\+Blaster\+Spam}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Base\+Attack.\+h\end{DoxyCompactItemize}

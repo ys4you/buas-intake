@@ -1,0 +1,113 @@
+\doxysection{Main\+Menu\+Scene Class Reference}
+\hypertarget{class_main_menu_scene}{}\label{class_main_menu_scene}\index{MainMenuScene@{MainMenuScene}}
+
+
+A scene that represents the main menu of the game.  
+
+
+
+
+{\ttfamily \#include $<$Main\+Menu\+Scene.\+h$>$}
+
+Inheritance diagram for Main\+Menu\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_menu_scene}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_menu_scene_a2e6db30a339174fd62060140f95d30d3}{on\+Enter}} (Surface \texorpdfstring{$\ast$}{*}screen) override
+\begin{DoxyCompactList}\small\item\em Called when this scene is entered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_menu_scene_a6c15f9a6eead88774b8a24be99826bb0}{on\+Update}} (float delta\+Time, Surface \texorpdfstring{$\ast$}{*}screen) override
+\begin{DoxyCompactList}\small\item\em Updates the scene based on the elapsed time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_menu_scene_af2ba392c3cce1f4401171ad57785d561}{on\+Exit}} (Surface \texorpdfstring{$\ast$}{*}screen) override
+\begin{DoxyCompactList}\small\item\em Called when this scene is exited. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_menu_scene_a2503a783ec3339e04f46b3db278bfbfa}{check\+Switch\+State}} () override
+\begin{DoxyCompactList}\small\item\em Checks if the scene should transition to another state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A scene that represents the main menu of the game. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_main_menu_scene_a2503a783ec3339e04f46b3db278bfbfa}\index{MainMenuScene@{MainMenuScene}!checkSwitchState@{checkSwitchState}}
+\index{checkSwitchState@{checkSwitchState}!MainMenuScene@{MainMenuScene}}
+\doxysubsubsection{\texorpdfstring{checkSwitchState()}{checkSwitchState()}}
+{\footnotesize\ttfamily \label{class_main_menu_scene_a2503a783ec3339e04f46b3db278bfbfa} 
+void check\+Switch\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the scene should transition to another state. 
+
+
+
+Implements \mbox{\hyperlink{class_scene_base_state_a1a4dd0b870993e51d9ce4c928223d389}{Scene\+Base\+State}}.
+
+\Hypertarget{class_main_menu_scene_a2e6db30a339174fd62060140f95d30d3}\index{MainMenuScene@{MainMenuScene}!onEnter@{onEnter}}
+\index{onEnter@{onEnter}!MainMenuScene@{MainMenuScene}}
+\doxysubsubsection{\texorpdfstring{onEnter()}{onEnter()}}
+{\footnotesize\ttfamily \label{class_main_menu_scene_a2e6db30a339174fd62060140f95d30d3} 
+void on\+Enter (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when this scene is entered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & A pointer to the Surface object for rendering. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_scene_base_state_a7e2926c61228ce85d0ad02dec535031d}{Scene\+Base\+State}}.
+
+\Hypertarget{class_main_menu_scene_af2ba392c3cce1f4401171ad57785d561}\index{MainMenuScene@{MainMenuScene}!onExit@{onExit}}
+\index{onExit@{onExit}!MainMenuScene@{MainMenuScene}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily \label{class_main_menu_scene_af2ba392c3cce1f4401171ad57785d561} 
+void on\+Exit (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when this scene is exited. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & A pointer to the Surface object for rendering. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_scene_base_state_ad104cd2165f4bae7d64c7a7f1439f243}{Scene\+Base\+State}}.
+
+\Hypertarget{class_main_menu_scene_a6c15f9a6eead88774b8a24be99826bb0}\index{MainMenuScene@{MainMenuScene}!onUpdate@{onUpdate}}
+\index{onUpdate@{onUpdate}!MainMenuScene@{MainMenuScene}}
+\doxysubsubsection{\texorpdfstring{onUpdate()}{onUpdate()}}
+{\footnotesize\ttfamily \label{class_main_menu_scene_a6c15f9a6eead88774b8a24be99826bb0} 
+void on\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{, }\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the scene based on the elapsed time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed since the last frame update. \\
+\hline
+{\em screen} & A pointer to the Surface object for rendering. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_scene_base_state_afa40104bcfa983df324dd26fc708eeb1}{Scene\+Base\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Main\+Menu\+Scene.\+h\item 
+Main\+Menu\+Scene.\+cpp\end{DoxyCompactItemize}

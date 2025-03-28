@@ -1,0 +1,122 @@
+\doxysection{Diamond\+Rain Class Reference}
+\hypertarget{class_diamond_rain}{}\label{class_diamond_rain}\index{DiamondRain@{DiamondRain}}
+
+
+A diamond rain attack that spawns diamond projectiles at regular intervals.  
+
+
+
+
+{\ttfamily \#include $<$Diamond\+Rain.\+h$>$}
+
+Inheritance diagram for Diamond\+Rain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_diamond_rain}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_diamond_rain_a0c012d6b42888de589776fbd3403646c}{Diamond\+Rain}} (Surface \texorpdfstring{$\ast$}{*}screen, float duration, float interval, float bullet\+Speed, \mbox{\hyperlink{class_box}{Box}} \texorpdfstring{$\ast$}{*}box, bool going\+Up=true)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the \doxylink{class_diamond_rain}{Diamond\+Rain} attack. \end{DoxyCompactList}\item 
+\Hypertarget{class_diamond_rain_a96e070948ddf75b293bd61ec48322b15}\label{class_diamond_rain_a96e070948ddf75b293bd61ec48322b15} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Diamond\+Rain} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_diamond_rain}{Diamond\+Rain}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diamond_rain_ae76a938c75c1497d46f357da4ff09065}{Update}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Updates the attack logic and spawns projectiles at intervals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_attack}{Base\+Attack}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_attack_a614769c75f904d6a99e3ae9813a98a30}{Base\+Attack}} (Surface \texorpdfstring{$\ast$}{*}screen, float duration, float interval)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_base_attack}{Base\+Attack} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_attack_a77c9c686ee3eaf45a00fa79227c7b630}{Set\+Interval}} (float new\+Interval)
+\begin{DoxyCompactList}\small\item\em Sets the interval of the attack. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_base_attack_a95131e7f00d70037fcf137a4c9bcd2b0}{Get\+Interval}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current interval. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Base\+Attack} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_base_attack}{Base\+Attack}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_attack_aef66d29247eac07ec1bf67fc687eb9cd}{Fire\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em Triggers the attack. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_base_attack_a17f26c4e540e012571c599095794b0ed}{Doing\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the attack is still active. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_attack_a1c0e899750694c87b6bd496b8ec7de6c}{Reset\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em Resets the attack state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{class_base_attack}{Base\+Attack}}}
+\begin{DoxyCompactItemize}
+\item 
+Surface \texorpdfstring{$\ast$}{*} {\bfseries screen}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_base_attack}{Base\+Attack}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries attack\+Time} = 0.\+01f
+\item 
+float {\bfseries interval} = 0.f
+\item 
+float {\bfseries timer} = 0.f
+\item 
+bool {\bfseries is\+Attacking} = false
+\item 
+bool {\bfseries is\+Destroying} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A diamond rain attack that spawns diamond projectiles at regular intervals. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_diamond_rain_a0c012d6b42888de589776fbd3403646c}\index{DiamondRain@{DiamondRain}!DiamondRain@{DiamondRain}}
+\index{DiamondRain@{DiamondRain}!DiamondRain@{DiamondRain}}
+\doxysubsubsection{\texorpdfstring{DiamondRain()}{DiamondRain()}}
+{\footnotesize\ttfamily \label{class_diamond_rain_a0c012d6b42888de589776fbd3403646c} 
+\mbox{\hyperlink{class_diamond_rain}{Diamond\+Rain}} (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{float}]{duration}{, }\item[{float}]{interval}{, }\item[{float}]{bullet\+Speed}{, }\item[{\mbox{\hyperlink{class_box}{Box}} \texorpdfstring{$\ast$}{*}}]{box}{, }\item[{bool}]{going\+Up}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize the \doxylink{class_diamond_rain}{Diamond\+Rain} attack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & A pointer to the Surface object for rendering. \\
+\hline
+{\em duration} & The duration of the attack. \\
+\hline
+{\em interval} & The time interval between spawning projectiles. \\
+\hline
+{\em bullet\+Speed} & The speed at which the projectiles move. \\
+\hline
+{\em box} & A pointer to the \doxylink{class_box}{Box} object, which may affect attack behavior. \\
+\hline
+{\em going\+Up} & A boolean indicating the direction of the attack (default is true). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_diamond_rain_ae76a938c75c1497d46f357da4ff09065}\index{DiamondRain@{DiamondRain}!Update@{Update}}
+\index{Update@{Update}!DiamondRain@{DiamondRain}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_diamond_rain_ae76a938c75c1497d46f357da4ff09065} 
+void Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the attack logic and spawns projectiles at intervals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed since the last frame update. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base_attack_ad75b558459e6aa344841f632e78316b8}{Base\+Attack}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Diamond\+Rain.\+h\item 
+Diamond\+Rain.\+cpp\end{DoxyCompactItemize}

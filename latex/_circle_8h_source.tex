@@ -1,0 +1,31 @@
+\doxysection{Circle.\+h}
+\hypertarget{_circle_8h_source}{}\label{_circle_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}SphereProjectile.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_circle_a1ddd8c487dc7b39a24d9c442e0bb3053}{Circle}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_circle_a1ddd8c487dc7b39a24d9c442e0bb3053}{Circle}}(Surface*\ screen,\ \textcolor{keywordtype}{int}\ amountOfProjectiles)}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ :\ screen(screen),\ projectilesAmount(amountOfProjectiles)\ \{\}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_circle}{\string~Circle}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ Surface*\ screen;}
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<SphereProjectile*>\ projectiles;}
+\DoxyCodeLine{00017\ \ \ \ \ glm::vec2\ projSize\ =\ \{\ 64,\ 64\ \};}
+\DoxyCodeLine{00018\ \ \ \ \ glm::vec2\ center\ =\ \{\ 640\ -\/\ projSize.x\ /\ 2,\ 240\ -\/\ projSize.y\ /\ 2\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ projectilesAmount\ =\ 0;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ radius\ =\ 200.f;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ projTimer\ =\ 0.2f;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ spiralIsDone\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circle_a2c7f3781218f4b5f1439fe88f64fd596}{SpawnCircle}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circle_a26cac5c1b1c70c6c63010879e4b9f813}{SpiralCircle}}(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circle_afb1982f48db0e19d0f24291dc61708cd}{MoveProjToCenter}}(SphereProjectile*\ proj,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00036\ \};}
+
+\end{DoxyCode}

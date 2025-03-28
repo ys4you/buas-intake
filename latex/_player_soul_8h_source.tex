@@ -1,0 +1,51 @@
+\doxysection{Player\+Soul.\+h}
+\hypertarget{_player_soul_8h_source}{}\label{_player_soul_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameObject.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_soul_afca03d17680e3a0a3fc39c4563cc4661}{PlayerSoul}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_player_soul_afca03d17680e3a0a3fc39c4563cc4661}{PlayerSoul}}(}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ Surface*\ screen,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ pos\ =\ \{\ 0,\ 0\ \},}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec2\&\ objSize\ =\ \{\ 1,\ 1\ \},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ filePath\ =\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ objName\ =\ \textcolor{stringliteral}{"{}PlayerSoul"{}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maxHealth\ =\ 100,\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Default\ max\ health}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ health\ =\ 100,\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Default\ current\ health}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ Collider\ collider\ =\ Collider(ColliderType::AABB)}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ )}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{GameObject}}(}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ screen,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ pos,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ 1,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ objSize,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ std::move(filePath),}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ objName,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ collider),}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ healthPoints(health),}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ maxHealthPoints(maxHealth)}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_soul_a26c6bf5390870ba76d1c512bac710a95}{TakeDamage}}(\textcolor{keywordtype}{int}\ damageAmount);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_soul_a8a2daf2544bc307b1ac11de356608feb}{Die}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_soul_a3e7bda009261080c12cb3647bc79dbb1}{Heal}}(\textcolor{keywordtype}{int}\ healAmount);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasDied\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ healthPoints;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ maxHealthPoints;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ glm::vec2\ positionOfUI\ =\ \{\ 100.f,20.f\ \};}
+\DoxyCodeLine{00065\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\doxysection{Game\+Object\+Manager.\+h}
+\hypertarget{_game_object_manager_8h_source}{}\label{_game_object_manager_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_object}{GameObject}};}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }GameObjectManager\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{static}\ GameObjectManager\&\ \mbox{\hyperlink{class_game_object_manager_a9de1d068c8fcc118279fc093b6161158}{Get}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_manager_aa3f387ac644d264166074a6df14f8c41}{RegisterGameObject}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ newGameObj);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_game_object_manager_a47da8edc469ee4130f61b97e28bd65f7}{GetGameObject}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_game_object_manager_af74e90dee995644928e59b98e3207b5a}{GetGameObjectByName}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_manager_a354811ae437d2c1f2bf1c03eaaf09855}{RemoveGameObject}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_manager_a846d7533360cccdd5081739ed7ede859}{UpdateAllObjects}}(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ GameObjectManager();}
+\DoxyCodeLine{00039\ \ \ \ \ \string~GameObjectManager();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ nextId;}
+\DoxyCodeLine{00042\ \ \ \ \ std::map<int,\ GameObject*>\ gameObjects;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ GameObjectManager(\textcolor{keyword}{const}\ GameObjectManager\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00045\ \ \ \ \ GameObjectManager\&\ operator=(\textcolor{keyword}{const}\ GameObjectManager\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00046\ \};}
+
+\end{DoxyCode}

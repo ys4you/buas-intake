@@ -1,0 +1,123 @@
+\doxysection{Blast Class Reference}
+\hypertarget{class_blast}{}\label{class_blast}\index{Blast@{Blast}}
+
+
+Represents a \doxylink{class_blast}{Blast} object in the game, typically an enemy or projectile.  
+
+
+
+
+{\ttfamily \#include $<$Blast.\+h$>$}
+
+Inheritance diagram for Blast\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_blast}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_blast_ade752ec9005fb7de4ccb05d6324afd2e}{Blast}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos=\{ 0, 0 \}, const glm\+::vec2 \&obj\+Size=\{ 0, 0 \}, int random\+Dir=-\/1, std\+::string file\+Path="{}assets/art/enemy/dummy/pixel.\+png"{}, const std\+::string \&obj\+Name="{}Blast"{}, \mbox{\hyperlink{struct_collider}{Collider}} collider=\mbox{\hyperlink{struct_collider}{Collider}}(Collider\+Type\+::\+AABB))
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the \doxylink{class_blast}{Blast} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{Game\+Object}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos=\{ 0, 0 \}, int frames=1, const glm\+::vec2 \&obj\+Size=\{ 1, 1 \}, std\+::string obj\+Path=nullptr, const std\+::string \&obj\+Name="{}new\+Game\+Obj"{}, \mbox{\hyperlink{struct_collider}{Collider}} obj\+Collider=\mbox{\hyperlink{struct_collider}{Collider}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_game_object}{Game\+Object} with specified parameters. \end{DoxyCompactList}\item 
+virtual void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_game_object}{Game\+Object}, registering it and setting up its collider and sprite. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_adfa70e64c33f2fac05f26f24a061636e}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current position of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_afe39f30629557d1d60c0b188754e6aa0}{Set\+Position}} (const glm\+::vec2 \&new\+Pos)
+\begin{DoxyCompactList}\small\item\em Sets a new position for the \doxylink{class_game_object}{Game\+Object} and updates the collider. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_ab0a2a16ddf1661a02b84266bb4c5453a}{Get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_object_acf7055c41f3f3d9b9ce00888e2974c50}{Get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unique ID of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a96c455daf3755e7091a1359df88fbcb9}{Set\+Id}} (int new\+Id)
+\begin{DoxyCompactList}\small\item\em Sets the ID of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a0273d96d40646b143487678ddba74899}{Set\+Frame\+Count}} (int frameC)
+\begin{DoxyCompactList}\small\item\em Sets the number of animation frames and updates the sprite accordingly. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_collider}{Collider}} \mbox{\hyperlink{class_game_object_a4a759ba05345e180e8fa4cbecb513446}{Get\+Collider}} () const
+\begin{DoxyCompactList}\small\item\em Gets the collider associated with the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a9a98946a64f3893b085f650932c9dfee}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void {\bfseries Mark\+For\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Marks the \doxylink{class_game_object}{Game\+Object} for deletion. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_af66e04a10d7f6d25cb88b770c7449760}{Should\+Be\+Removed}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{class_game_object}{Game\+Object} should be removed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_a17b0065d70b65e1ab7cbc38caf2964bf}{Check\+Collision}} (const \mbox{\hyperlink{class_game_object}{Game\+Object}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks if this \doxylink{class_game_object}{Game\+Object} collides with another \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_afcf33669e338b014034e40c0ee50fef3}{Keep\+Inside\+Boundary}} (const \mbox{\hyperlink{struct_collider}{Collider}} \&boundary)
+\begin{DoxyCompactList}\small\item\em Ensures the \doxylink{class_game_object}{Game\+Object} stays within a specified boundary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a020cdbe405a467da68c5d0575e9c2a82}{Game\+Object}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos, int frames, const glm\+::vec2 \&obj\+Size, std\+::string obj\+Surface, const std\+::string \&obj\+Name, int obj\+Id, \mbox{\hyperlink{struct_collider}{Collider}} obj\+Collider)
+\begin{DoxyCompactList}\small\item\em Protected constructor for derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Surface \texorpdfstring{$\ast$}{*} {\bfseries screen}
+\item 
+glm\+::vec2 {\bfseries position}
+\item 
+glm\+::vec2 {\bfseries size}
+\item 
+\mbox{\hyperlink{struct_collider}{Collider}} {\bfseries collider}
+\item 
+int {\bfseries Id}
+\item 
+std\+::string {\bfseries name\+\_\+}
+\item 
+std\+::string {\bfseries file\+\_\+}
+\item 
+Sprite \texorpdfstring{$\ast$}{*} {\bfseries sprite\+\_\+}
+\item 
+bool {\bfseries is\+Deleted\+\_\+}
+\item 
+int {\bfseries frames\+\_\+}
+\item 
+int {\bfseries frame\+Count\+\_\+} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \doxylink{class_blast}{Blast} object in the game, typically an enemy or projectile. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_blast_ade752ec9005fb7de4ccb05d6324afd2e}\index{Blast@{Blast}!Blast@{Blast}}
+\index{Blast@{Blast}!Blast@{Blast}}
+\doxysubsubsection{\texorpdfstring{Blast()}{Blast()}}
+{\footnotesize\ttfamily \label{class_blast_ade752ec9005fb7de4ccb05d6324afd2e} 
+\mbox{\hyperlink{class_blast}{Blast}} (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{const glm\+::vec2 \&}]{pos}{ = {\ttfamily \{~0,0~\}}, }\item[{const glm\+::vec2 \&}]{obj\+Size}{ = {\ttfamily \{~0,~0~\}}, }\item[{int}]{random\+Dir}{ = {\ttfamily -\/1}, }\item[{std\+::string}]{file\+Path}{ = {\ttfamily "{}assets/art/enemy/dummy/pixel.png"{}}, }\item[{const std\+::string \&}]{obj\+Name}{ = {\ttfamily "{}Blast"{}}, }\item[{\mbox{\hyperlink{struct_collider}{Collider}}}]{collider}{ = {\ttfamily \mbox{\hyperlink{struct_collider}{Collider}}(ColliderType\+:\+:AABB)}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize the \doxylink{class_blast}{Blast} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & A pointer to the Surface object for rendering. \\
+\hline
+{\em pos} & The position of the object (default is \{0, 0\}). \\
+\hline
+{\em obj\+Size} & The size of the object (default is \{0, 0\}). \\
+\hline
+{\em random\+Dir} & A random direction value for the blast (default is -\/1). \\
+\hline
+{\em file\+Path} & The file path for the texture (default is "{}assets/art/enemy/dummy/pixel.\+png"{}). \\
+\hline
+{\em obj\+Name} & The name of the object (default is "{}\+Blast"{}). \\
+\hline
+{\em collider} & The collider type for the object (default is \doxylink{struct_a_a_b_b}{AABB}). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Blast.\+h\item 
+Blast.\+cpp\end{DoxyCompactItemize}

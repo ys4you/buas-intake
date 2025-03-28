@@ -1,0 +1,179 @@
+\doxysection{Player\+Soul Class Reference}
+\hypertarget{class_player_soul}{}\label{class_player_soul}\index{PlayerSoul@{PlayerSoul}}
+
+
+A class representing the player\textquotesingle{}s soul or character in the game. This class extends \doxylink{class_game_object}{Game\+Object} and adds health management features like taking damage, dying, and healing. It is responsible for tracking the player\textquotesingle{}s health and rendering the player\textquotesingle{}s soul.  
+
+
+
+
+{\ttfamily \#include $<$Player\+Soul.\+h$>$}
+
+Inheritance diagram for Player\+Soul\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_soul}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_soul_afca03d17680e3a0a3fc39c4563cc4661}{Player\+Soul}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos=\{ 0, 0 \}, const glm\+::vec2 \&obj\+Size=\{ 1, 1 \}, std\+::string file\+Path="{}"{}, const std\+::string \&obj\+Name="{}Player\+Soul"{}, int max\+Health=100, int health=100, \mbox{\hyperlink{struct_collider}{Collider}} collider=\mbox{\hyperlink{struct_collider}{Collider}}(Collider\+Type\+::\+AABB))
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_player_soul}{Player\+Soul} with specified parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_soul_a26c6bf5390870ba76d1c512bac710a95}{Take\+Damage}} (int damage\+Amount)
+\begin{DoxyCompactList}\small\item\em Reduces health by the specified amount of damage. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_soul_a8a2daf2544bc307b1ac11de356608feb}\label{class_player_soul_a8a2daf2544bc307b1ac11de356608feb} 
+void {\bfseries Die} ()
+\begin{DoxyCompactList}\small\item\em Handles the death of the \doxylink{class_player_soul}{Player\+Soul} (game over). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_soul_a3e7bda009261080c12cb3647bc79dbb1}{Heal}} (int heal\+Amount)
+\begin{DoxyCompactList}\small\item\em Increases the health of the \doxylink{class_player_soul}{Player\+Soul} by the specified amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_aa5bc0afc26c61d18f453b18d9fb2f8e0}{Game\+Object}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos=\{ 0, 0 \}, int frames=1, const glm\+::vec2 \&obj\+Size=\{ 1, 1 \}, std\+::string obj\+Path=nullptr, const std\+::string \&obj\+Name="{}new\+Game\+Obj"{}, \mbox{\hyperlink{struct_collider}{Collider}} obj\+Collider=\mbox{\hyperlink{struct_collider}{Collider}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_game_object}{Game\+Object} with specified parameters. \end{DoxyCompactList}\item 
+virtual void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_game_object}{Game\+Object}, registering it and setting up its collider and sprite. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_adfa70e64c33f2fac05f26f24a061636e}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current position of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_afe39f30629557d1d60c0b188754e6aa0}{Set\+Position}} (const glm\+::vec2 \&new\+Pos)
+\begin{DoxyCompactList}\small\item\em Sets a new position for the \doxylink{class_game_object}{Game\+Object} and updates the collider. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_game_object_ab0a2a16ddf1661a02b84266bb4c5453a}{Get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_object_acf7055c41f3f3d9b9ce00888e2974c50}{Get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the unique ID of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a96c455daf3755e7091a1359df88fbcb9}{Set\+Id}} (int new\+Id)
+\begin{DoxyCompactList}\small\item\em Sets the ID of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a0273d96d40646b143487678ddba74899}{Set\+Frame\+Count}} (int frameC)
+\begin{DoxyCompactList}\small\item\em Sets the number of animation frames and updates the sprite accordingly. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_collider}{Collider}} \mbox{\hyperlink{class_game_object_a4a759ba05345e180e8fa4cbecb513446}{Get\+Collider}} () const
+\begin{DoxyCompactList}\small\item\em Gets the collider associated with the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a9a98946a64f3893b085f650932c9dfee}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void {\bfseries Mark\+For\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Marks the \doxylink{class_game_object}{Game\+Object} for deletion. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_af66e04a10d7f6d25cb88b770c7449760}{Should\+Be\+Removed}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{class_game_object}{Game\+Object} should be removed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a0bc3f3606d9cf5304dac90cd7a619194}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Renders the \doxylink{class_game_object}{Game\+Object} on the screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_a17b0065d70b65e1ab7cbc38caf2964bf}{Check\+Collision}} (const \mbox{\hyperlink{class_game_object}{Game\+Object}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks if this \doxylink{class_game_object}{Game\+Object} collides with another \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_afcf33669e338b014034e40c0ee50fef3}{Keep\+Inside\+Boundary}} (const \mbox{\hyperlink{struct_collider}{Collider}} \&boundary)
+\begin{DoxyCompactList}\small\item\em Ensures the \doxylink{class_game_object}{Game\+Object} stays within a specified boundary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_soul_a29b545bc6acb8dedea00b6413c4fa641}\label{class_player_soul_a29b545bc6acb8dedea00b6413c4fa641} 
+bool {\bfseries has\+Died} = false
+\item 
+\Hypertarget{class_player_soul_a04cb8ad75330477109217d96825b052f}\label{class_player_soul_a04cb8ad75330477109217d96825b052f} 
+int {\bfseries health\+Points}
+\item 
+\Hypertarget{class_player_soul_a0da6b3c20be898071dc135c37de41191}\label{class_player_soul_a0da6b3c20be898071dc135c37de41191} 
+int {\bfseries max\+Health\+Points}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a020cdbe405a467da68c5d0575e9c2a82}{Game\+Object}} (Surface \texorpdfstring{$\ast$}{*}screen, const glm\+::vec2 \&pos, int frames, const glm\+::vec2 \&obj\+Size, std\+::string obj\+Surface, const std\+::string \&obj\+Name, int obj\+Id, \mbox{\hyperlink{struct_collider}{Collider}} obj\+Collider)
+\begin{DoxyCompactList}\small\item\em Protected constructor for derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Surface \texorpdfstring{$\ast$}{*} {\bfseries screen}
+\item 
+glm\+::vec2 {\bfseries position}
+\item 
+glm\+::vec2 {\bfseries size}
+\item 
+\mbox{\hyperlink{struct_collider}{Collider}} {\bfseries collider}
+\item 
+int {\bfseries Id}
+\item 
+std\+::string {\bfseries name\+\_\+}
+\item 
+std\+::string {\bfseries file\+\_\+}
+\item 
+Sprite \texorpdfstring{$\ast$}{*} {\bfseries sprite\+\_\+}
+\item 
+bool {\bfseries is\+Deleted\+\_\+}
+\item 
+int {\bfseries frames\+\_\+}
+\item 
+int {\bfseries frame\+Count\+\_\+} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing the player\textquotesingle{}s soul or character in the game. This class extends \doxylink{class_game_object}{Game\+Object} and adds health management features like taking damage, dying, and healing. It is responsible for tracking the player\textquotesingle{}s health and rendering the player\textquotesingle{}s soul. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_player_soul_afca03d17680e3a0a3fc39c4563cc4661}\index{PlayerSoul@{PlayerSoul}!PlayerSoul@{PlayerSoul}}
+\index{PlayerSoul@{PlayerSoul}!PlayerSoul@{PlayerSoul}}
+\doxysubsubsection{\texorpdfstring{PlayerSoul()}{PlayerSoul()}}
+{\footnotesize\ttfamily \label{class_player_soul_afca03d17680e3a0a3fc39c4563cc4661} 
+\mbox{\hyperlink{class_player_soul}{Player\+Soul}} (\begin{DoxyParamCaption}\item[{Surface \texorpdfstring{$\ast$}{*}}]{screen}{, }\item[{const glm\+::vec2 \&}]{pos}{ = {\ttfamily \{~0,~0~\}}, }\item[{const glm\+::vec2 \&}]{obj\+Size}{ = {\ttfamily \{~1,~1~\}}, }\item[{std\+::string}]{file\+Path}{ = {\ttfamily "{}"{}}, }\item[{const std\+::string \&}]{obj\+Name}{ = {\ttfamily "{}PlayerSoul"{}}, }\item[{int}]{max\+Health}{ = {\ttfamily 100}, }\item[{int}]{health}{ = {\ttfamily 100}, }\item[{\mbox{\hyperlink{struct_collider}{Collider}}}]{collider}{ = {\ttfamily \mbox{\hyperlink{struct_collider}{Collider}}(ColliderType\+:\+:AABB)}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{class_player_soul}{Player\+Soul} with specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen} & The surface where the object will be drawn. \\
+\hline
+{\em pos} & The initial position of the \doxylink{class_player_soul}{Player\+Soul}. Default is \{ 0, 0 \}. \\
+\hline
+{\em obj\+Size} & The size of the \doxylink{class_player_soul}{Player\+Soul}. Default is \{ 1, 1 \}. \\
+\hline
+{\em file\+Path} & The file path of the sprite for the \doxylink{class_player_soul}{Player\+Soul}. Default is "{}"{} (empty). \\
+\hline
+{\em obj\+Name} & The name of the object. Default is "{}\+Player\+Soul"{}. \\
+\hline
+{\em max\+Health} & The maximum health the \doxylink{class_player_soul}{Player\+Soul} can have. Default is 100. \\
+\hline
+{\em health} & The current health of the \doxylink{class_player_soul}{Player\+Soul}. Default is 100. \\
+\hline
+{\em collider} & The collider associated with the \doxylink{class_player_soul}{Player\+Soul}. Default is a collider of type \doxylink{struct_a_a_b_b}{AABB}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_soul_a3e7bda009261080c12cb3647bc79dbb1}\index{PlayerSoul@{PlayerSoul}!Heal@{Heal}}
+\index{Heal@{Heal}!PlayerSoul@{PlayerSoul}}
+\doxysubsubsection{\texorpdfstring{Heal()}{Heal()}}
+{\footnotesize\ttfamily \label{class_player_soul_a3e7bda009261080c12cb3647bc79dbb1} 
+void Heal (\begin{DoxyParamCaption}\item[{int}]{heal\+Amount}{}\end{DoxyParamCaption})}
+
+
+
+Increases the health of the \doxylink{class_player_soul}{Player\+Soul} by the specified amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heal\+Amount} & The amount of health to restore. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_soul_a26c6bf5390870ba76d1c512bac710a95}\index{PlayerSoul@{PlayerSoul}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!PlayerSoul@{PlayerSoul}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily \label{class_player_soul_a26c6bf5390870ba76d1c512bac710a95} 
+void Take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage\+Amount}{}\end{DoxyParamCaption})}
+
+
+
+Reduces health by the specified amount of damage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage\+Amount} & The amount of damage to be taken. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Player\+Soul.\+h\item 
+Player\+Soul.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\doxysection{Audio\+Manager Class Reference}
+\hypertarget{class_audio_manager}{}\label{class_audio_manager}\index{AudioManager@{AudioManager}}
+
+
+Manages audio playback and initialization using Mini\+Audio.  
+
+
+
+
+{\ttfamily \#include $<$Audio\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_audio_manager_ab3e7cc706c522b3231f9156bba461436}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the audio engine. \end{DoxyCompactList}\item 
+\Hypertarget{class_audio_manager_af7a4a2e0fa19ebb4e38d88dae63f3b25}\label{class_audio_manager_af7a4a2e0fa19ebb4e38d88dae63f3b25} 
+void {\bfseries deconstruct} ()
+\begin{DoxyCompactList}\small\item\em Cleans up and shuts down the audio engine. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_audio_manager_af90394ef8b357ef9a1eb8798c5752d90}{play\+Audio}} (const std\+::string \&audio\+Name)
+\begin{DoxyCompactList}\small\item\em Plays an audio file by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} \& \mbox{\hyperlink{class_audio_manager_a488cc95bbab008477be1c748e104cc12}{Get}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of the \doxylink{class_audio_manager}{Audio\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages audio playback and initialization using Mini\+Audio. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_manager_a488cc95bbab008477be1c748e104cc12}\index{AudioManager@{AudioManager}!Get@{Get}}
+\index{Get@{Get}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a488cc95bbab008477be1c748e104cc12} 
+\mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} \& Get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of the \doxylink{class_audio_manager}{Audio\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{class_audio_manager}{Audio\+Manager} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_audio_manager_ab3e7cc706c522b3231f9156bba461436}\index{AudioManager@{AudioManager}!initialize@{initialize}}
+\index{initialize@{initialize}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{class_audio_manager_ab3e7cc706c522b3231f9156bba461436} 
+bool initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the audio engine. 
+
+\begin{DoxyReturn}{Returns}
+True if initialization succeeds, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_audio_manager_af90394ef8b357ef9a1eb8798c5752d90}\index{AudioManager@{AudioManager}!playAudio@{playAudio}}
+\index{playAudio@{playAudio}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{playAudio()}{playAudio()}}
+{\footnotesize\ttfamily \label{class_audio_manager_af90394ef8b357ef9a1eb8798c5752d90} 
+bool play\+Audio (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{audio\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Plays an audio file by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em audio\+Name} & The name of the audio file to play. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the audio plays successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Audio\+Manager.\+h\item 
+Audio\+Manager.\+cpp\end{DoxyCompactItemize}
