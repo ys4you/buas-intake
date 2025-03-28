@@ -30,8 +30,8 @@ public:
         const std::string& objName = "Dummy")
         : Enemy(
             screen,
-            5,
-            5,
+            15,
+            15,
             8,
             pos,
             objSize,

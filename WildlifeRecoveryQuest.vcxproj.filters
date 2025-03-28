@@ -92,6 +92,9 @@
     <ClCompile Include="FSMSceneController.cpp">
       <Filter>Code\Managers\SceneManager</Filter>
     </ClCompile>
+    <ClCompile Include="WinScene.cpp">
+      <Filter>Code\Scenes\Win</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="template\common.h">
@@ -210,6 +213,9 @@
     <ClInclude Include="Turn.h">
       <Filter>Code\Util</Filter>
     </ClInclude>
+    <ClInclude Include="WinScene.h">
+      <Filter>Code\Scenes\Win</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
@@ -324,6 +330,9 @@
     </Filter>
     <Filter Include="Code\Scenes\Game">
       <UniqueIdentifier>{6eb793fb-3908-41c1-a174-74ec9c189085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Scenes\Win">
+      <UniqueIdentifier>{2aa9e615-6c44-4b70-8431-1de9c6c1d62b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -40,6 +40,8 @@ public:
 
     int damage = 0;
 
+    bool isEnemyDead = false;
+
     /// @brief Updates the enemy's state, called every frame.
     /// @param deltaTime Time passed since the last frame.
     void Update(float deltaTime) override;
@@ -49,4 +51,6 @@ public:
 
     /// @brief Handles the enemy's death, typically when health reaches zero.
     void Die();
+    ///@brief Returns the alive state of the enemy
+    bool isDead() const { return isEnemyDead; }
 };

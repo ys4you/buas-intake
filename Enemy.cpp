@@ -9,7 +9,9 @@ void Enemy::Update(float deltaTime)
 
 void Enemy::TakeDamage(int amount)
 {
+	std::cout << "enemy took damage\n";
 	healthPoints = -amount;
+	std::cout << "new health points: " << healthPoints << std::endl;
 
 	if (healthPoints <= 0)
 	{
@@ -19,5 +21,6 @@ void Enemy::TakeDamage(int amount)
 
 void Enemy::Die()
 {
-	//TODO: inplement what to do when die
+	std::cout << "enemy Died\n";
+	isEnemyDead = true;
 }

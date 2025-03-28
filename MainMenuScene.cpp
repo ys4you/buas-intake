@@ -5,6 +5,7 @@
 
 #include "FSMSceneController.h"
 #include "GameLoopScene.h"
+#include "AudioManager.h"
 
 
 void MainMenuScene::onEnter(Surface* screen)
@@ -15,7 +16,7 @@ void MainMenuScene::onEnter(Surface* screen)
     int padding = 200;
     int x1 = 0 + padding;
     int x2 = SCRWIDTH - 128 - padding; 
-
+    
     int spacing = (x2 - x1) / (3 - 1); // Calculate even spacing
     buttons.push_back(new Button(
         screen,

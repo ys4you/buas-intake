@@ -40,7 +40,8 @@ bool AudioManager::initialize() {
 //add audio to a dict so referencing it in other files is easier
 void AudioManager::SetupAudioDict()
 {
-    audioDict["hit"] = "C:/Buas/Intake/Collect/assets/audio/hit.wav";
+    audioDict["hit"] = "C:/Buas/Collect/assets/audio/hit.wav";
+    audioDict["circleSpawning"] = "C:/Buas/Collect/assets/audio/circleSpawning.mp3"; 
 }
 
 void AudioManager::deconstruct() {
@@ -57,14 +58,14 @@ void AudioManager::deconstruct() {
 
 bool AudioManager::playAudio(const std::string& audioName) {
     if (!m_initialized) {
-        std::cerr << "AudioManager is not initialized. Cannot play audio.\n";
+        std::cout << "AudioManager is not initialized. Cannot play audio.\n";
         return false;
     }
 
     auto it = audioDict.find(audioName);
     if (it == audioDict.end())
     {
-        std::cerr << "Audio file not found: " << audioName << "\n";
+        std::cout << "Audio file not found: " << audioName << "\n";
         return false;
     }
 
@@ -73,7 +74,7 @@ bool AudioManager::playAudio(const std::string& audioName) {
 
     // Play the audio file
     if (ma_engine_play_sound(&m_engine, audioFilePath.c_str(), NULL) != MA_SUCCESS) {
-        std::cerr << "Failed to play audio: " << audioFilePath << "\n";
+        std::cout << "Failed to play audio: " << audioFilePath << "\n";
         return false;
     }
 

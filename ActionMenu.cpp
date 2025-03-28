@@ -49,6 +49,7 @@ void ActionMenu::Fight()
 	}
 	else if (levelOfDeepness == 2)
 	{
+		enemy_->TakeDamage(1);
 		ResetMenu();
 	}
 }

@@ -5,12 +5,14 @@
 #include "PlayerSoul.h"
 #include "common.h"
 #include "DeathScene.h"
+#include "WinScene.h"
 
 void GameLoopScene::onEnter(Surface* screen)
 {
 	std::cout << "Entering Game Loop Scene\n";
 
 #pragma region GameObjects initializing
+
 	player = new PlayerSoul(
 		screen,
 		glm::vec2(700, 300),
@@ -117,8 +119,14 @@ void GameLoopScene::checkSwitchState()
 {
 	if (player->hasDied)
 	{
-		std::unique_ptr<DeathScene> deathScene = std::make_unique<DeathScene>();
-		FSMSceneController::Get()->changeState(std::move(deathScene));
+		FSMSceneController::Get()->changeState(std::move(std::make_unique<DeathScene>()));
+		return;
+	}
+
+	if (dummy->isDead())
+	{
+		FSMSceneController::Get()->changeState(std::move(std::make_unique<WinScene>()));
+		return;
 	}
 }
 
