@@ -161,9 +161,6 @@
       <Filter>Code\GameObjects\Player\Characters</Filter>
     </ClInclude>
     <ClInclude Include="game.h" />
-    <ClInclude Include="Enemy.h">
-      <Filter>Code\GameObjects\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="DummyEnemy.h">
       <Filter>Code\GameObjects\Enemy\Dummy</Filter>
     </ClInclude>
@@ -215,6 +212,9 @@
     </ClInclude>
     <ClInclude Include="WinScene.h">
       <Filter>Code\Scenes\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Code\GameObjects\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

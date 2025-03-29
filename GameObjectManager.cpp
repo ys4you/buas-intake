@@ -35,6 +35,8 @@ void GameObjectManager::RegisterGameObject(GameObject* newGameObj)
 #ifdef _DEBUG
     OutputDebugStringA(logMessage.c_str());
 #endif
+
+    std::cout << logMessage;
 }
 
 GameObject* GameObjectManager::GetGameObject(int id)

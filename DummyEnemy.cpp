@@ -7,7 +7,8 @@ DummyEnemy::~DummyEnemy()
 	{
 		delete attack;
 	}
-	attacks.clear(); 
+	attacks.clear();
+	MarkForDeletion();
 }
 
 void DummyEnemy::Update(float deltaTime)
